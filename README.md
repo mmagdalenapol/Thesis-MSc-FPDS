@@ -1,0 +1,3 @@
+The folder labelled "1.Models responses" contains the Jupyter notebook used to make the calls to the models though through the API, along with the folders containing the responses obtained. The Create_code folder contains the results of Experiment 1, the Code_objective folder contains the results of Experiment 2.1, and finally, the results of Experiment 2.2 are the Con_system_prompt and Sin_system_prompt folders. 
+
+The results have been subjected to analysis, and the findings are presented in the folder "2. Responses analysed". This folder contains the analyses carried out for each of the experiments under study. 
