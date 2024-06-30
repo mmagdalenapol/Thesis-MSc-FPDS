@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "SyntaxError: invalid syntax. Missing colons at the end of function definition, if statements, elif statements, and else statements."
+}

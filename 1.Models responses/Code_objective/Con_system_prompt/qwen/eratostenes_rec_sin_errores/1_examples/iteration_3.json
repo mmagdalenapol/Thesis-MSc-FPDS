@@ -1,0 +1,4 @@
+{
+code_language: "python",
+code_objective: "remove multiples of c from a list until c*c is greater than x",
+}

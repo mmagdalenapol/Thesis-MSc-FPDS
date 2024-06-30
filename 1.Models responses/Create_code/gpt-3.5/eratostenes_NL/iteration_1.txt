@@ -1,0 +1,25 @@
+Here is a Python implementation of the described algorithm:
+
+```python
+def sieve(n):
+    x = [True] * n
+    
+    # Set the first two positions to False
+    x[0] = x[1] = False
+    
+    # Perform the sieve algorithm
+    for j in range(2, int(n**0.5) + 1):
+        if x[j]:
+            for i in range(j*j, n, j):
+                x[i] = False
+    
+    # Return the indices of True values
+    return [i for i in range(n) if x[i]]
+
+# Test the function with n = 20
+n = 20
+result = sieve(n)
+print("Prime indices up to", n, ":", result)
+```
+
+You can run this code to try out the algorithm with different values of `n` to get the indices of the array `x` that are True after the sieve algorithm is applied. Let me know if you need further assistance!

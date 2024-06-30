@@ -1,0 +1,58 @@
+This problem is a classic example of the "Knapsack Problem," specifically the "0/1 Knapsack Problem," where each item can either be included or excluded from the knapsack. You aim to maximize the total value (sum of p_i) while keeping the total weight (sum of w_i) within a given limit (W).
+
+Here's a Python implementation using a recursive approach to solve this problem. The function will take in the lists p and w along with the maximum allowable weight W, and it will return the maximum value achievable and the indices of items included to achieve this value.
+
+```python
+def knapsack_recursive(p, w, W, n=None, memo=None):
+    if n is None:
+        n = len(p)
+    if memo is None:
+        memo = {}
+
+    # Base case: No items or no capacity
+    if n == 0 or W == 0:
+        return (0, [])
+
+    # If the result is already in the memo, use it
+    if (n, W) in memo:
+        return memo[(n, W)]
+    
+    # If the weight of the nth item is more than Knapsack capacity W, then
+    # this item cannot be included in the optimal solution
+    if w[n-1] > W:
+        result = knapsack_recursive(p, w, W, n-1, memo)
+        memo[(n, W)] = result
+        return result
+
+    # Return the maximum of two cases: 
+    # (1) nth item included 
+    # (2) not included
+    else:
+        # Include the nth item
+        included_value, included_items = knapsack_recursive(p, w, W - w[n-1], n-1, memo)
+        included_value += p[n-1]
+
+        # Exclude the nth item
+        excluded_value, excluded_items = knapsack_recursive(p, w, W, n-1, memo)
+
+        if included_value > excluded_value:
+            result = (included_value, included_items + [n-1])
+        else:
+            result = (excluded_value, excluded_items)
+    
+        memo[(n, W)] = result
+        return result
+
+# Example usage of the function
+p = [60, 100, 120]  # Values corresponding to the elements
+w = [10, 20, 30]    # Weights of the elements
+W = 50              # Maximum weight capacity
+
+max_value, items_used = knapsack_recursive(p, w, W)
+print(f"Maximum value: {max_value}")
+print(f"Items used: {items_used}")
+```
+
+This implementation includes a memoization approach (`memo` dictionary) to store previously calculated results, thus improving the efficiency of the recursive solution.
+
+This tricky problem shows how recursive solutions paired with memoization (a technique known as "top-down dynamic programming" or just "memoization") can efficiently solve complex optimization issues, reducing the redundant calculations found in plain recursive approaches.

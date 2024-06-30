@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'y =! 0', the syntax for the comparison is not correct. The correct syntax would be 'y != 0'."
+}

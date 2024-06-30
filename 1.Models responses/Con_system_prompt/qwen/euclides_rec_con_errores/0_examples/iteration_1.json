@@ -1,0 +1,8 @@
+```json
+{
+  "code_sintax_error": "Yes",
+  "code_sintax_explanation": "1. Missing closing parenthesis on line 11.
+2. Incorrect use of semicolons on line 12. It should be a single line with the correct assignment.
+3. 'euclidean_gcd' is not defined on line 16. It should be 'fun_1' instead."
+}
+```

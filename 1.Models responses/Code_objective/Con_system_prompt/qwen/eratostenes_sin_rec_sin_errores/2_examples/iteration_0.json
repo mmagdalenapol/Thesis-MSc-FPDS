@@ -1,0 +1,4 @@
+{
+code_language: "python",
+code_objective: "generate a list of prime numbers up to a given number x",
+}

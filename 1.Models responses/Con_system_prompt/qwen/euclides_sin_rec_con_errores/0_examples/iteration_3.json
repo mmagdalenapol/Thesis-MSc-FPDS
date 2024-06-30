@@ -1,0 +1,6 @@
+```python
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Error en la línea 7: Se ha utilizado el operador de asignación '=' en lugar del operador de comparación '!='. Debería ser 'y != 0' en lugar de 'y =! 0'."
+}
+```

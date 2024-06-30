@@ -1,0 +1,20 @@
+Yes, this algorithm has a name. It is called binary search. Here is a Python code that implements binary search:
+
+```python
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+```
+
+This function takes an ordered list (arr) and a target value as input and returns the position of the target value in the list if it is found, or -1 if it is not found.

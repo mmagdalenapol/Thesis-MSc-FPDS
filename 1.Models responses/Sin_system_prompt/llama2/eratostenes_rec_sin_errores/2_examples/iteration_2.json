@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'if c * c > x', the syntax for comparison is not correct. Additionally, the function fun_1 is recursive but it is not properly defined, it is missing a return statement in the recursive call."
+}

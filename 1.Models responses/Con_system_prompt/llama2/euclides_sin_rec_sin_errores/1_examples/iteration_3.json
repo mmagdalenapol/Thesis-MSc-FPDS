@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'if not isinstance(a, int) or not isinstance(b, int) or a <= 0 or b <= 0:' there is a missing ')' before the 'or' clause."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are two syntax errors in the code. In the line 'if p is None:', the variable name 'p' should be replaced with 'primes'. In the line 'for j in range [c*c,  x+1, c]:', the square brackets should be replaced with normal parentheses, i.e., 'for j in range(c*c, x+1, c):'"
+}

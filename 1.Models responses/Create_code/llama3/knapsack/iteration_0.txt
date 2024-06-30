@@ -1,0 +1,39 @@
+Here is a Python code that solves the problem using the brute force approach:
+
+```python
+def max_sum_p(p, w, W):
+    N = len(p)
+    max_sum = 0
+    selected_elements = []
+    
+    for i in range(2**N):
+        subset_sum_w = 0
+        subset_sum_p = 0
+        subset_elements = []
+        
+        for j in range(N):
+            if (i >> j) & 1:
+                subset_sum_w += w[j]
+                subset_sum_p += p[j]
+                subset_elements.append(j)
+        
+        if subset_sum_w <= W and subset_sum_p > max_sum:
+            max_sum = subset_sum_p
+            selected_elements = subset_elements
+    
+    return max_sum, selected_elements
+
+# Example usage:
+p = [10, 20, 30]
+w = [1, 2, 3]
+W = 4
+max_sum, selected_elements = max_sum_p(p, w, W)
+print("Maximum sum of p:", max_sum)
+print("Selected elements:", selected_elements)
+```
+
+This algorithm has a time complexity of O(2^N), which can be very slow for large N. This is because it generates all possible subsets of the elements and checks each one.
+
+This problem is known as the 0/1 Knapsack Problem, which is a classic problem in computer science and operations research. The 0/1 Knapsack Problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+
+A more efficient solution to this problem can be achieved using dynamic programming, which can reduce the time complexity to O(NW).

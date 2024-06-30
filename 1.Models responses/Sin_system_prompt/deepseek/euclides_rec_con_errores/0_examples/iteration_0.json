@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code contains several syntax errors. The first one is in the function definition. The function name is 'fun_1' but it is called 'euclidean_gcd'. The second error is in the comment. The comment should start with '#' not '&'. The third error is in the if statement. The condition should be 'if b == 0:' not 'if b = 0:'. The fourth error is in the assignment of 'r'. The correct syntax is 'r = a % b' not 'r = a % b;'. The fifth error is in the recursive call. The correct syntax is 'return fun_1(b, r)' not 'return fun_1(b, r)'. The sixth error is in the assignment of 'a' and 'b'. The correct syntax is 'a = 10' and 'b = 6' not 'a == 10' and 'b == 6'."
+}

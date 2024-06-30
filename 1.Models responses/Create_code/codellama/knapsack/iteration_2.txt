@@ -1,0 +1,45 @@
+
+
+Here is a Python code that solves the optimization problem:
+
+```
+def optimize(p, w, W):
+    # Initialize the maximum sum of p_i and the selected elements
+    max_sum_p = 0
+    selected_elements = []
+
+    # Generate all subsets of w with a sum <= W
+    for subset in subsets_with_sum(w, W):
+        # Calculate the sum of p_i for the current subset
+        sum_p = sum(p[i] for i in subset)
+
+        # Update the maximum sum of p_i and the selected elements if necessary
+        if sum_p > max_sum_p:
+            max_sum_p = sum_p
+            selected_elements = subset
+
+    return max_sum_p, selected_elements
+
+
+def subsets_with_sum(w, W):
+    # Generate all subsets of w with a sum <= W
+    subsets = []
+    for i in range(1 << len(w)):
+        subset = [j for j in range(len(w)) if (i & (1 << j))]
+        if sum(w[j] for j in subset) <= W:
+            subsets.append(subset)
+    return subsets
+
+
+# Example usage
+p = [1, 2, 3, 4, 5]
+w = [2, 3, 4, 5, 6]
+W = 10
+
+max_sum_p, selected_elements = optimize(p, w, W)
+
+print("Maximum sum of p_i:", max_sum_p)
+print("Selected elements:", selected_elements)
+```
+
+This algorithm is known as the **Knapsack Problem**. It is a classic optimization problem in computer science and is often used as a benchmark for evaluating the performance of optimization algorithms.

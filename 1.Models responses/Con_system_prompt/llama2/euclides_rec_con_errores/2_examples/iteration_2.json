@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the ampersand (&) character is not valid in Python and should be removed. Additionally, there are several instances of unnecessary semicolons (;) in the code, which are not needed in Python. Furthermore, in the last line of the code, there is a missing parentheses after the function call to euclidean_gcd. Finally, the function name is not defined."
+}

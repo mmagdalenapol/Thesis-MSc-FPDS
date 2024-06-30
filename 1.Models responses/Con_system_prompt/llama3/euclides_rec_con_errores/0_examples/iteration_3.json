@@ -1,0 +1,11 @@
+{"code_sintax_error": "Yes", "code_sintax_explanation": "There are several syntax errors in the code. 
+
+1. The code uses '&' instead of '#' for comments. 
+
+2. The line 'a; b == b; a' is not a valid Python statement. It seems like the intention was to swap the values of a and b, but the correct way to do this in Python is 'a, b = b, a'.
+
+3. The function name in the function definition is 'fun_1' but it is called as 'euclidean_gcd' in the example usage.
+
+4. The line 'a == 10' and 'b == 6' are not assignments, they are comparison operators. The correct way to assign values to a and b is 'a = 10' and 'b = 6'.
+
+5. The line 'if b = 0:' is not a valid Python statement. The correct way to check for equality in Python is 'if b == 0:'."}

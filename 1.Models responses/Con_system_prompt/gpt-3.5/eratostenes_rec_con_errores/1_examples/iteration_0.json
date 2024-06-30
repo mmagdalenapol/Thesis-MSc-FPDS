@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'if p is None:', 'p' is not defined. Also, 'range [c*c, x+1, c]' has incorrect syntax for the range function."
+}

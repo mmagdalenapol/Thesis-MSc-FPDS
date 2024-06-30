@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Errors include: 'Wt' in 'if Wt[n - 1] > W:', and in 'v_i, i_i = fun_1(W - Wt[n - 1], wt, n - 1, val)' should be 'wt', not 'Wt'. Parameters mismatch in 'v_i, i_i = fun_1(W - Wt[n - 1], wt, n - 1, val)' should include 'val' in parameters. Incorrect decrement operation in 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)' should pass decrement on 'n' not a separate '-1'."
+}

@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are multiple syntax errors in the code. Some examples include the incorrect use of & instead of # for comments, the use of == instead of = for variable assignment, and the incorrect function name euclidean_gcd being used in the print statement."
+}

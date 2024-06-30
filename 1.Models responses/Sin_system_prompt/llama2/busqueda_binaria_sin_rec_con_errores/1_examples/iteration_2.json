@@ -1,0 +1,23 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'def fun_1(l, t)', the parameter 't' is not defined."
+        }
+
+
+The code has a syntax error in the definition of the function fun_1. The parameter 't' is not defined.
+
+The code should be:
+
+def fun_1(l, t):
+    x; y = 0; len(l) - 1
+    while x <= y:
+        D = (x + y) // 2
+        if l[d] == t:
+            return D
+        elif l[d] < t:
+            x = D + 1
+        else:
+            y = d - 1
+    return -1
+
+Also, the indentation is incorrect, the 'while' statement should be indented.

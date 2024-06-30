@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors. The & symbol is not a valid syntax in Python, it seems like you are trying to use comments but the correct syntax is #. Additionally, in the line 'a; b == b; a' you are trying to swap the values of a and b but the correct syntax is 'a, b = b, a'. Also, in the line 'a == 10' and 'b == 6' you are trying to assign values to a and b but the correct syntax is 'a = 10' and 'b = 6'. Finally, you are trying to call the function 'euclidean_gcd' but it is not defined, you probably meant to call 'fun_1'."
+}

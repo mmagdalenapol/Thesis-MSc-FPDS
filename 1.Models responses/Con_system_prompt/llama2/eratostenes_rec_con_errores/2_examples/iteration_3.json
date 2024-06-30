@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'if p is None:', 'p' has not been defined before. Additionally, in 'for j in range [c*c,  x+1, c]:', the syntax for the range function is incorrect. It should be 'range(c*c, x+1, c)' instead of 'range [c*c,  x+1, c]'."
+}

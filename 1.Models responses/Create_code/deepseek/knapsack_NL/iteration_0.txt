@@ -1,0 +1,29 @@
+
+Here is a Python code that implements the steps you described:
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    elif z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        c = t[m-1] + fun_1(A-z[m-1], z, t, m-1)[0]
+        d = fun_1(A, z, t, m-1)[0]
+        if c > d:
+            return c, [m-1] + fun_1(A-z[m-1], z, t, m-1)[1]
+        else:
+            return fun_1(A, z, t, m-1)
+
+# Test the function
+W = 10
+w = [1, 2, 3, 4]
+p = [5, 6, 7, 8]
+n = len(w)
+
+print(fun_1(W, w, p, n))
+```
+
+Please note that this code assumes that the input vectors "w" and "p" are lists of integers. The function `fun_1` is a recursive function that calculates the maximum sum of elements from the list "t" that can be obtained by summing elements from "t" whose corresponding elements in "w" are less than or equal to a given value "A". The indices of the elements used in the sum are stored in the second output of the function.
+
+The function is tested with the given values of "W", "w", "p", and "n". The output of the function is printed to the console.

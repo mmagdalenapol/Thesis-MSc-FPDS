@@ -1,0 +1,24 @@
+  The algorithm you described is known as the Euclidean algorithm, which is a well-established method for computing the greatest common divisor (GCD) of two integers. It is named after the ancient Greek mathematician Euclid, who described it in his book "Elements".
+
+Here is an example of how the Euclidean algorithm works:
+
+Suppose we want to find the GCD of 12 and 18. We can start by writing 18 = 12 * 1 + 6, so we can see that 12 is a divisor of 18. Now, we can repeat the process by writing 12 = 6 * 2 + 0, so we can see that 6 is a divisor of 12. We can continue this process by writing 6 = 2 * 3 + 0, so we can see that 2 is a divisor of 6. We can repeat this process again by writing 2 = 1 * 2 + 0, so we can see that 1 is a divisor of 2.
+
+At this point, we have found the GCD of 12 and 18, which is 6. We can express 18 as 6 * 3 + 0, and 12 as 6 * 2 + 0, so we can see that 6 is the greatest common divisor of 12 and 18.
+
+The Euclidean algorithm can be written in Python as follows:
+
+def euclidean_algorithm(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+This function takes two integers a and b as input, and it returns the GCD of a and b. It works by repeatedly subtracting the smaller number (b) from the larger number (a) until b is 0, at which point a is the GCD of a and b.
+
+To use this function, you can call it with two integers as arguments, like this:
+
+print(euclidean_algorithm(12, 18))  # Output: 6
+
+This will print 6, which is the GCD of 12 and 18.
+
+I hope this helps! Let me know if you have any questions.

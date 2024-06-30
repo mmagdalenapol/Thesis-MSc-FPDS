@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "1. Missing colon after 'def fun_1(l, t)'. 2. Incorrect use of semicolon ';' in variable declarations and assignments. 3. Missing colon after 'while x <= y'. 4. Missing colon after 'if l[d] < t'. 5. Incorrect use of 'else' without matching 'if'. 6. Incorrect variable 'd' used in 'l[d]' instead of 'D'."
+}

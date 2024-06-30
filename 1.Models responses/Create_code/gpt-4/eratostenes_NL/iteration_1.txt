@@ -1,0 +1,44 @@
+Certainly! The process you've described aligns closely with a classic algorithm known as the "Sieve of Eratosthenes," which is used for finding all prime numbers up to a given number `n`. Here's a Python implementation based on your specified steps:
+
+```python
+import math
+
+def sieve_of_eratosthenes(n):
+    if n < 2:
+        return []  # No prime numbers less than 2
+    
+    # Step 2: Initialize the array x with all True values
+    x = [True] * (n + 1)
+    
+    # Step 3: Set the first two positions to False
+    x[0] = x[1] = False
+    
+    # Step 4: Iterating over the elements
+    # Only iterate up to the square root of n
+    for j in range(2, int(math.sqrt(n)) + 1):
+        if x[j]:  # Step 4.1: Check if x at position j is True
+            # Update all multiples of j from j*j to n to False
+            for multiple in range(j*j, n + 1, j):
+                x[multiple] = False
+    
+    # Step 4.2: Collect and return all indices that are still True
+    primes = [index for index, is_prime in enumerate(x) if is_prime]
+    return primes
+
+# Example usage
+n = 30  # You can change n to any natural number
+primes = sieve_of_eratosthenes(n)
+print(f"Prime numbers up to {n}:", primes)
+```
+
+### Explanation:
+
+1. **Initialization:** An array `x` of length `n+1` is created with all values set to `True`, considering positions as numbers (i.e., `x[k]` represents the number `k`).
+
+2. **Setting first two values:** We then address the fact that neither 0 nor 1 are prime numbers, thus we set `x[0]` and `x[1]` to `False`.
+
+3. **Sieve Logic:** For each number `j` starting from 2 up to the integer square root of `n`, if `x[j]` is `True` (meaning `j` is still considered prime at this stage), we mark all multiples of `j` from `j*j` onwards as `False` (since they have `j` as a factor and thus can't be prime).
+
+4. **Collecting Primes:** After the sieve operation, the remaining `True` values in the `x` array indicate prime numbers. We iterate through `x` and collect indices (representing numbers) where values are `True`.
+
+Feel free to adjust `n` and try out the function with different values to see how the array of primes changes.

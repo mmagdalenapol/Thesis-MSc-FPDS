@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "The function fun_1 is recursively calling itself with the arguments in a different order. The correct order should be (W - Wt[n - 1], wt, val, n - 1) and (W, Wt, val, n - 1)."
+}

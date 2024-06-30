@@ -1,0 +1,4 @@
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "Multiple syntax errors: 1. Missing colon after function definition and the while loop. 2. Incorrect variable case sensitivity (D used, but d defined later). 3. Missing colons at the end of the elif and else statements. 4. Semicolon used improperly to define multiple variables on one line."
+}

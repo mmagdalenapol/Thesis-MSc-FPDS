@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are syntax errors in the code. The variable 'Wt' is not defined properly; it should be 'wt'. Additionally, there are syntax errors in the function calls where parameters are being passed, such as 'n - 1' instead of 'n-1' and '- 1' instead of '-1'."
+}

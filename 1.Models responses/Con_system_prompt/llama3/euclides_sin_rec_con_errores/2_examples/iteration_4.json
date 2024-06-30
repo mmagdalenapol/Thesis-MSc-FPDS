@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are two syntax errors. The first one is that 'ent' is not defined, it should be 'int'. The second one is that the syntax for 'not equal' in Python is '!=' not '=!'"
+}

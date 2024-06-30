@@ -1,0 +1,9 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "Comments are denoted incorrectly using '&'. In Python, comments should start with '#'.",
+        "Incorrect variable swapping and misunderstandable use of semicolon in 'a; b == b; a'. The correct Python syntax for swapping variables is 'a, b = b, a'.",
+        "Incorrect function call in 'print(\"GCD of\", a, \"and\", b, \"is\", euclidean_gcd(a, b))'. The function defined is 'fun_1', not 'euclidean_gcd'.",
+        "The code block to set values for 'a' and 'b' and to call the function is out of any function and would execute during import if in a module. It should be contained in a function or protected by an 'if __name__ == '__main__' block to avoid execution during import."
+    ]
+}

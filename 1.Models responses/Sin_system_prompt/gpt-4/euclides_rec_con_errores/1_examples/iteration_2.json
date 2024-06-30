@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Multiple syntax errors including incorrect usage of comments marked with '&', misuse of the assignment operator ‘;’ instead of swapping values, incorrectly equating 'a' and 'b' outside of any function or statement block, and attempting to call 'euclidean_gcd' which is not defined instead of 'fun_1'."
+}

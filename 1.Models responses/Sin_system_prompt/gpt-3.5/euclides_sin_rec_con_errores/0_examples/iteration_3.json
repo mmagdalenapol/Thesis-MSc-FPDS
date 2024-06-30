@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "SyntaxError: invalid syntax in the line 'while y =! 0:' - it should be 'while y != 0:'"
+}

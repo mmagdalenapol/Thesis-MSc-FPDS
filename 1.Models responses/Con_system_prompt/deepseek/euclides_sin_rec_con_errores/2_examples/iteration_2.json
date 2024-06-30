@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In the line 'while y ≠ 0:', the comparison operator should be '==' instead of '≠'. Also, the function 'isinstance' is not defined. It should be 'int' instead of 'ent'. The function 'ent' is not defined. The function 'rount' is not defined, it should be 'round'. The function 'max' is not defined, it should be 'max'. The function 'min' is not defined, it should be 'min'. The function 'isinstance' is not defined, it should be 'int'."
+}

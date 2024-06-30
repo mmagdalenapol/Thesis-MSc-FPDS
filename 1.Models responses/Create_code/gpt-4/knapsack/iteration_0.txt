@@ -1,0 +1,49 @@
+The problem described is known as the "Knapsack problem," specifically the "0/1 knapsack problem." In this problem, you are given a set of items, each with a weight and a value, and a knapsack with a maximum capacity. The goal is to determine which items to include in your knapsack so that the total weight is less than or equal to the knapsack's weight limit, and the total value is as high as possible.
+
+Here's a Python solution using dynamic programming to solve the 0/1 knapsack problem and provide the maximum sum of the `p` elements and the indices of those elements used:
+
+```python
+def knapsack(p, w, W):
+    N = len(p)
+    # Create a DP table where dp[i][j] will be the max value for first i items with capacity j
+    dp = [[0] * (W + 1) for _ in range(N + 1)]
+    
+    # Fill the DP table
+    for i in range(1, N + 1):
+        for j in range(W + 1):
+            if w[i-1] <= j:
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + p[i-1])
+            else:
+                dp[i][j] = dp[i-1][j]
+                
+    # The maximum value is found in dp[N][W]
+    max_value = dp[N][W]
+    
+    # Trace back to find which items are in the optimal subset
+    capacity = W
+    items_used = []
+    for i in range(N, 0, -1):
+        if dp[i][capacity] != dp[i-1][capacity]:
+            items_used.append(i-1)
+            capacity -= w[i-1]
+    
+    items_used.reverse()
+    
+    return max_value, items_used
+
+# Example usage:
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+max_p_sum, items_indices = knapsack(p, w, W)
+print("Maximum sum of p:", max_p_sum)
+print("Indices of elements used:", items_indices)
+```
+
+Explanation:
+- The function `knapsack` is defined to take three inputs: `p` (profit values), `w` (weight values), and `W` (maximum capacity).
+- The core of this solution is dynamic programming. The `dp` table is constructed where `dp[i][j]` holds the maximum profit that can be achieved with the first `i` items and a total weight limit of `j`.
+- Once the table is filled, the `max_value` is found at `dp[N][W]`. The code then traces back through the table to determine which items contribute to this maximum value.
+- The solution returns both the maximum profit sum and the indices of the items chosen. These indices allow us to know exactly which items made up the optimal subset.
+
+In the example usage, three items with specific profits and weights are given along with a maximum weight capacity. After running the function, both the maximum achievable profit and the indices of the items that contribute to this profit are provided.

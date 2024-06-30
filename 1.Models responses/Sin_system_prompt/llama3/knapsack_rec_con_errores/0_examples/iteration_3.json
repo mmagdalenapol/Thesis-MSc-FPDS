@@ -1,0 +1,6 @@
+Here is the result:
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are two syntax errors in the code. Firstly, the variable 'Wt' is not defined. It should be 'wt'. Secondly, in the line 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)', 'Wt' should be 'wt' and '- 1' should be 'n - 1'."
+}

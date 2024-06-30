@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Multiple syntax errors detected: 'if p is None:', p should be primes. The range must be specified with parentheses, not brackets: 'range(2, x + 1)' and 'range(c*c, x+1, c)'. Variable 'c' should be 'current' as it is defined in function signature."
+}

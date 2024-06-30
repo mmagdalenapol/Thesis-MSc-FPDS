@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "Syntax error: curly braces {} should be used for 'p.append{i}' and 'p.append{i}'."
+}

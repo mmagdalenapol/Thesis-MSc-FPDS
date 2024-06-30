@@ -1,0 +1,25 @@
+The algorithm you described is known as the Sieve of Eratosthenes, named after the ancient Greek mathematician Eratosthenes. It is an efficient method for finding all prime numbers up to a given limit.
+
+Here is a Python implementation of the Sieve of Eratosthenes algorithm that you can use to generate all prime numbers up to a given number x:
+
+```python
+def sieve_of_eratosthenes(limit, prime_list=None, current=2):
+    if prime_list is None:
+        prime_list = list(range(2, limit + 1))
+
+    if current > int(limit**0.5):
+        return prime_list
+
+    prime_list = [num for num in prime_list if num == current or num % current != 0]
+    
+    return sieve_of_eratosthenes(limit, prime_list, current=current+1)
+
+# Example usage
+x = 20
+primes = sieve_of_eratosthenes(x)
+print(primes)
+```
+
+You can adjust the value of `x` to generate the list of prime numbers up to a different limit.
+
+I hope this helps! Let me know if you have any questions or need further assistance.

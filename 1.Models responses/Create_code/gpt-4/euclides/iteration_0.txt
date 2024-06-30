@@ -1,0 +1,26 @@
+What you're describing is essentially the process used in the Euclidean algorithm to find the greatest common divisor (GCD) of two numbers \( a \) and \( b \). The Euclidean algorithm repeatedly subtracts the smaller number from the larger one (or uses the modulus operator, which is a more efficient computational representation of the same process) until the remainder is 0. The last non-zero remainder is the GCD of the original pair.
+
+Here's a Python code snippet that implements the Euclidean algorithm based on your description, finding the GCD of two integers:
+
+```python
+def euclidean_algorithm(a, b):
+    # Ensure a and b are natural numbers (positive integers)
+    if a < 1 or b < 1:
+        raise ValueError("Both a and b must be natural numbers")
+    
+    # Continue finding remainders until one of them is 0
+    while b != 0:
+        a, b = b, a % b
+    
+    # a is now the GCD of the original a and b
+    return a
+
+# Example usage
+a = 48
+b = 18
+print("The GCD of", a, "and", b, "is:", euclidean_algorithm(a, b))
+```
+
+This Python function first checks if `a` and `b` are both natural numbers. It then proceeds to iterate, replacing `a` with `b` and `b` with `a % b` (the remainder when `a` is divided by `b`) until `b` becomes 0. At that point, `a` contains the GCD.
+
+To answer your question about the name of the algorithm: This is called the **Euclidean Algorithm**, which has been known since ancient times and is a fundamental algorithm for number theory and computation of the greatest common divisor (GCD).

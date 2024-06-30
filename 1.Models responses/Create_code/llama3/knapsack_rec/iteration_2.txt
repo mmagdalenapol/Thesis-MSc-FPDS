@@ -1,0 +1,28 @@
+Here is a Python code that solves the problem recursively:
+
+```python
+def knapsack_recursive(p, w, W, n):
+    if n == 0 or W == 0:
+        return 0, []
+    if w[n-1] > W:
+        return knapsack_recursive(p, w, W, n-1)
+    else:
+        included, included_indices = knapsack_recursive(p, w, W-w[n-1], n-1)
+        not_included, not_included_indices = knapsack_recursive(p, w, W, n-1)
+        if p[n-1] + included > not_included:
+            return p[n-1] + included, included_indices + [n-1]
+        else:
+            return not_included, not_included_indices
+
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+n = len(p)
+max_sum, indices = knapsack_recursive(p, w, W, n)
+print("Maximum sum:", max_sum)
+print("Indices of selected elements:", indices)
+```
+
+This algorithm is known as the 0/1 Knapsack Problem. It's a classic problem in computer science and operations research that involves finding the optimal way to pack a set of items of different weights and values into a knapsack of limited capacity.
+
+The time complexity of this recursive algorithm is O(2^n), which can be very slow for large inputs. A more efficient solution would be to use dynamic programming, which can solve the problem in O(nW) time.

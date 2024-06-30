@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors: the variable 'Wt' is used but not defined or assigned previously; it should probably be 'wt'. In the call `fun_1(W, Wt, - 1, val)`, the function signature does not match the expected parameters 'fun_1(W, wt, val, n)'. Additionally, recursions use '-' instead of 'n - 1'."
+}

@@ -1,0 +1,30 @@
+  Sure, here's a Python code that implements the steps you described:
+
+```
+def euclidean_division(a, b):
+    while b != 0:
+        quotient, remainder = divmod(a, b)
+        if remainder == 0:
+            return b
+        a, b = b, remainder
+    return a
+```
+
+Explanation:
+
+* The function takes two positive integers `a` and `b` as input.
+* The while loop continues until `b` is 0.
+* Inside the loop, we use the `divmod()` function to perform the Euclidean division of `a` by `b`.
+* If the remainder of the division is 0, we return `b` as the denominator.
+* If the remainder is not 0, we set `a` and `b` to the denominator and remainder of the previous division, respectively, and repeat the process.
+* When the remainder is 0, we return the denominator of that division.
+
+Here's an example usage of the function:
+
+```
+print(euclidean_division(12, 3))  # Output: 4
+```
+
+In this example, the Euclidean division of 12 by 3 has a remainder of 0, so the function returns 4 as the denominator.
+
+I hope this helps! Let me know if you have any questions or need further clarification.

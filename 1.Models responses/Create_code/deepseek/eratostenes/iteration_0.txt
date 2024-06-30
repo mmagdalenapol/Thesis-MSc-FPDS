@@ -1,0 +1,27 @@
+
+The algorithm you described is known as the Sieve of Eratosthenes. It is a simple and efficient algorithm for finding all primes smaller than a given number n.
+
+Here is a Python implementation of the Sieve of Eratosthenes:
+
+```python
+def sieve_of_eratosthenes(n):
+    primes = [True for i in range(n+1)]
+    p = 2
+    while (p * p <= n):
+        if (primes[p] == True):
+            for i in range(p * p, n+1, p):
+                primes[i] = False
+        p += 1
+    prime_numbers = [p for p in range(2, n) if primes[p]]
+    return prime_numbers
+
+print(sieve_of_eratosthenes(30))
+```
+
+This code will output:
+
+```
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+```
+
+These are all the prime numbers less than 30.

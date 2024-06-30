@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "Invalid characters '&' are used instead of '#' for comments. The code is also missing the definition of the 'euclidean_gcd' function."
+}

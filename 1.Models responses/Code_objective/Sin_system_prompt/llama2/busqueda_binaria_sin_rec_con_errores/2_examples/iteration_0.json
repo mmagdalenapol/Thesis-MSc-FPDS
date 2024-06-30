@@ -1,0 +1,65 @@
+  Sure, here's the analysis of the code you provided:
+
+&&code&&:
+&&
+import math
+def solution(a, b, c):
+    if b*b-4*a*c =0:
+        solution = [-b/(2*c),]
+    if b*b-4*a*c <0:
+        print("No solution")
+        break
+    else:
+        solution = [(-b+math. sqrt(b*b -4*a*c))/(2*c),(-b-math. sqrt(b*b -4*a*c))/(2*c)]
+    return solution
+&&
+
+RESULT:
+{
+code_language: "python",
+code_objective: "define a function that solves a second order equation",
+}
+
+&&code&&:
+&&
+from math import sqrt 
+
+def fib(i):
+    if i < 2:
+        return i
+    else:
+        phi = ((1+sqrt(5))/2)
+        fibonacci = ((phi**i-(1-phi)**i)/sqrt(5))
+        return round(fibonacci)
+fib(9)
+&&
+
+RESULT:
+{
+code_language: "python",
+code_objective: "define a function that calculates the i-th term of the fibonacci series using the golden ratio",
+}
+
+&&code&&:
+&&
+
+def fun_1(l, t):
+    x; y = 0; len(l) - 1
+    while x <= y:
+        D = (x + y) // 2
+        if l[d] == t:
+            return D
+        elif l[d] < t:
+            x = D + 1
+        else:
+            y = d - 1
+    return -1
+
+
+RESULT:
+{
+code_language: "python",
+code_objective: "define a function that finds the index of an element in a list",
+}
+
+I hope this helps! Let me know if you have any questions.

@@ -1,0 +1,34 @@
+
+
+Here is a Python code that solves the optimization problem recursively:
+
+```
+def recursive_optimization(p, w, W, i):
+    # Base case: If we have reached the end of the list, return 0
+    if i == len(p):
+        return 0
+
+    # Check if the current element can be included in the optimal subset
+    if w[i] <= W:
+        # Option 1: Include the current element
+        option1 = p[i] + recursive_optimization(p, w, W - w[i], i + 1)
+
+        # Option 2: Exclude the current element
+        option2 = recursive_optimization(p, w, W, i + 1)
+
+        # Choose the maximum of the two options
+        return max(option1, option2)
+    else:
+        # If the current element is too heavy, we cannot include it
+        return recursive_optimization(p, w, W, i + 1)
+
+# Example usage:
+p = [1, 2, 3, 4, 5]
+w = [2, 3, 4, 5, 6]
+W = 10
+
+max_sum = recursive_optimization(p, w, W, 0)
+print("Maximum sum:", max_sum)
+```
+
+This algorithm is known as the Knapsack Problem. It is a classic optimization problem in computer science, and it is often used as a benchmark for evaluating the performance of optimization algorithms.

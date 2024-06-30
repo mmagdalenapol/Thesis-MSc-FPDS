@@ -1,0 +1,13 @@
+```python
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "Missing colon after function definition: 'def fun_1(l, t)\n    x; y = 0; len(l) - 1'",
+        "Invalid syntax: 'while x <= y\n    D = (x + y) // 2'",
+        "Missing colon after 'if' statement: 'if l[d] == t:'",
+        "Missing colon after 'elif' statement: 'elif l[d] < t'",
+        "Invalid syntax: 'else\n            y = d - 1'",
+        "Missing closing parenthesis for the function call: 'return -1'"
+    ]
+}
+```

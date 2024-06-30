@@ -1,0 +1,34 @@
+The algorithm you described is known as the Euclidean Algorithm for finding the greatest common divisor of two numbers. It is a well-known algorithm used in number theory and mathematics.
+
+I can provide you with Python code that implements this algorithm recursively to find the denominator of the division that has a remainder of 0:
+
+```python
+def euclidean_algorithm(a, b):
+    if b == 0:
+        return a
+    else:
+        q = a // b
+        r = a % b
+        return euclidean_algorithm(b, r)
+
+def find_denominator(a, b):
+    if a < 0 or b < 0:
+        print("Both numbers should be natural numbers.")
+        return None
+    
+    x = max(a, b)
+    y = min(a, b)
+
+    if y == 0:
+        return None
+
+    return euclidean_algorithm(x, y)
+
+# Example usage
+a = 63
+b = 27
+denominator = find_denominator(a, b)
+print(f"The denominator of the division with remainder 0 is: {denominator}")
+```
+
+You can use this code by providing two natural numbers, and it will return the denominator of the division that has a remainder of 0. Feel free to adjust the input values or integrate this code into your project as needed.

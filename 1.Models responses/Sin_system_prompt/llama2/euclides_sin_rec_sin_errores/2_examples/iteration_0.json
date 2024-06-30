@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the function name 'fun_1' should be capitalized to 'Fun_1' according to Python conventions. Additionally, the 'isinstance' function takes two arguments, the first being the object to be checked and the second being the type to check against. In this code, the first argument is not an object but a variable 'a' and the second argument is not a type but a value 'int'. Furthermore, the 'or' operator in the condition statement should be 'and' to check for multiple conditions. Finally, the last line 'return "No se encontró."' should be indented to be within the while loop."
+}

@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `def` keyword. \n2. Missing indentation for the `if` statements. \n3. Missing parentheses for the `raise` statement. \n4. Incorrect use of the `;` operator. \n5. Missing indentation for the `return` statement. \n6. Incorrect use of the `==` operator for assignment. \n7. Missing indentation for the `print` statement."
+}

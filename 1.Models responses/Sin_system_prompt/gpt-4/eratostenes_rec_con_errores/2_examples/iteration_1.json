@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Several syntax errors: 'if p is None:' should be 'if primes is None:', used 'range[2, x + 1]' and 'range [c*c, x+1, c]' should be 'range(2, x + 1)' and 'range(c*c, x+1, c)', 'return fun_1(x, c + 1, p)' should be 'return fun_1(x, primes=p, current=c + 1)'."
+}

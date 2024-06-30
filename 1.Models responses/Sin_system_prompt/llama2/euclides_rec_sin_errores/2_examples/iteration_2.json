@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There is a missing colon after the def keyword in the function euclidean_gcd. Additionally, there is a missing space between the if keyword and the opening parenthesis in the second if statement. Finally, there is a missing closing parenthesis at the end of the function."
+}

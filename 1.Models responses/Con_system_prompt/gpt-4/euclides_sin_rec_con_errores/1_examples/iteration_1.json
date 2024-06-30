@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The usage 'not isinstance(a, ent)' should use 'int' instead of 'ent' for checking type. Additionally, the condition in 'while y =! 0:' should be 'while y != 0:' to correctly apply the inequality test."
+}

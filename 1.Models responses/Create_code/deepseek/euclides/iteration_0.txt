@@ -1,0 +1,15 @@
+
+The algorithm you described is known as the Euclidean algorithm, also known as the greatest common divisor algorithm. It is used to find the greatest common divisor of two numbers.
+
+Here is a Python implementation of the Euclidean algorithm:
+
+```python
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+```
+
+This function takes two numbers as input, and returns their greatest common divisor. The algorithm works by repeatedly replacing `a` with `b` and `b` with the remainder of `a` divided by `b`, until `b` is 0. At this point, `a` is the greatest common divisor of the original `a` and `b`.
+
+The Euclidean algorithm is named after Euclid, a Greek mathematician who first described it in his Elements.

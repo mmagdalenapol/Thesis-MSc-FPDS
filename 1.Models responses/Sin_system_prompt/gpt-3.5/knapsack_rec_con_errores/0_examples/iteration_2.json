@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. In the function definition, the parameter 'Wt' is used but it should be 'wt'.\n2. In the recursive calls to the function 'fun_1', the arguments passed are not in correct order."
+}

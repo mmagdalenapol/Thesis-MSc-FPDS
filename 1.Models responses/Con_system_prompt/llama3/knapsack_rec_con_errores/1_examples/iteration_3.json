@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'fun_1(W, Wt, - 1, val)' the third argument 'Wt' should be 'wt'. Also, the variable 'Wt' is not defined, it should be 'wt'."
+}

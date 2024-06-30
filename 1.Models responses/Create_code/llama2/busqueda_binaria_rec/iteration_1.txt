@@ -1,0 +1,30 @@
+  Sure! Here is a Python implementation of the binary search algorithm:
+
+```
+def binary_search(arr, target):
+    n = len(arr)
+    if n == 0:
+        return -1
+    mid = n // 2
+    if arr[mid] == target:
+        return mid
+    elif target < arr[mid]:
+        return binary_search(arr[:mid], target)
+    else:
+        return binary_search(arr[mid+1:], target)
+```
+
+The function takes an array and a target value as input, and it returns the index of the target value in the array if it exists, or -1 if it doesn't.
+
+As for your question, yes, this algorithm has a name! It's called binary search, which refers to the fact that it uses a divide-and-conquer approach to search for an element in a list. By repeatedly dividing the list in half and searching for the target value in one of the two halves, the algorithm reduces the number of elements it needs to check by half each time, resulting in a logarithmic time complexity of O(log n).
+
+Here's an example usage of the function:
+
+```
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = 5
+result = binary_search(arr, target)
+print(result) # Output: 4
+```
+
+In this example, the function returns 4, which is the index of the target value 5 in the array. If the target value were not found in the array, the function would return -1.

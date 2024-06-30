@@ -1,0 +1,23 @@
+The process described in the given scenario is a form of the Euclidean algorithm, which is famous for computing the greatest common divisor (GCD) of two integers. The Euclidean algorithm repeatedly replaces the larger number by its remainder when divided by the smaller number until the remainder is 0. The divisor at this stage will be the GCD.
+
+Here’s a Python function that implements this recursive approach to find the GCD, which corresponds to the denominator of the division process when the remainder becomes 0:
+
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+# Example usage:
+a = 48
+b = 18
+print(f"The GCD of {a} and {b} is {gcd(a, b)}")
+```
+
+This function starts with two numbers, `a` and `b`, and applies the Euclidean algorithm. The process is recursive, and the recursion continues until the remainder `b` in the function `gcd(a, b)` becomes zero. At that point, it returns `a`, which is the GCD of the original pair of numbers. 
+
+This function ensures the termination when `b` becomes zero, which as per your problem statement, will be the denominator of the division having a remainder of zero.
+
+### Answer to the additional question:
+Yes, this algorithm has a name—it is known as the **Euclidean algorithm**. It's a well-known mathematical algorithm used primarily to find the greatest common divisor (GCD) of two integers.

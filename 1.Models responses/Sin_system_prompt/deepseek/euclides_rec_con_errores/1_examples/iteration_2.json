@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In 'if b > a: a; b == b; a', the syntax for assignment is not correct. Also, the ';' is not needed in Python. The correct syntax should be 'a = b = a'."
+}

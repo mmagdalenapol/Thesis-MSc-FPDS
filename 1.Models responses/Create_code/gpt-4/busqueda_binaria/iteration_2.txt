@@ -1,0 +1,37 @@
+The algorithm you described is known as Binary Search. It operates on the logic of dividing the search interval in half, which is particularly efficient for sorted arrays.
+
+Here's a Python code to perform Binary Search:
+
+```python
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        # Check if x is present at mid
+        if arr[mid] == x:
+            return mid  # Return the index if x is found
+        # If x is greater, ignore the left half
+        elif arr[mid] < x:
+            low = mid + 1
+        # If x is smaller, ignore the right half
+        else:
+            high = mid - 1
+    return -1  # If we reach here, the element was not in the array
+
+# Example usage:
+arr = [3, 4, 5, 6, 7, 8, 9]
+x = 5
+result = binary_search(arr, x)
+if result != -1:
+    print(f"The element is present at index {result}")
+else:
+    print("The element is not present in the array")
+```
+
+In this implementation:
+- The list `arr` must be sorted.
+- `x` is the target element that we are searching for in the list.
+- The function will return the index position of `x` in `arr` if it exists; otherwise, it returns `-1`.
+
+Binary Search has a time complexity of O(log n), making it significantly more efficient than linear search (which has a complexity of O(n)) especially for larger lists. This efficiency comes from continually halving the search space, thus reducing the number of comparisons needed to locate the target element.

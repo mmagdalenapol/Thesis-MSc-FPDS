@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "SyntaxError: invalid syntax. Missing colons after function definition and if/elif/else statements. Incorrect variable names (D and d). Missing colons after while loop and else statement. Incorrect assignment operator in line x; y = 0; len(l) - 1."
+}

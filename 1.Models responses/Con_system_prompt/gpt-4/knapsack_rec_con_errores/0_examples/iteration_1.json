@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The variable 'Wt' should be 'wt' as Python is case-sensitive. There's also a mistake in the recursive calls of the function 'fun_1': the order of parameters in these calls is incorrect in some cases."
+}

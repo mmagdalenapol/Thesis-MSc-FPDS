@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Typo in function arguments for 'Wt' variable. It should be 'wt' instead of 'Wt'.\n2. Syntax error in line 9, extra space between '-' and '1'.\n3. Syntax error in line 10, missing comma between 'wt' and 'n - 1'.\n4. Syntax error in line 11, missing comma between 'W' and 'Wt'."
+}

@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'if p is None:', the syntax for the 'is' keyword is incorrect. It should be 'if p is None:' instead of 'if p is None:'. Additionally, in the last line of the function, there is a missing ')' before the 'return' keyword."
+}

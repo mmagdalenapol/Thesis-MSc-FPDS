@@ -1,0 +1,6 @@
+```json
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'Wt' is used in the code, while it appears from the parameters that it should be 'wt'. Python is case-sensitive. 2. The call 'fun_1(W - Wt[n - 1], wt, n - 1, val)' is incorrect as the order and count of parameters passed do not match the function's signature. 3. Another incorrect call 'fun_1(W, Wt, - 1, val)' has similar issues with ordering of parameters; 'Wt' is passed instead of 'wt' and '- 1' appears out of position."
+}
+```

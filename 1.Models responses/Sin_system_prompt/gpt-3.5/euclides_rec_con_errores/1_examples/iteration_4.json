@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The syntax '&' is not valid in Python. It should be '#' to comment in Python."
+}

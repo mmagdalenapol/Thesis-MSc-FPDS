@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'p.append{i}' and similarly 'p.append{i}', the syntax used to append items to the list is incorrect. It should use parentheses not curly braces, like 'p.append(i)'."
+}

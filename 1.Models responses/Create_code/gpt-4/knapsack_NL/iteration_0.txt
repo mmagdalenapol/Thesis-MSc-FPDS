@@ -1,0 +1,53 @@
+To implement the described recursive function `fun_1` and evaluate it with the necessary input parameters in Python, follow the steps outlined below:
+
+1. **Define the `fun_1` function** according to the rules provided.
+2. **Evaluate `fun_1`** using inputs `W`, `w`, `p`, and `n`.
+
+Here's a complete implementation:
+
+```python
+def fun_1(A, z, t, m):
+    # Base case when m or A are zero
+    if m == 0 or A == 0:
+        return 0, []
+    
+    # Recursive condition: ignoring the current item if it's weight is more than the remaining capacity
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    
+    # Option 1: Include the current item
+    c, subset_c = fun_1(A - z[m-1], z, t, m-1)
+    c += t[m-1]
+    
+    # Option 2: Exclude the current item
+    d, subset_d = fun_1(A, z, t, m-1)
+    
+    # Choose the better option
+    if c > d:
+        return c, subset_c + [m-1]
+    else:
+        return d, subset_d
+
+# Sample inputs:
+p = [60, 100, 120]  # List of profit or value
+w = [10, 20, 30]    # Corresponding weights
+W = 50              # Max weight capacity
+n = len(p)          # Number of items
+
+# Function execution
+result, items = fun_1(W, w, p, n)
+print("Maximum profit:", result)
+print("Items included:", items)
+```
+
+**Explanation:**
+
+- The function `fun_1` is implemented recursively.
+    - It checks if either the capacity `A` or the number of items `m` to consider is zero.
+    - If the weight `z[m-1]` of the current item (1-based position `m-1` because `m` counts from 1 in recursive calls but lists are 0-indexed) exceeds the current capacity `A`, the current call ignores this item and recurses with the remaining items.
+    - It calculates the profit `c` when including the current item, which involves the profit of the current item plus the best profit obtained from the subproblem with reduced capacity and one fewer item.
+    - It also calculates the profit `d` when excluding the current item.
+    - Depending on which option—include or exclude—gives a higher profit, it chooses either `c` or `d` and constructs the corresponding list of item indices.
+- This function ultimately returns a tuple: the maximum achievable profit and a list of 0-indexed positions of items that achieve this profit.
+
+The provided example vectors `p` and `w`, along with the weight limit `W`, show how to call `fun_1` and output its results.

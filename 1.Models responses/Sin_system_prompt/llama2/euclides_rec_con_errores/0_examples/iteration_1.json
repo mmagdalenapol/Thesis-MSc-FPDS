@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `def` keyword. \n2. Missing indentation for the `if` statements. \n3. Incorrect use of the `;` operator, it should be a colon (:) for the recursion call. \n4. Missing parenthesis for the `print` function call. \n5. The `euclidean_gcd` function is not defined."
+}

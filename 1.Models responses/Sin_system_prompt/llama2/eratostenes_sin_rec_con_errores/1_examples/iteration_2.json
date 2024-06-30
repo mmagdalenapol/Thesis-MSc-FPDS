@@ -1,0 +1,20 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'b*b-4*a*c =0' the syntax for comparison is not correct."
+}
+
+The error in the code is the use of a single "=" instead of a double "==" for the comparison in the if statement. In Python, a single "=" is used for assignment, while a double "==" is used for comparison.
+
+The corrected code would be:
+
+if b*b-4*a*c == 0:
+    solution = [-b/(2*c),]
+if b*b-4*a*c < 0:
+    print("No solution")
+    break
+else:
+    solution = [(-b+math.sqrt(b*b -4*a*c))/(2*c),(-b-math.sqrt(b*b -4*a*c))/(2*c)]
+
+return solution
+
+It's also worth noting that the break statement is not necessary in the else clause, as the return statement will exit the function regardless.

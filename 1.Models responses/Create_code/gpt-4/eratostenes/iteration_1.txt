@@ -1,0 +1,33 @@
+The algorithm you've described is known as the "Sieve of Eratosthenes." It is a classical approach for finding all prime numbers up to a given limit, leveraging the fact that multiples of a prime number are not prime. Below is a Python implementation of the Sieve of Eratosthenes to find all the prime numbers less than a given number x:
+
+```python
+def sieve_of_eratosthenes(x):
+    # Create a boolean array "prime[0..x]" and initialize all entries as true.
+    # A value in prime[i] will eventually be false if i is not a prime, else true.
+    prime = [True for _ in range(x)]
+    p = 2
+    while (p * p <= x):
+        # If prime[p] is not changed, then it is a prime
+        if prime[p] == True:
+            # Updating all multiples of p to false indicating non-prime
+            for i in range(p * p, x, p):
+                prime[i] = False
+        p += 1
+    prime[0] = prime[1] = False # 0 and 1 are not prime numbers
+    
+    # Collecting all prime numbers
+    primes = [p for p, is_prime in enumerate(prime) if is_prime]
+    return primes
+
+# Example usage:
+x = 30
+print(f"All prime numbers smaller than {x}:\n{sieve_of_eratosthenes(x)}")
+```
+
+This script defines a function `sieve_of_eratosthenes()` that accepts a number `x`, and it will return a list of all prime numbers less than `x`. Inside the function:
+1. A list called `prime` is initialized to hold boolean values. All values are initially set to `True` (assuming all numbers are prime initially).
+2. Starting from the first prime number `2`, it marks all multiples of each found prime number as `False`.
+3. It loops through numbers, stopping at the sqrt(x) as described (since beyond that, all non-primes would have already been identified by their smaller prime factors).
+4. Finally, it constructs and returns a list of numbers that are still marked `True` in the `prime` list (which means they are primes).
+
+You can run this Python script with different values of x to find all primes smaller than x using the Sieve of Eratosthenes.

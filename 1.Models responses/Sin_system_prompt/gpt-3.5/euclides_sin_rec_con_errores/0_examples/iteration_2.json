@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are syntax errors in the code. The errors are: 1. 'ent' should be 'int' to check if the variables are integers. 2. The while loop condition should use '!=' instead of '=!' to check if 'y' is not equal to 0."
+}

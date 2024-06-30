@@ -1,0 +1,4 @@
+{
+        "code_sintax_error": "Yes",
+        "code_sintax_explanation": "It seems that there are several syntax errors in the code: There are incorrect variables 'Wt' and 'Wt' should be 'wt'. The recursive calls have incorrect arguments passed, such as 'n - 1' instead of 'val, n - 1' and '- 1' instead of 'n - 1'."
+}

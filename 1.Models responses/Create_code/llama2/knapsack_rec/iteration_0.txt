@@ -1,0 +1,18 @@
+  Sure, here is a Python code that should accomplish what you described:
+```
+def optimize_subset(p, w, W):
+    if W == 0:
+        return 0, []
+    max_sum, selected_indices = None, []
+    for subset_sum in range(W+1):
+        for subset in combinations(range(len(p)), min(len(p), subset_sum)):
+            curr_sum = sum(p[i] for i in subset)
+            if curr_sum > max_sum or (curr_sum == max_sum and sum(w[i] for i in subset) < sum(w[i] for i in selected_indices)):
+                max_sum, selected_indices = curr_sum, subset
+    return max_sum, selected_indices
+```
+This function uses the `combinations` function from the `itertools` module to generate all possible subsets of the elements in `p` and `w` with a sum less than or equal to `W`. It then iterates over these subsets, computes the sum of the `p` values for each subset, and checks if it is greater than the current maximum sum or if it is equal and the sum of the `w` values for the subset is less than the sum of the `w` values for the current selected indices. If it is, it updates the maximum sum and selected indices.
+
+The function returns the maximum sum of the selected elements in `p` and the indices of the elements that were selected.
+
+As for whether this algorithm has a name, it appears to be a variation of the 0/1 knapsack problem, which is a well-known problem in computer science and operations research. The main difference between this problem and the classic 0/1 knapsack problem is that in this case, the items have both a weight and a profit associated with them, whereas in the classic problem, the items only have a weight. The algorithm you described is a greedy algorithm, which is a common approach for solving this type of problem.

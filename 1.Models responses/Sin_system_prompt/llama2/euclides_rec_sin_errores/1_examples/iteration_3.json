@@ -1,0 +1,10 @@
+  {
+code_sintax_error: "No",
+code_sintax_explanation: ""
+}
+
+Explanation:
+
+The code provided is syntactically correct. It defines a function `euclidean_gcd` that takes two natural numbers as input and returns their greatest common divisor (GCD) using the Euclidean algorithm. The function has a base case when `b` is 0, and otherwise, it makes a recursive call with `a` and `b` swapped. The example usage at the end is also correct.
+
+Therefore, the result is a dictionary with "code_sintax_error" set to "No" and "code_sintax_explanation" set to an empty string, indicating that there are no syntax errors in the code.

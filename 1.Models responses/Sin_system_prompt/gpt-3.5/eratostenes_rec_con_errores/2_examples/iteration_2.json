@@ -1,0 +1,10 @@
+{
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "There are multiple syntax errors in the code:
+        1. In line 4, 'p is None' should be 'primes is None'
+        2. In line 5, '[i for i in range[2, x + 1]]' should be '[i for i in range(2, x + 1)]'
+        3. In line 6, 'c * c' should be 'current * current'
+        4. In line 7, 'range [c*c,  x+1, c]' should be 'range(c*c, x+1, c)'
+        5. In line 8, 'j in p' should be 'j in primes'
+        6. In line 9, 'fun_1(x, c + 1, p)' should be 'fun_1(x, primes, current + 1)'"
+}

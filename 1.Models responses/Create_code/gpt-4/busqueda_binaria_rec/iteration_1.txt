@@ -1,0 +1,39 @@
+The algorithm you are referring to is known as **Binary Search**. It is a widely used algorithm in computer science for efficiently locating an element within a sorted list. Since the list is divided into halves in each step, binary search achieves a logarithmic time complexity, making it much more efficient than linear search, especially for large data sets.
+
+Here's a Python implementation of binary search using recursion:
+
+```python
+def binary_search(arr, target, low, high):
+    if high >= low:
+        mid = (high + low) // 2
+
+        # If the middle element is the target, return its index
+        if arr[mid] == target:
+            return mid
+        
+        # If the target is smaller than the middle element, it is in the left subarray
+        elif arr[mid] > target:
+            return binary_search(arr, target, low, mid - 1)
+        
+        # Else the target must be in the right subarray
+        else:
+            return binary_search(arr, target, mid + 1, high)
+    else:
+        # The target is not present in the array
+        return -1
+
+# Example usage:
+arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+target = 13
+result = binary_search(arr, target, 0, len(arr) - 1)
+print("Element found at index" if result != -1 else "Element not found:", result)
+```
+
+In the provided code:
+1. The `binary_search` function takes an array `arr`, the `target` value to search for, and the `low` and `high` indices that define the current subarray being searched.
+2. The function calculates the middle index `mid`. It then checks whether the middle element is the target.
+3. If the middle element is not the target, the function determines whether to search in the left or the right half of the array by comparing the target with the middle element.
+4. The function recursively calls itself with the new subarray boundaries determined in step 3. If the target is smaller than the middle element, the function searches the left subarray; otherwise, it searches the right subarray.
+5. If the boundaries overlap (i.e., `high` becomes less than `low`), the function concludes that the target is not present in the array and returns `-1`.
+
+You can use and adjust this function according to the specifics of the data you are working with. This implementation assumes the input array is sorted, which is a prerequisite for binary search to function correctly.

@@ -1,0 +1,21 @@
+
+
+The code has a syntax error in the line 'if b*b-4*a*c =0:'. The correct syntax for comparison is 'if b*b-4*a*c == 0:'. The '=' operator is used for assignment, while the '==' operator is used for comparison.
+
+Here is the corrected code:
+
+```
+import math
+def solution(a, b, c):
+    if b*b-4*a*c == 0:
+        solution = [-b/(2*c),]
+    if b*b-4*a*c <0:
+        print("No solution")
+        break
+    else:
+        solution = [(-b+math. sqrt(b*b -4*a*c))/(2*c),(-b-math. sqrt(b*b -4*a*c))/(2*c)]
+
+    return solution
+```
+
+The corrected code should now run without any syntax errors.

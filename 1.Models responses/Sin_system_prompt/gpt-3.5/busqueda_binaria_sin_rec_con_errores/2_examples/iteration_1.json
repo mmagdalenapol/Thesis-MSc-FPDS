@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors in the code: 1. Missing colons after function definition and while loop statement. 2. Use of semicolons instead of commas in variable definition. 3. Incorrect variable names 'D' and 'd'. 4. Missing indentation in the while loop and if-elif-else statements."
+}

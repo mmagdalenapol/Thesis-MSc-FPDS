@@ -1,0 +1,33 @@
+
+
+The algorithm you described is known as the Sieve of Eratosthenes. It is a classic algorithm for finding prime numbers.
+
+Here is a Python implementation of the Sieve of Eratosthenes:
+
+```
+def sieve_of_eratosthenes(x):
+    # Create a list of boolean values to represent if a number is prime or not
+    is_prime = [True] * x
+
+    # We only need to check up to the square root of x
+    limit = int(x ** 0.5)
+
+    # Start with 2, the first prime number
+    for i in range(2, limit + 1):
+        # If the number is prime, mark its multiples as not prime
+        if is_prime[i]:
+            for j in range(i * i, x, i):
+                is_prime[j] = False
+
+    # Return a list of prime numbers up to x
+    return [i for i in range(2, x) if is_prime[i]]
+
+# Example usage
+x = 100
+primes = sieve_of_eratosthenes(x)
+print(primes)
+```
+
+This code will print all prime numbers up to x. The algorithm works by first creating a list of boolean values to represent if a number is prime or not. Then, it iterates through the numbers from 2 to the square root of x, and for each prime number, it marks its multiples as not prime. Finally, it returns a list of prime numbers up to x.
+
+Note that this algorithm is not the most efficient way to find prime numbers, but it is a good starting point for understanding the concept.

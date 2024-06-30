@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Two syntax errors detected. The first one is 'ent' is used instead of 'int' for checking if a variable is an integer. The second error is in 'while y =! 0:', the correct operator for 'not equal to' in Python is '!='."
+}

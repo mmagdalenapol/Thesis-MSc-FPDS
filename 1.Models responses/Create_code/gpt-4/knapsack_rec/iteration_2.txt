@@ -1,0 +1,56 @@
+This problem is a classic computer science problem called the "Knapsack Problem". Specifically, it sounds like the "0/1 Knapsack Problem" where each item can either be taken or not taken, as opposed to being fractionally taken.
+
+Here is a Python code that solves the 0/1 Knapsack Problem using recursion:
+
+```python
+def knapsack(p, w, W, n, memo={}):
+    # Base case: no items or no capacity
+    if n == 0 or W == 0:
+        return (0, [])
+
+    # Use tuple (n, W) as the key for memoization
+    if (n, W) in memo:
+        return memo[(n, W)]
+
+    # If the weight of the nth item is more than Knapsack of capacity W,
+    # then this item cannot be included in the optimal solution
+    if w[n-1] > W:
+        result = knapsack(p, w, W, n-1, memo)
+    else:
+        # Case 1: nth item included
+        included_value, included_items = knapsack(p, w, W-w[n-1], n-1, memo)
+        included_value += p[n-1]
+        included_items = included_items + [n-1]
+
+        # Case 2: nth item not included
+        excluded_value, excluded_items = knapsack(p, w, W, n-1, memo)
+
+        # Choose the case that yields the greater value
+        if included_value > excluded_value:
+            result = (included_value, included_items)
+        else:
+            result = (excluded_value, excluded_items)
+
+    memo[(n, W)] = result
+    return result
+
+# Example usage
+p = [10, 20, 30]  # Values
+w = [5, 10, 15]   # Weights
+W = 25            # Total capacity
+N = len(p)        # Number of items
+
+max_value, used_indices = knapsack(p, w, W, N)
+print("Maximum sum of p:", max_value)
+print("Indices of elements used:", used_indices)
+```
+
+This code will return the maximum possible sum of elements from list `p` such that the corresponding sum of elements from list `w` does not exceed `W`. 
+
+**Explanation**:
+- The `knapsack` function is defined recursively. It determines the best solution by considering whether to include the current element in the subset or not.
+- The function uses "memoization" to save results of subproblems in a dictionary to avoid redundant calculations. This dramatically increases efficiency, especially for larger inputs.
+- The `knapsack` function returns a tuple with the maximum sum obtainable and a list of indices representing the items included to achieve that sum.
+- The function is initially called with `N` (number of items) and `W` (total weight capacity).
+
+Given its recursive nature and use of memoization, this method efficiently solves the 0/1 Knapsack problem, which otherwise has an exponential time complexity if solved using brute force.

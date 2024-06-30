@@ -1,0 +1,19 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm",
+        }
+
+Explanation:
+
+* The code is written in Python.
+* The objective of the code is to define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm.
+
+Note:
+
+* The code uses the Euclidean algorithm to calculate the greatest common divisor of two natural numbers.
+* The function takes two arguments, a and b, which are natural numbers.
+* The function first checks if a and b are natural numbers and ensures that a >= b.
+* If b = 0, the function returns a.
+* Otherwise, the function calculates the remainder of a/b and makes a recursive call with a = b and b = r.
+* The function returns the result of the recursive call.
+* The example usage demonstrates how to use the function to calculate the greatest common divisor of two natural numbers.

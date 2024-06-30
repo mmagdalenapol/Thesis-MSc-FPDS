@@ -1,0 +1,41 @@
+Here's a Python code to implement the steps you've outlined. This algorithm resembles the Sieve of Eratosthenes, which is used to find all primes less than or equal to a given number n:
+
+```python
+import math
+
+def sieve(n):
+    # Step 1 & 2: Create an array x of boolean values initialized to True
+    if n < 2:
+        return []
+    
+    x = [True] * (n + 1)
+    
+    # Step 3: Set the first two positions (0 and 1) to False
+    x[0], x[1] = False, False
+    
+    # Step 4: Start from the first prime number, 2
+    limit = int(math.sqrt(n))
+    for j in range(2, limit + 1):
+        if x[j]:  # Step 4.1: Check if x[j] is still True
+            # Update the multiples of j from j*j to n to False
+            for multiple in range(j*j, n + 1, j):
+                x[multiple] = False
+
+    # Step 4.2: Find all indices that have the value True
+    true_indices = [i for i, value in enumerate(x) if value]
+    
+    return true_indices
+
+# Example usage
+n = 30
+result = sieve(n)
+print(f"Indices with True values (primes up to {n}): {result}")
+```
+
+This script defines a function `sieve` which implements the sieve of Eratosthenes algorithm:
+- It constructs a boolean array, marking non-prime numbers as `False`.
+- The number 0 and 1 are not primes hence initially marked as `False`.
+- For each number from 2 to the square root of `n` (rounded down), it marks its multiples as non-primes (`False`).
+- Finally, it collects and returns the indices of the array which remain `True`, representing prime numbers.
+
+You can test this function with different values of `n` to see the prime numbers up to `n`. The example provided sets `n` to 30 and prints the prime numbers up to 30.

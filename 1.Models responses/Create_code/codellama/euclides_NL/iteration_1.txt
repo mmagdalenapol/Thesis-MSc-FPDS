@@ -1,0 +1,37 @@
+
+
+Here is a Python code that performs the steps you have described:
+
+```
+def euclidean_division(a, b):
+    # Verify if a and b are positive integers
+    if a > 0 and b > 0 and isinstance(a, int) and isinstance(b, int):
+        # Perform the Euclidean division of the larger by the smaller
+        if a > b:
+            quotient, remainder = a // b, a % b
+        else:
+            quotient, remainder = b // a, b % a
+
+        # If the remainder is 0, return the denominator
+        if remainder == 0:
+            return b
+        else:
+            # Repeat the Euclidean division until the remainder is 0
+            while remainder != 0:
+                a, b = b, remainder
+                quotient, remainder = a // b, a % b
+
+            # Return the denominator of the last division with a remainder of 0
+            return b
+    else:
+        return "Invalid input. Please enter two positive integers."
+
+# Example usage
+a = 10
+b = 2
+
+result = euclidean_division(a, b)
+print(result)  # Output: 2
+```
+
+In this code, we first verify if `a` and `b` are positive integers. If they are, we perform the Euclidean division of the larger by the smaller. If the remainder is 0, we return the denominator. If the remainder is not 0, we repeat the Euclidean division until the remainder is 0, and then return the denominator of the last division. If `a` and `b` are not positive integers, we return an error message.

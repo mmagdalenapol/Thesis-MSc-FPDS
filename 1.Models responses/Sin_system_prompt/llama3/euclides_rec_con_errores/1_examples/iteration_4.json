@@ -1,0 +1,7 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are multiple syntax errors in the code. 
+1. The syntax for comparison is not correct in 'b = 0', it should be 'b == 0'. 
+2. The syntax for swapping values is not correct in 'a; b == b; a', it should be 'a, b = b, a'. 
+3. The function name in the function definition is 'fun_1' but it is called as 'euclidean_gcd' in the example usage."
+}

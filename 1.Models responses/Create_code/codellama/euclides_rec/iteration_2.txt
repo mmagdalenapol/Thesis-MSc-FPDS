@@ -1,0 +1,17 @@
+
+
+The algorithm you described is similar to the Euclidean algorithm for finding the greatest common divisor (GCD) of two natural numbers. The Euclidean algorithm is a recursive algorithm that repeatedly finds the remainder of dividing the larger number by the smaller number until the remainder is 0. The last non-zero remainder is the GCD of the two numbers.
+
+Here is a Python implementation of the Euclidean algorithm:
+
+```
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+```
+
+This function takes two natural numbers `a` and `b` as input and returns their GCD. It works by repeatedly dividing the larger number by the smaller number until the remainder is 0.
+
+The Euclidean algorithm is a well-known and efficient algorithm for finding the GCD of two natural numbers. It is often used in number theory and cryptography.

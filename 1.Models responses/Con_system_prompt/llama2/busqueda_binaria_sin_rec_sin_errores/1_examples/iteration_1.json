@@ -1,0 +1,9 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'x, y = 0, len(l) - 1' there is a comma separating the two expressions, which is not allowed in Python."
+        }
+
+
+Note: The error message is pointing to the line where the error occurs, it's not necessary to include the line number in the explanation.
+
+Also, it's worth mentioning that the code has a semantic error, the `break` statement is not inside a loop, so it will raise a `SyntaxError` when executed. But since the instructions are to only check for syntax errors, I'm not including it in the explanation.

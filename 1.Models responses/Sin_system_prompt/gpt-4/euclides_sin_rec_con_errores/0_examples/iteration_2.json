@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'ent' in isinstance should be 'int'. This is likely a typo. 2. In the while loop condition, 'y =! 0' should be 'y != 0' to correctly represent the not equal to operator."
+}

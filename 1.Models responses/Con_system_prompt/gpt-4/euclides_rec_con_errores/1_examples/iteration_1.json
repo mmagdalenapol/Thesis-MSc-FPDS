@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Comments are incorrectly written with '&' instead of '#'. 2. The syntax for swapping values 'a; b == b; a' is incorrect; it should use a tuple assignment, 'a, b = b, a'. 3. Incorrect function call 'euclidean_gcd(a, b)', the correct function name is 'fun_1'. 4. The assignment 'a == 10' and 'b == 6' should be single equals 'a = 10', 'b = 6' for assigning the values."
+}

@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are multiple syntax errors. 1) The syntax for comments in Python is '#' not '&'. 2) In 'a; b == b; a' the syntax for swapping values is not correct, it should be 'a, b = b, a'. 3) In 'a == 10' and 'b == 6' the syntax for assignment is not correct, it should be 'a = 10' and 'b = 6'. 4) The function name in the function definition is 'fun_1' but it's called as 'euclidean_gcd'. 5) In 'b = 0, a is the output' the syntax for comparison is not correct, it should be 'b == 0'."
+}

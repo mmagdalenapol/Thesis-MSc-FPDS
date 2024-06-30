@@ -1,0 +1,4 @@
+{
+  "code_sintax_error": "Yes",
+  "code_sintax_explanation": "1. 'p is None' should be 'primes is None' as 'p' is not defined. 2. The function parameter 'current' should be used instead of 'c' which is not defined. 3. 'range' should not use square brackets. Use parentheses instead."
+}

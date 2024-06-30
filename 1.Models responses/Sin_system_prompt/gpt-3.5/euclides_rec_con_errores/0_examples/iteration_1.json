@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are several syntax errors in the code: 1. Missing colons(:) after the if statements. 2. Incorrect usage of comparison operators in the line 'a; b == b; a'. It should be 'a, b = b, a'. 3. Incorrect function name 'euclidean_gcd' in the print statement. It should be 'fun_1'."
+}

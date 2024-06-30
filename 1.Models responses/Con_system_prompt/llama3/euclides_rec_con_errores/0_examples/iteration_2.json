@@ -1,0 +1,17 @@
+{"code_sintax_error": "Yes", "code_sintax_explanation": "There are several syntax errors in the code. 
+
+1. The code uses '&' instead of '#' for comments. 
+
+2. The line 'a; b == b; a' is not a valid Python statement. It seems like the intention was to swap the values of 'a' and 'b', but the correct way to do this in Python is 'a, b = b, a'.
+
+3. The line 'if b = 0:' is using a single '=' for assignment instead of '==' for comparison.
+
+4. The function is defined as 'fun_1' but it is called as 'euclidean_gcd' in the example usage.
+
+5. The variables 'a' and 'b' are assigned values using '==' which is a comparison operator, not an assignment operator. The correct way to assign values is using '='.
+
+6. The function 'fun_1' is not indented properly. In Python, indentation is used to define the scope of a block of code.
+
+7. The 'raise ValueError' statement is not indented properly. It should be indented under the 'if' statement.
+
+8. The 'return a' statement is not indented properly. It should be indented under the 'if' statement."}

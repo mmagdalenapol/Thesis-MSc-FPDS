@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors. Firstly, the comments are initiated using '&' which is incorrect; comments should begin with '#'. The line 'a; b == b; a' attempts to swap values with incorrect syntax; it should be 'a, b = b, a'. Lastly, the function calls in the example usage are incorrect; it uses 'euclidean_gcd(a, b)' which is undefined in given code instead of 'fun_1(a, b)'."
+}

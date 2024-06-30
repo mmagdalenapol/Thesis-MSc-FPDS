@@ -1,0 +1,45 @@
+The problem you've described is a form of the "Knapsack problem," specifically the 0/1 Knapsack problem. Here's a Python function to solve it using recursion:
+
+```python
+def knapsack(p, w, W, n):
+    if n == 0 or W == 0:
+        return 0, []
+    if w[n-1] > W:
+        return knapsack(p, w, W, n-1)
+    else:
+        without_n, without_items = knapsack(p, w, W, n-1)
+        with_n, with_items = knapsack(p, w, W - w[n-1], n-1)
+        with_n += p[n-1]
+        if with_n > without_n:
+            return with_n, with_items + [n-1]
+        else:
+            return without_n, without_items
+
+def solve_knapsack(p, w, W):
+    max_value, items_used = knapsack(p, w, W, len(p))
+    items_used = [i+1 for i in items_used]  # Convert to 1-based index
+    return max_value, items_used
+
+# Example usage:
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+max_value, items_used = solve_knapsack(p, w, W)
+print("Maximum value:", max_value)
+print("Items used: (1-indexed)", items_used)
+```
+
+### Details
+
+The `knapsack` function recursively explores two scenarios for each item: including the item in the knapsack and excluding it. For each item "n":
+
+1. If the item is heavier than the current capacity (`W`), it is discarded.
+2. If the item can be potentially included, the function explores:
+   - The maximum value if the item is included.
+   - The maximum value if the item isn't included.
+
+The recursive approach ensures that every combination of items is considered, and the required condition (total weight <= W) is met. The function returns both the maximum value achievable and the indices of the items contributing to this value.
+
+### Performance Note
+
+This recursive solution is not optimized and may recompute results for the same subproblems many times (exponential time complexity). A more efficient approach would use dynamic programming (memoization or tabulation techniques) to store intermediate results and avoid redundant calculations. This is common in practical implementations of the 0/1 Knapsack problem.

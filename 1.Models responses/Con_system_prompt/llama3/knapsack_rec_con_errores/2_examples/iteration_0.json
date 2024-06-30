@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "The variable Wt is not defined, it should be wt. Also, in the recursive call fun_1(W, Wt, - 1, val), the third argument should be n - 1, not - 1."
+}

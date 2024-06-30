@@ -1,0 +1,10 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'c * c > x' the sintaxis for comparison is not correct."
+        }
+
+The error in the code is the use of the assignment operator (=) instead of the comparison operator (==) in the conditionals.
+
+In the first code snippet, the condition `b*b-4*a*c =0` should be `b*b-4*a*c == 0` to check if the expression is equal to zero.
+
+In the second code snippet, the condition `c * c > x` should be `c * c >= x` to check if the expression is greater than or equal to x.

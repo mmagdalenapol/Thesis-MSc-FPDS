@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are several syntax errors in the code: 'p is None' should be 'primes is None', range should be written as a function 'range()', [2, x + 1] should be (2, x + 1), range should be written as a function 'range()', and [c*c, x+1, c] should be (c*c, x+1, c)."
+}

@@ -1,0 +1,21 @@
+The process you described is essentially the Euclidean algorithm for finding the greatest common divisor of two numbers. When using the algorithm to find the gcd of two numbers a and b, the last non-zero remainder obtained in the process will be the gcd of a and b. This is usually expressed as gcd(a, b) = gcd(b, a mod b).
+
+I can provide you with a Python code snippet that implements the Euclidean algorithm and returns the denominator of the division that has a remainder of 0:
+
+```python
+def euclidean_algorithm(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage
+a = 48
+b = 18
+gcd = euclidean_algorithm(a, b)
+
+print("GCD of", a, "and", b, "is:", gcd)
+```
+
+You can replace the values of `a` and `b` with any natural numbers you want to find the gcd of.
+
+So to answer your question, the algorithm you described is the Euclidean algorithm for finding the greatest common divisor of two numbers.

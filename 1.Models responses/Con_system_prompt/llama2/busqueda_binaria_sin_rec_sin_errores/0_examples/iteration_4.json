@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, the `def` keyword is not properly indented. It should be indented to the same level as the `if` statement. Secondly, the `while` loop has no colon after the keyword. Additionally, the `elif` statement is not properly indented. It should be indented to the same level as the `if` statement. Lastly, the `return` statement in the `else` branch is not properly indented. It should be indented to the same level as the `if` statement."
+}

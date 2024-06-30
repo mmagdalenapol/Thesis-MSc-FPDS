@@ -1,0 +1,13 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'y =! 0' the syntax for comparison is not correct. Also, in 'x // y' the syntax for integer division is not correct, use 'x // y' instead."
+}
+
+The code has several syntax errors:
+
+* In 'y =! 0' the syntax for comparison is not correct. The correct syntax would be 'y != 0'.
+* In 'x // y' the syntax for integer division is not correct. The correct syntax would be 'x // y'.
+
+Additionally, the function 'fun_1' is not defined correctly, it is missing a return type and the parameters 'a' and 'b' are not defined.
+
+It's also worth mentioning that the code is not correctly indented, which can make it harder to read and understand.

@@ -1,0 +1,4 @@
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are syntax errors such as 'p.append{i}' which should be 'p.append(i)'."
+}

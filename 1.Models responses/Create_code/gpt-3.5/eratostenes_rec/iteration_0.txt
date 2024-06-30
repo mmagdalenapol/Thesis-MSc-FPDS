@@ -1,0 +1,34 @@
+The algorithm you've described is known as the "Sieve of Eratosthenes." It is a simple and efficient algorithm used to find all prime numbers up to a given limit. By repeatedly removing multiples of each prime number starting from 2, the algorithm identifies all prime numbers in a given range.
+
+Here is a Python implementation of the Sieve of Eratosthenes algorithm that finds all prime numbers up to a given limit x using recursion:
+
+```python
+def sieve_of_eratosthenes(limit, current=2, primes=None):
+    if primes is None:
+        primes = []
+
+    if current > limit ** 0.5:
+        for num in range(current, limit + 1):
+            if num not in primes:
+                primes.append(num)
+        return primes
+
+    multiples = set()
+    for i in range(current * 2, limit + 1, current):
+        multiples.add(i)
+
+    next_prime = current + 1
+    while next_prime in multiples:
+        next_prime += 1
+
+    return sieve_of_eratosthenes(limit, next_prime, primes)
+
+# Test the algorithm
+x = 30
+result = sieve_of_eratosthenes(x)
+print(result)
+```
+
+You can adjust the value of `x` to find prime numbers up to a different limit. The `sieve_of_eratosthenes` function recursively generates all prime numbers up to the specified limit `x` and returns a list of primes.
+
+Feel free to run this code snippet in a Python environment to see the output for a specific value of `x`.

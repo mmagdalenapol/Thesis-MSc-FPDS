@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Missing colon at the end of the function definition 'def fun_1(l, t)', missing colons after while and elif conditions, and the incorrect variable naming 'd' should be 'D' in if and elif conditions."
+}

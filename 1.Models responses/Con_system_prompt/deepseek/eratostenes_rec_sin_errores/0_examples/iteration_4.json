@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code is missing a return statement at the end of the function. It should return the result of the recursive call to the function 'fun_1'."
+}

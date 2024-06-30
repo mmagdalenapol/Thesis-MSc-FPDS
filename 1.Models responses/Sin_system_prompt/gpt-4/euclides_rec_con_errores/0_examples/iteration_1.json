@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Comments are denoted with '#' but '&' is used instead. 2. Swap operation 'a; b == b; a' should be 'a, b = b, a'. 3. Assignment in the comment 'Base case: if b = 0, a is the output' uses '=', should be '=='. 4. The function 'euclidean_gcd(a, b)' is called, but the function is defined as 'fun_1'."
+}

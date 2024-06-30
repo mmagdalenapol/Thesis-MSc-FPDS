@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the function fun_1 has an incorrect indentation, it should be indented more than the previous line. Secondly, in the last line of the function, there is a missing colon after the 'else' keyword. Additionally, in the third line of the function, there is a missing comma after the 'wt' argument in the function call. Finally, in the last line of the function, the 'i_n_i' variable is not defined."
+}

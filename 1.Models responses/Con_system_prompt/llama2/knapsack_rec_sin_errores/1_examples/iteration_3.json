@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'v_n_i, i_n_i = fun_1(W, wt, val, n- 1)', the syntax for function call is not correct. The argument 'n- 1' should be wrapped in parentheses."
+}

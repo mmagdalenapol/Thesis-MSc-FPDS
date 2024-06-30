@@ -1,0 +1,25 @@
+The process you described is known as the Euclidean algorithm, which is used to find the greatest common divisor of two integers. The algorithm involves continuously finding the remainder of dividing the larger number by the smaller number until the remainder becomes 0. The last non-zero remainder obtained in this process is the greatest common divisor of the two numbers.
+
+To implement the Euclidean algorithm in Python to find the denominator of the division that has a remainder of 0, you can use the following code:
+
+```python
+def euclidean_algorithm(a, b):
+    x, y = max(a, b), min(a, b)
+    
+    while y != 0:
+        q = x // y
+        r = x % y
+        if r == 0:
+            return y
+        x, y = y, r
+        
+    return y
+
+# Example usage
+a = 54
+b = 24
+result = euclidean_algorithm(a, b)
+print(f"The denominator of the division with remainder 0 is: {result}")
+```
+
+This code defines a function `euclidean_algorithm` that takes two integers `a` and `b` as input, applies the Euclidean algorithm to find the denominator of the division that has a remainder of 0, and returns the result. You can modify the values of `a` and `b` in the example usage to test the function with different numbers.

@@ -1,0 +1,23 @@
+Here's a Python code that implements the described steps:
+
+```python
+import math
+
+def find_true_indices(n):
+    x = [True] * n
+    x[0], x[1] = False, False
+
+    for j in range(2, int(math.sqrt(n)) + 1):
+        if x[j]:
+            for i in range(j * j, n, j):
+                x[i] = False
+
+    return [i for i, val in enumerate(x) if val]
+
+# Example usage:
+n = 20
+result = find_true_indices(n)
+print(f"Indices with True values: {result}")
+```
+
+In this code, we first initialize an array `x` of size `n` with all elements set to `True`. Then, we set the first two positions to `False`. We iterate over the numbers from `2` to the square root of `n`, and if `x[j]` is `True`, we update the array by setting positions `j*j` through `n` to `False`, incrementing by `j` in each step. Finally, we return the indices where `x` is `True`.

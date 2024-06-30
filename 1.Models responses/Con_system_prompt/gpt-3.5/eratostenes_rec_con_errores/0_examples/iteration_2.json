@@ -1,0 +1,4 @@
+{
+  "code_sintax_error": "Yes",
+  "code_sintax_explanation": "1. 'p' is not defined correctly, it should be 'primes'\n2. 'c' is not defined correctly, it should be 'current'\n3. Syntax error in list comprehensions, it should be range(2, x + 1) instead of range[2, x + 1]\n4. Syntax error in range function, it should be range(c*c, x+1, c) instead of range [c*c, x+1, c]"
+}

@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "In both 'def fun_1(l, t)' and 'while x <= y' a colon ':' is missing at the end of the lines."
+}

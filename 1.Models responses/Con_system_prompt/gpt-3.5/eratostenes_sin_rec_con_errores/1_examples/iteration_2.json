@@ -1,0 +1,6 @@
+{
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "There are syntax errors in the following lines:
+        1. In 'p.append{i}', curly braces should be replaced with square brackets: p.append[i]
+        2. 'append' should be called as a method with parentheses: p.append(i)"
+}

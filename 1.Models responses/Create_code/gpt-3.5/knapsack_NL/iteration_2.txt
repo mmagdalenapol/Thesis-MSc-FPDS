@@ -1,0 +1,29 @@
+Here is the Python implementation of the described function "fun_1" and the evaluation of this function on the input (W, w, p, n):
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    
+    c = t[m-1] + fun_1(A - z[m-1], z, t, m-1)[0]
+    d = fun_1(A, z, t, m-1)[0]
+    
+    if c > d:
+        return c, [m-1] + fun_1(A - z[m-1], z, t, m-1)[1]
+    else:
+        return fun_1(A, z, t, m-1)
+
+# Given input
+p = [1, 2, 3, 4, 5]
+w = [6, 7, 8, 9, 10]
+W = 15
+n = len(p)
+
+result = fun_1(W, w, p, n)
+print("Output of fun_1 on input (W, w, p, n):", result)
+```
+
+You can run this code in a Python environment to see the output of the function "fun_1" on the given input (W, w, p, n).

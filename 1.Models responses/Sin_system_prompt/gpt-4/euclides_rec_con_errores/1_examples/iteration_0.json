@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Several syntax issues are present: Comments should start with '#' but here they start with '&'. The line 'a; b == b; a' uses incorrect syntax for swapping values, it should be 'a, b = b, a'. Comparison is made using '==' instead of '=' in 'a == 10' and 'b == 6']. The function 'euclidean_gcd' is called but not defined; it seems it should be 'fun_1'."
+}

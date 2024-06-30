@@ -1,0 +1,11 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that solves a 0/1 knapsack problem",
+        }
+
+Explanation:
+
+* code_language: The code is written in Python, so the value of this key is "python".
+* code_objective: The code defines a function that solves a 0/1 knapsack problem, so the value of this key is "define a function that solves a 0/1 knapsack problem".
+
+Note: The code provided is a fragment of a larger codebase, and it is not clear what the final objective of the code is. Therefore, the value of code_objective is a concise description of the function defined in the code snippet provided.

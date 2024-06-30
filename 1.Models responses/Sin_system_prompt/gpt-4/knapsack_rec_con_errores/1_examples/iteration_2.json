@@ -1,0 +1,4 @@
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "Misuses in variable capitalization as 'Wt' should be 'wt'. Also, incorrect function call 'fun_1(W, Wt, - 1, val)' should pass 'wt' instead of 'Wt' and fix the misplaced '- 1'. Furthermore, the parameters in the recursive calls are in wrong order or poorly formatted."
+}

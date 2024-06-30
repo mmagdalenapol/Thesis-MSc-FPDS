@@ -1,0 +1,41 @@
+The description you provided outlines the Sieve of Eratosthenes, a classic algorithm used to find all prime numbers up to a given limit, \( n \). This algorithm efficiently lists all primes below \( n \) by iteratively marking the multiples of each prime number starting from \( 2 \).
+
+Here's a Python code implementation to perform the Sieve of Eratosthenes:
+
+```python
+def sieve_of_eratosthenes(n):
+    # Create a boolean array "prime[0..n]" and initialize all entries as True.
+    # Entry will finally be False if it is Not a prime, True if it is a prime.
+    prime = [True for _ in range(n+1)]
+    p = 2
+    while (p * p <= n):
+        # If prime[p] is not changed, then it is a prime
+        if (prime[p] == True):
+            # Updating all multiples of p to False starting from p*p
+            for i in range(p * p, n+1, p):
+                prime[i] = False
+        p += 1
+    
+    # Collect all prime numbers
+    primes = [p for p in range(2, n) if prime[p]]
+    return primes
+
+# Example use
+x = 30
+print(f"All prime numbers smaller than {x}: {sieve_of_eratosthenes(x)}")
+```
+
+This will output:
+```
+All prime numbers smaller than 30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+```
+
+### Algorithm explanation:
+1. **Initialization**: A list `prime` is initialized with `True` values indicating all numbers are initially assumed prime except number 0 and 1.
+2. **Marking non-primes**: Starting from the first prime number \(2\), mark all its multiples as non-prime. Increment the base prime and repeat till you've considered numbers up to the square root of \( n \).
+3. **Collect results**: Extract numbers which remain `True` in the list, indicating these are prime numbers.
+
+### Performance:
+The Sieve of Eratosthenes runs in \( O(n \log \log n) \) time complexity, making it highly efficient for large \( n \). This performance is derived from the fact that it marks the multiples of each prime number only, minimizing redundant operations.
+
+The memory required is \( O(n) \), to store the boolean values for each number up to \( n \).

@@ -1,0 +1,25 @@
+Here is the Python code that implements the binary search algorithm recursively:
+```
+def binary_search(arr, target, low=0, high=None):
+    if high is None:
+        high = len(arr) - 1
+    if low > high:
+        return -1  # not found
+    mid = (low + high) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search(arr, target, mid + 1, high)
+    else:
+        return binary_search(arr, target, low, mid - 1)
+```
+Here's an explanation of the code:
+
+* The function takes four arguments: `arr` is the ordered list of elements, `target` is the value we're searching for, `low` is the lower bound of the search range (default is 0), and `high` is the upper bound of the search range (default is the length of the list minus 1).
+* If `low` is greater than `high`, it means we've exhausted the search range and the value is not in the list, so we return -1.
+* We calculate the midpoint `mid` of the search range using integer division.
+* If the value at the midpoint is equal to the target, we return the midpoint index.
+* If the value at the midpoint is less than the target, we recursively call the function on the upper half of the search range (from `mid + 1` to `high`).
+* If the value at the midpoint is greater than the target, we recursively call the function on the lower half of the search range (from `low` to `mid - 1`).
+
+As for your question, this algorithm is called **Binary Search**. It's a classic algorithm for finding an element in a sorted list, and it has a time complexity of O(log n), making it much faster than a linear search (which has a time complexity of O(n)) for large lists.

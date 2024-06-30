@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Misuse of assignment in 'if p is None:', it should be 'if primes is None:'. Also used 'range[2, x + 1]' and 'range [c*c,  x+1, c]' with incorrect syntax, should be 'range(2, x + 1)' and 'range(c*c, x+1, c)'. Variables 'p' and 'c' are used instead of 'primes' and 'current'."
+}

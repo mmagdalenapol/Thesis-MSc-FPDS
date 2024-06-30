@@ -1,0 +1,19 @@
+The algorithm described in the problem essentially performs the Euclidean algorithm to find the greatest common divisor (GCD) of two numbers. The Euclidean algorithm is a method to compute the GCD of two integers. It works on the principle that GCD of two numbers also divides their difference. If there’s a remainder, the algorithm repeats the process with the smaller number and the remainder, and it continues until the remainder is 0.
+
+Here is Python code that recursively implements this process to find the GCD, which is the divisor when the remainder becomes 0:
+
+```python
+def euclidean_algorithm(a, b):
+    if b == 0:
+        return a
+    else:
+        return euclidean_algorithm(b, a % b)
+
+# Example usage
+a = 48
+b = 18
+print("GCD of", a, "and", b, "is", euclidean_algorithm(a, b))
+```
+
+For the question regarding the name of the algorithm:
+- Yes, as noted earlier, this algorithm is known as the Euclidean algorithm. It is one of the oldest algorithms still used in common practice, originating from Euclid's "Elements" around 300 BC, where it was first described. The algorithm is typically used to find the greatest common divisor (GCD) of two integers and is an essential part of number theory and modern computing applications like cryptography.

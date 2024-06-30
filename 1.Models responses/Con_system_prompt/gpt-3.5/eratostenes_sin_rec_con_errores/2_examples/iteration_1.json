@@ -1,0 +1,7 @@
+{
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "The syntax errors in the code are: 
+        1. Line 14: Change { to ( when appending elements to the list p.
+        2. Line 16: Change i*i to i*i and remove the unnecessary spaces in the range function.
+        3. Line 24: Change { to ( when appending elements to the list p."
+}

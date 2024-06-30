@@ -1,0 +1,9 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that solves a second order equation",
+        }
+
+Explanation:
+
+* The code is written in Python, hence the value of "code_language" is "python".
+* The code defines a function named "solution" that takes three arguments: a, b, and c. The function solves a second-order equation and returns a list of solutions. Therefore, the value of "code_objective" is "define a function that solves a second-order equation".

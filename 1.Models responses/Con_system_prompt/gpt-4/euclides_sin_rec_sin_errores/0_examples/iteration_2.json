@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The assignment 'y = c' should be outside the if-else structure in the while loop for proper updating of 'y' in each iteration of the loop."
+}

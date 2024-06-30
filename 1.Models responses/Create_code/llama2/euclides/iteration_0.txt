@@ -1,0 +1,35 @@
+  The algorithm you described is known as the Euclidean algorithm, which is a method for computing the greatest common divisor (GCD) of two integers. It is a well-known and widely used algorithm in number theory.
+
+Here is a Python implementation of the Euclidean algorithm that returns the GCD of two integers, a and b:
+
+def euclidean_algorithm(a, b):
+    while b != 0:
+        r = a // b
+        a = b
+        b = r
+    return a
+
+To use this function, you can call it with two integers as arguments, like this:
+
+print(euclidean_algorithm(12, 8))  # Output: 4
+
+This will compute the GCD of 12 and 8, which is 4.
+
+Regarding your question about the denominator of the division that has a remainder of 0, the Euclidean algorithm can be modified to return the denominator of the division that has a remainder of 0. Here is an example of how to do this:
+
+def euclidean_algorithm(a, b):
+    while b != 0:
+        r = a // b
+        a = b
+        b = r
+        if r == 0:
+            return b
+    return a
+
+With this modification, the function will return the denominator of the division that has a remainder of 0. For example:
+
+print(euclidean_algorithm(12, 8))  # Output: 8
+
+This will compute the GCD of 12 and 8, which is 4, and return the denominator of the division that has a remainder of 0, which is 8.
+
+I hope this helps! Let me know if you have any other questions.

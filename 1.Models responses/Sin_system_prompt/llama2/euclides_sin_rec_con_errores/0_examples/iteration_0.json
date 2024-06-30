@@ -1,0 +1,8 @@
+  {
+"code_sintax_error": "No",
+"code_sintax_explanation": ""
+}
+
+The code does not have any syntax errors.
+
+It's worth noting that the code has a logical error. The while loop will run indefinitely if the input numbers are both zero or both negative.

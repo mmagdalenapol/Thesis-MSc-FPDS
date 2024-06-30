@@ -1,0 +1,24 @@
+
+Here is a Python code that performs the steps you described:
+
+```python
+def gcd(a, b):
+    if not (isinstance(a, int) and isinstance(b, int) and a > 0 and b > 0):
+        return "Both numbers must be positive integers"
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
+
+print(gcd(48, 18))  # Output: 6
+print(gcd(101, 103))  # Output: 1
+```
+
+This code defines a function `gcd` that takes two arguments `a` and `b`. It first checks if both `a` and `b` are positive integers. If not, it returns an error message.
+
+Then it enters a loop that continues until `b` is 0. In each iteration of the loop, it updates `a` and `b` to the values of `b` and `a` modulo `b` respectively. This is the Euclidean division of `a` by `b`.
+
+When `b` is 0, the loop ends and the function returns `a`. This is the greatest common divisor of the original `a` and `b`.
+
+The `print` statements at the end of the code call the `gcd` function with some example inputs and print the results.

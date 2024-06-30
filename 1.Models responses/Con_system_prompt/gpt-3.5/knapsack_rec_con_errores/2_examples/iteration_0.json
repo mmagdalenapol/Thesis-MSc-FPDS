@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'Wt[n - 1]' and 'Wt' at line 5, 'Wt' is not defined. It should be 'wt'. Additionally, in the same line, 'val' is incorrectly placed and should be moved to the end of the parameters."
+}

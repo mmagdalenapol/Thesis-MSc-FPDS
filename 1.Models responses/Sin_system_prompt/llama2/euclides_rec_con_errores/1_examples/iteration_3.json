@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'a; b == b; a', there is a syntax error. The semicolon (;) is not allowed in Python. Instead, use a comma (,) to separate statements."
+}

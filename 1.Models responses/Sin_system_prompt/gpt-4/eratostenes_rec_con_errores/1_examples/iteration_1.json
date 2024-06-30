@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Several syntax mistakes are present: 1. 'if p is None:' should be 'if primes is None:', 2. Incorrect notation 'range[' ']' should be 'range()'."
+}

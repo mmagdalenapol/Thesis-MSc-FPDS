@@ -1,0 +1,9 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm",
+        }
+
+Explanation:
+
+* The code language is Python, which is indicated by the use of Python syntax and the import statement for the math module.
+* The code objective is to define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm. This is evident from the function name, parameters, and the recursive algorithm used in the function body.

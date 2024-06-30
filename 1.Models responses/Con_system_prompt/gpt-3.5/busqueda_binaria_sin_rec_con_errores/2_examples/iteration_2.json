@@ -1,0 +1,4 @@
+{
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "Syntax errors found in the code. Missing colons after function definition and if/elif/else statements. Also, variables x, y and D are not properly assigned, used ; instead of , in variable assignment. Incorrect variable names in if statement (l[d] instead of l[D]). Missing colons after while and else statements."
+}

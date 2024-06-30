@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Firstly, 'ent' should be replaced with 'int' for proper type checking. Secondly, '!= 0' instead of '=! 0' should be used for the comparison in accordance with Python syntax."
+}

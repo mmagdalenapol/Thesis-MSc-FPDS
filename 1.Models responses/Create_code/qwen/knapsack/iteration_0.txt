@@ -1,0 +1,35 @@
+This optimization problem is a variation of the 0-1 Knapsack problem, where you're looking to maximize the sum of `p_i` instead of the value of the items. The standard 0-1 Knapsack problem has a greedy solution, but in this case, since we're maximizing the sum of `p_i`, the problem becomes NP-hard. However, we can still use a dynamic programming approach to solve it.
+
+Here's a Python code to solve the problem:
+
+```python
+def knapsack_max_p_sum(p, w, W):
+    N = len(p)
+    dp = [[0 for _ in range(W + 1)] for _ in range(N + 1)]
+
+    for i in range(1, N + 1):
+        for j in range(W + 1):
+            if w[i - 1] <= j:
+                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - w[i - 1]] + p[i - 1])
+            else:
+                dp[i][j] = dp[i - 1][j]
+
+    selected_items = []
+    current_weight = W
+    for i in range(N, 0, -1):
+        if dp[i][current_weight] != dp[i - 1][current_weight]:
+            selected_items.append(i - 1)
+            current_weight -= w[i - 1]
+
+    return dp[N][W], selected_items
+
+# Example usage
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+max_sum, selected = knapsack_max_p_sum(p, w, W)
+print("Maximum sum of p:", max_sum)
+print("Selected elements:", selected)
+```
+
+This algorithm is a variation of the 0-1 Knapsack problem, but it doesn't have a specific name as it's a tailored solution for this particular objective function. The standard 0-1 Knapsack problem aims to maximize the total value of items, not the sum of their properties.

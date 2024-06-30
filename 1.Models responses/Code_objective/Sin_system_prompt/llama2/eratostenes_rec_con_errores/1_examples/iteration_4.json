@@ -1,0 +1,16 @@
+  Sure, here's the analysis of the code you provided:
+
+code_language: "python"
+code_objective: "define a function that finds the prime numbers up to a given number"
+
+The code you provided is a Python function named `fun_1` that takes three arguments: `x`, `primes`, and `current`. The function is designed to find the prime numbers up to a given number `x`.
+
+Here's a breakdown of the code:
+
+1. The first line `if p is None:` checks if the `primes` argument is None. If it is, the function initializes a list of prime numbers from 2 to `x+1` using a list comprehension.
+2. The second line `if c * c > x:` checks if the square of the current number `c` is greater than `x`. If it is, the function returns the list of prime numbers up to `c`.
+3. The third line `for j in range [c*c,  x+1, c]:` loops through a range of numbers from `c*c` to `x+1` in increments of `c`.
+4. The fourth line `if j in p:` checks if the current number `j` is in the list of prime numbers `p`. If it is, the function removes it from the list.
+5. The fifth line `return fun_1(x, c + 1, p)` recursively calls the function with the updated list of prime numbers `p` and the new current number `c+1`.
+
+Overall, the code is designed to find the prime numbers up to a given number `x` using a recursive approach.

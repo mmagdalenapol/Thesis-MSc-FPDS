@@ -1,0 +1,573 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'if c * c > x:' there is a missing colon after the if statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_2(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_3(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_4(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_5(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_6(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_7(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_8(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_9(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_10(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_11(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_12(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_13(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_14(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_15(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_16(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_17(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_18(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_19(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_20(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_21(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_22(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_23(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_24(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_25(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_26(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_27(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_28(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_29(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_30(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_31(x):
+            for i in range(5):
+                print(i)
+            return
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'for i in range(5):' there is a missing colon after the for statement."
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_32(x):
+            if x > 0:
+                return x
+            else:
+                return -x
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "No",
+        code_sintax_explanation: ""
+        }
+
+
+        --code_language--: --Python--
+        &&code&&: 
+        
+        &&
+        def fun_33(x, y):
+            return x + y
+
+        &&
+
+        RESULT:
+        {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'return x + y' there is a missing colon after the return statement."
+        }
+
+
+        --code_language--: --Python--
+        &&

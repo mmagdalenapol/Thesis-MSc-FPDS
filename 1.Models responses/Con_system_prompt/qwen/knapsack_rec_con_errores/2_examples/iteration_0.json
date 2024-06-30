@@ -1,0 +1,1 @@
+{ code_sintax_error: "Yes", code_sintax_explanation: "There is a typo in the function call 'fun_1(W, Wt, - 1, val)'. It should be 'fun_1(W, wt, n - 1, val)' instead. Also, the variable 'Wt' is not defined in the function, it should be 'wt' consistently." }

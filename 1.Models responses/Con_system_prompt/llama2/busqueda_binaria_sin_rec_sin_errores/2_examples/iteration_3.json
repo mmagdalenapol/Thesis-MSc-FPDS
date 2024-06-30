@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In '(x + y) // 2' the syntax for integer division is not correct. In Python 3, the syntax for integer division is 'a // b' instead of 'a / b'. Additionally, the function name 'fun_1' does not follow the convention of starting with a lowercase letter."
+}

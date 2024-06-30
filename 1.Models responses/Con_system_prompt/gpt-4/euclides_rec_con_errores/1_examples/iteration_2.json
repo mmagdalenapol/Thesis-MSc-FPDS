@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The function comments are not properly formatted as Python comments. They should start with '#'. 'a; b == b; a' is using illegal syntax; it should likely be 'a, b = b, a'. Assignment uses '=', not '=='. Also, there are syntax errors in example usage: 'euclidean_gcd(a, b)' should be 'fun_1(a, b)' since 'euclidean_gcd' is not defined, and 'a == 10' and 'b == 6' should be 'a = 10' and 'b = 6'."
+}

@@ -1,0 +1,28 @@
+Here is the Python code that performs the steps you described:
+```
+import math
+
+def sieve_of_eratosthenes(n):
+    x = [True] * n
+    x[0] = x[1] = False
+
+    for j in range(2, int(math.sqrt(n)) + 1):
+        if x[j]:
+            for k in range(j * j, n, j):
+                x[k] = False
+
+    return [i for i, val in enumerate(x) if val]
+
+n = int(input("Enter a natural number: "))
+result = sieve_of_eratosthenes(n)
+print("Indices of True values:", result)
+```
+Here's an explanation of the code:
+
+1. We create an array `x` of size `n` with all elements initialized to `True`.
+2. We set the first two elements of `x` to `False`.
+3. We iterate from `2` to the nearest integer to the square root of `n` (inclusive).
+4. For each `j` in this range, we check if `x[j]` is `True`. If it is, we update the values of `x` to `False` starting from `j*j` to `n` in increments of `j`. This is done using the inner loop.
+5. Finally, we return a list of indices `i` such that `x[i]` is `True`. We use a list comprehension to achieve this.
+
+Note that this implementation is known as the Sieve of Eratosthenes, a well-known algorithm for finding all prime numbers up to a given number `n`. The indices of the `True` values in the resulting array correspond to the prime numbers up to `n`.

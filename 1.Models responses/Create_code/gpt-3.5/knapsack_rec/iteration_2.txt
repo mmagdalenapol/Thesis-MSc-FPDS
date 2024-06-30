@@ -1,0 +1,37 @@
+The problem described is a variation of the classic 0/1 Knapsack problem. The goal is to maximize the value of items selected into the knapsack (sum of p_i) without exceeding the weight capacity of the knapsack (sum of w_i).
+
+Here is a Python code implementing the recursive solution for this problem:
+
+```python
+def knapsack(p, w, W, n):
+    if n == 0 or W == 0:
+        return 0, []
+    
+    if w[n-1] > W:
+        return knapsack(p, w, W, n-1)
+    
+    incl_p, incl_indices = knapsack(p, w, W-w[n-1], n-1)
+    incl_p += p[n-1]
+    
+    excl_p, excl_indices = knapsack(p, w, W, n-1)
+    
+    if incl_p > excl_p:
+        return incl_p, incl_indices + [n-1]
+    else:
+        return excl_p, excl_indices
+
+# Example usage
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+n = len(p)
+
+max_p, selected_indices = knapsack(p, w, W, n)
+
+print("Maximum sum of selected elements in p:", max_p)
+print("Selected elements indices:", selected_indices)
+```
+
+This recursive solution can find the optimal subset of elements that maximizes the sum of p_i while ensuring the sum of w_i does not exceed the given capacity W.
+
+Please note that the given code assumes the indices of the elements to start from 0. You may need to adjust the index handling based on your specific input format.

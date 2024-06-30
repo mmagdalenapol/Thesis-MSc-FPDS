@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'r = a % b' the sintaxis for modulus is not correct. In Python, the modulus operator is '%', not 'mod'."
+}

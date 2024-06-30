@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'y =! 0' the syntax for comparison is not correct. Also, in 'while y =! 0' the syntax for the while loop is not correct."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'while y =! 0:', the syntax for comparison is not correct. The correct syntax should be 'while y != 0:' to check for inequality."
+}

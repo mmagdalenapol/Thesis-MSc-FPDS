@@ -1,0 +1,27 @@
+The algorithm you're describing is known as the Euclidean algorithm, which is a method for computing the greatest common divisor (GCD) of two numbers. Here's a Python implementation of the algorithm:
+```
+def gcd(a, b):
+    if not (isinstance(a, int) and isinstance(b, int) and a > 0 and b > 0):
+        raise ValueError("Both inputs must be positive integers")
+    x, y = max(a, b), min(a, b)
+    while y != 0:
+        r = x % y
+        x, y = y, r
+    return x
+```
+Here's an explanation of the code:
+
+1. The function takes two arguments `a` and `b`, and checks that they are both positive integers. If not, it raises a `ValueError`.
+2. It sets `x` to the maximum of `a` and `b`, and `y` to the minimum of `a` and `b`.
+3. The algorithm enters a loop, where it computes the remainder `r` of `x` divided by `y`.
+4. It then updates `x` and `y` to be `y` and `r`, respectively.
+5. The loop continues until `y` becomes 0.
+6. At that point, `x` is the GCD of the original `a` and `b`.
+
+You can test the function with some examples:
+```
+print(gcd(12, 15))  # Output: 3
+print(gcd(24, 30))  # Output: 6
+print(gcd(48, 18))  # Output: 6
+```
+The Euclidean algorithm is a well-known and efficient method for computing the GCD of two numbers. It has many applications in number theory, algebra, and computer science.

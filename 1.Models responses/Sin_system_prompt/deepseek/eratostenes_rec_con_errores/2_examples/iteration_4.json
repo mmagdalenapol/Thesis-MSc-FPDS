@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "The variable 'p' is not defined in the function 'fun_1'. It should be 'primes'. Also, the variable 'c' is not defined in the function 'fun_1'. It should be 'current'. The function 'range' is missing parentheses around the arguments in the list comprehension."
+}

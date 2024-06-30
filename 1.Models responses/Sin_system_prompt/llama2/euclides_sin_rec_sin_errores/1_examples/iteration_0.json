@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'b*b-4*a*c =0' the syntax for comparison is not correct. The = sign should be replaced with a comparison operator such as == or !=."
+}

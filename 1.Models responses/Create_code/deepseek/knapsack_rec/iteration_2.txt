@@ -1,0 +1,45 @@
+
+The algorithm you're describing is a variation of the 0/1 Knapsack problem, which is a well-known problem in computer science. It's a classic example of a problem that can be solved using dynamic programming.
+
+Here is a Python code that solves the problem using recursion and memoization:
+
+```python
+def knapsack(p, w, W, i, memo):
+    if i == 0 or W == 0:
+        return 0
+    if (i, W) not in memo:
+        if w[i-1] > W:
+            result = knapsack(p, w, W, i-1, memo)
+        else:
+            temp1 = knapsack(p, w, W, i-1, memo)
+            temp2 = p[i-1] + knapsack(p, w, W-w[i-1], i-1, memo)
+            result = max(temp1, temp2)
+        memo[(i, W)] = result
+    return memo[(i, W)]
+
+def find_used_items(p, w, W):
+    memo = {}
+    knapsack(p, w, W, len(p), memo)
+    i, j = len(p), W
+    used_items = []
+    while i > 0:
+        if (i, j) in memo and (i-1, j) not in memo:
+            used_items.append(i-1)
+            j -= w[i-1]
+        i -= 1
+    return used_items[::-1]
+
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+
+max_sum = knapsack(p, w, W, len(p), {})
+used_items = find_used_items(p, w, W)
+
+print("Maximum sum of p:", max_sum)
+print("Used items:", used_items)
+```
+
+This code first computes the maximum sum of p that can be achieved with a total weight less than or equal to W. It then backtracks through the memoization table to find the items that were used to achieve this sum.
+
+The answer to your second question is yes, this algorithm does have a name. It's called the 0/1 Knapsack problem, and it's a classic example of a problem that can be solved using dynamic programming.

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Incorrect usage of the class 'ent', which does not exist by default in Python. Probably meant to use 'int'. 2. Syntax error on comparison, 'y =! 0' should be 'y != 0'."
+}

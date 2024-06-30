@@ -1,0 +1,14 @@
+  {
+"code_sintax_error": "No",
+"code_sintax_explanation": ""
+}
+
+The code provided is a Python function named `fun_1` that implements an algorithm for computing the greatest common divisor (GCD) of two natural numbers. The function is well-structured and easy to follow.
+
+The function starts by verifying that the input parameters `a` and `b` are natural numbers. It then ensures that `a` is greater than or equal to `b`. If `b` is equal to 0, the function returns `a` immediately.
+
+The function then finds the remainder of `a` divided by `b`, and makes a recursive call with `a` set to `b` and `b` set to the remainder. Finally, the function returns the result of the recursive call.
+
+There are no syntax errors in the code, and the code is well-formatted and easy to read. The function is also correctly structured, with clear and concise variable names and appropriate indentation.
+
+Overall, the code looks good and should work as intended.

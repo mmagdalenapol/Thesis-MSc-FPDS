@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "Missing colons after function definition, 'while' statement, 'if' statement, and 'elif' statement. Also, 'd' should be 'D' in the 'if' and 'else' lines."
+}

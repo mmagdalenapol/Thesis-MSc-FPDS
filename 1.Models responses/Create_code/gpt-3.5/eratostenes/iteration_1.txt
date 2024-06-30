@@ -1,0 +1,28 @@
+The algorithm described is known as the "Sieve of Eratosthenes." It is a simple and efficient algorithm used to find all prime numbers up to a specified integer value.
+Here is a Python implementation of the Sieve of Eratosthenes algorithm:
+
+```python
+def sieve_of_eratosthenes(x):
+    primes = []
+    sieve = [True] * (x+1)
+    sieve[0] = sieve[1] = False
+
+    for i in range(2, int(x**0.5) + 1):
+        if sieve[i]:
+            primes.append(i)
+            for j in range(i*i, x+1, i):
+                sieve[j] = False
+
+    for i in range(int(x**0.5)+1, x+1):
+        if sieve[i]:
+            primes.append(i)
+
+    return primes
+
+x = int(input("Enter a number x: "))
+result = sieve_of_eratosthenes(x)
+print(f"Prime numbers up to {x}:")
+print(result)
+```
+
+You can run this code by inputting a value for x, and it will generate all prime numbers up to x as per the Sieve of Eratosthenes algorithm.

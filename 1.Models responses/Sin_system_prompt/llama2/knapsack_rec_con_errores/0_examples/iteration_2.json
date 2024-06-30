@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `if n == 0 or W == 0:` statement. \n2. Missing colon after the `if Wt[n - 1] > W:` statement. \n3. Missing colon after the `else` statement. \n4. Missing parentheses in the recursive call to `fun_1` in the last line of the function."
+}

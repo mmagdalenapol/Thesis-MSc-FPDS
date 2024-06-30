@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In 'if p is None:', 'p' is not defined. Also, in 'if c * c > x:', 'c' is not defined. In 'for j in range [c*c,  x+1, c]:', 'c' is not defined. In 'return fun_1(x, c + 1, p)', 'c' is not defined."
+}

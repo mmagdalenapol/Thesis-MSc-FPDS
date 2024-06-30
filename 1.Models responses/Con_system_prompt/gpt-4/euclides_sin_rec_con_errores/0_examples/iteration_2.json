@@ -1,0 +1,7 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "The word 'ent' is used in 'isinstance' function which is not recognized. It should likely be 'int' to check if the variable is of integer type.",
+        "The expression 'y =! 0' in the while loop condition is incorrect. The correct operator for inequality in Python is '!='."
+    ]
+}

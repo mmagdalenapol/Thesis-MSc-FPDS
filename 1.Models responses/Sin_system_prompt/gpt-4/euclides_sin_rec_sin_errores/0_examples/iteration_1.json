@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There is a logical error in assigning 'c' to 'y' in the loop. It should be 'x, y = y, x % y' instead of 'x = y; y = c;' to correctly perform the Euclidean algorithm for finding the greatest common divisor."
+}

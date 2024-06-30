@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There is a missing colon after the def keyword. Additionally, there is a missing space between the if and elif statements."
+}

@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, there is a missing colon after the `def` keyword. Additionally, there are mismatched indentation levels throughout the code, making it difficult to determine the scope of certain statements. Finally, the `return -1` statement is not properly indented and is not within a valid scope."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The error 'ent' in 'isinstance(a, ent)' should be 'int' for checking integer type. The operator '=!' is incorrect, it should be '!='."
+}

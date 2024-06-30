@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. In 'if p is None:', 'p' is not defined, it should be 'primes'. In 'p = [i for i in range[2, x + 1]]', 'range' is a function and should be called with parentheses, not brackets. In 'for j in range [c*c,  x+1, c]:', 'range' is a function and should be called with parentheses, not brackets. In 'return fun_1(x, c + 1, p)', 'c' is not defined, it should be 'current'."
+}

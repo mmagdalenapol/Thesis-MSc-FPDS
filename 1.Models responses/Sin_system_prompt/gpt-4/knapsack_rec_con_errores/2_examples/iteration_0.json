@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The variable Wt is not defined. In the parameter list, the variable should be wt, considering Python's case sensitivity. The function call fun_1(W - Wt[n - 1], wt, n - 1, val) should have 'val' before 'n - 1' as it mismatches with function definition parameters ordering fun_1(W, wt, val, n). Incorrect call fun_1(W, Wt, -1, val) should have the right variable and decrement operation properly assigned to 'n - 1'."
+}

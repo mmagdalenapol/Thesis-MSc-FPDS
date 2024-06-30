@@ -1,0 +1,23 @@
+Here is the Python code that implements the steps you've described:
+
+```python
+def euclidean_algorithm(a, b):
+    if a <= 0 or b <= 0:
+        print("Both numbers must be positive integers.")
+        return
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
+
+num1 = int(input("Enter the first positive integer: "))
+num2 = int(input("Enter the second positive integer: "))
+
+result = euclidean_algorithm(max(num1, num2), min(num1, num2))
+
+if result:
+    print(f"The largest common denominator of {num1} and {num2} is: {result}")
+```
+
+You can copy and paste this code into a Python environment to test it out. It will prompt you to enter two positive integers and then compute the largest common denominator using the Euclidean algorithm as you described.

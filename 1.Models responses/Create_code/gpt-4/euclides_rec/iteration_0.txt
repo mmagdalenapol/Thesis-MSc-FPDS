@@ -1,0 +1,23 @@
+The process you've described is basically the Euclidean algorithm, which is used to find the greatest common divisor (GCD) of two given integers. The Euclidean algorithm repeatedly subtracts the smaller number from the larger number until the remainder becomes 0. The last non-zero remainder is the GCD of the original pair of numbers.
+
+Here is the Python code that replicates this process using recursion and gives you the divisor for which the remainder becomes 0. This is effectively calculating the GCD of the two numbers:
+
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+# Example usage:
+a, b = 24, 36
+result = gcd(a, b)
+print(f"The GCD of {a} and {b} is {result}.")
+```
+
+In this code:
+- `gcd(a, b)` is a function that uses recursion to find the greatest common divisor of two numbers `a` and `b`.
+- If `b` becomes `0`, the function returns `a` (since GCD of `a` and `0` is `a`).
+- Otherwise, it calls itself with `b` and `a % b` (the remainder of the division of `a` by `b`). This step ensures repeated subtraction as per the Euclidean algorithm.
+
+You can try the function with different pairs of numbers by setting different values for `a` and `b` in the `gcd(a, b)` call. The function will accurately calculate and return the greatest common divisor for those numbers.

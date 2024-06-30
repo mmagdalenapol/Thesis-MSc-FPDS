@@ -1,0 +1,7 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors in the code:"
+    "1. In lines with '&' symbols, the comments should start with '#'."
+    "2. In the line 'a; b == b; a', the correct syntax for swapping values is 'a, b = b, a'."
+    "3. 'euclidean_gcd' function is not defined but attempted to be used in the print statement."
+}

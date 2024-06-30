@@ -1,0 +1,10 @@
+  {
+"code_sintax_error": "No",
+"code_sintax_explanation": ""
+}
+
+The code provided is syntactically correct in Python. There are no syntax errors in the code.
+
+The code defines a function named euclidean_gcd that takes two natural numbers a and b as input and returns their greatest common divisor (GCD) using the Euclidean algorithm. The function first checks if a and b are natural numbers, and if b > a, it swaps a and b. Then, it finds the remainder of a/b and makes a recursive call with b as the new a and r as the new b. Finally, it returns the GCD.
+
+The example usage at the end of the code demonstrates how to call the function with two numbers, 10 and 6, and prints the GCD of 4.

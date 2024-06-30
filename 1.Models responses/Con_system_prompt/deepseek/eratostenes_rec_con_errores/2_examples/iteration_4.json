@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "The variable 'p' is not defined in the function. It should be 'primes'. Also, the variable 'c' is not defined in the function. It should be 'current'. The function 'fun_1' is calling itself recursively without a base case to stop the recursion. The range function is not correctly defined. It should be range(c*c, x+1, c)."
+}

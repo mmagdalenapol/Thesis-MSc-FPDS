@@ -1,0 +1,30 @@
+Here is a Python code that implements the steps you described:
+
+```Python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    elif z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        c = t[m-1] + fun_1(A-z[m-1], z, t, m-1)[0]
+        d, lst = fun_1(A, z, t, m-1)
+        if c > d:
+            return c, lst + [m-1]
+        else:
+            return d, lst
+
+# Example usage:
+n = 5
+W = 10
+w = [1, 2, 3, 4, 5]
+p = [10, 20, 30, 40, 50]
+
+result, lst = fun_1(W, w, p, n)
+print("Result:", result)
+print("List:", lst)
+```
+
+This code defines the `fun_1` function according to the rules you provided. It then uses this function to evaluate `fun_1(W, w, p, n)` and prints the result and the list.
+
+Please note that the `fun_1` function uses 0-based indexing, i.e., the first element of a list is at index 0.

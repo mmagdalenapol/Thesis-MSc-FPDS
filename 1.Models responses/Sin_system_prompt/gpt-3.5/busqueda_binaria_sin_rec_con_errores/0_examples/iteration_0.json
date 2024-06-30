@@ -1,0 +1,5 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Missing colon (:) at the end of the function definition line 'def fun_1(l, t)'
+2. Missing colons (:) at the end of 'while' and 'else' statements."
+}

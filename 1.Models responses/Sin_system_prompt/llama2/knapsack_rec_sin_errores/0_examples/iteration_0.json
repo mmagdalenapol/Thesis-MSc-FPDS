@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `if n == 0 or W == 0:` statement. \n2. Missing space between `W` and `wt` in the `if wt[n - 1] > W:` statement. \n3. Missing space between `val` and `n` in the `v_i, i_i = fun_1(W - wt[n - 1], wt, val, n - 1)` statement. \n4. Missing space between `W` and `wt` in the `v_n_i, i_n_i = fun_1(W, wt, val, n - 1)` statement. \n5. Missing colon after the `else` keyword in the last `if` statement."
+}

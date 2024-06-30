@@ -1,0 +1,4 @@
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "Misuse of curly braces instead of parentheses when calling the append method. It should be p.append(i) instead of p.append{i}."
+}

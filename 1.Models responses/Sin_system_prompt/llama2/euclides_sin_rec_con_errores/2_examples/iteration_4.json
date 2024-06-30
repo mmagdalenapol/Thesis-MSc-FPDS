@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the function name 'fun_1' should be capitalized to 'Fun_1' or 'fun_1' to follow Python's naming conventions. Secondly, the 'ent' module is not imported, but it is being used in the 'isinstance' function. Thirdly, the '!=' operator should be replaced with '!='. Lastly, the 'while' loop has an unnecessary '=' sign after 'y'. Additionally, the function does not return anything when 'y' is not 0."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Multiple errors: 'Wt' should be 'wt'. In the function call 'fun_1(W - Wt[n - 1], wt, n - 1, val)', parameters are in incorrect order and an argument is missing. Additionally, in 'fun_1(W, Wt, - 1, val)', 'Wt' is incorrect and '- 1' seems out of place suggesting another parameter order or a typo issue."
+}

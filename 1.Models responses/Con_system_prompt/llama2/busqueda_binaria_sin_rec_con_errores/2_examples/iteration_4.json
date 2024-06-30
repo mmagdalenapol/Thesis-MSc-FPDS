@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the function name 'fun_1' should be capitalized to 'Fun_1' or 'fun_1' to follow Python naming conventions. Secondly, the variable 'D' is defined without a type declaration. Thirdly, the 'while' loop has an incomplete syntax, missing a colon after the condition. Lastly, the 'elif' statement should be 'if' instead. Additionally, the variable 'x' and 'y' are not defined."
+}

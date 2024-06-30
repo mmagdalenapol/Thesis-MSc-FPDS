@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Several syntax errors in the code: 1. 'Wt' is not defined, it seems it should be 'wt'. 2. The function calls have the wrong order of parameters, it should likely be 'fun_1(W, wt, val, n - 1)', 'fun_1(W - wt[n - 1], wt, val, n - 1)', and 'fun_1(W, wt, val, n - 1)'."
+}

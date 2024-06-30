@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In the line 'fun_1(W - Wt[n - 1], wt, n - 1, val)', the function is called with 'wt' instead of 'wt[n - 1]' in the second argument. Also, in the line 'fun_1(W, Wt, - 1, val)', there's a typo with 'Wt' instead of 'W' in the second argument, and a wrong argument '- 1' instead of 'n - 1' in the third argument."
+}

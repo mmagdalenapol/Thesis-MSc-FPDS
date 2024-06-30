@@ -1,0 +1,26 @@
+Here is the Python code that implements the described steps:
+
+```python
+import math
+
+def sieve_of_eratosthenes(n):
+    x = [True] * n
+    x[0] = x[1] = False
+
+    for j in range(2, math.isqrt(n) + 1):
+        if x[j]:
+            for i in range(j*j, n, j):
+                x[i] = False
+
+    prime_indices = [i for i in range(n) if x[i]]
+    return prime_indices
+
+# Test the function with an example number
+n = 20
+result = sieve_of_eratosthenes(n)
+print(result)
+```
+
+You can call the `sieve_of_eratosthenes` function with a natural number `n` to get the list of indices that have a True value in the array after applying the sieve of Eratosthenes algorithm. The code includes comments to explain each step. 
+
+Feel free to adjust the input value `n` to test the function with different natural numbers.

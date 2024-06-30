@@ -1,0 +1,34 @@
+The algorithm you've described is a variation of the 0-1 Knapsack problem, which is a classic optimization problem in computer science. The standard Knapsack problem deals with selecting items with maximum value, but in your case, you're looking for items with maximum sum of 'p' while keeping the sum of 'w' below a threshold.
+
+Here's a recursive Python implementation of the algorithm:
+
+```python
+def knapsack_recursion(p, w, W, n):
+    if n == 0 or W == 0:
+        return 0, []
+
+    include = knapsack_recursion(p, w, W - w[n - 1], n - 1)
+    exclude = knapsack_recursion(p, w, W, n - 1)
+
+    if include[0] > exclude[0]:
+        return include[0] + p[n - 1], [n - 1] + include[1]
+    else:
+        return exclude[0], exclude[1]
+
+def knapsack(p, w, W):
+    n = len(p)
+    max_sum, selected_indices = knapsack_recursion(p, w, W, n)
+    return max_sum, [p[i] for i in selected_indices]
+
+# Example usage
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+max_sum, selected_elements = knapsack(p, w, W)
+print("Maximum sum:", max_sum)
+print("Selected elements:", selected_elements)
+```
+
+This implementation uses recursion to explore all possible subsets of elements, comparing the sum of 'p' when including or excluding the current element. It returns the maximum sum and the indices of the selected elements.
+
+The time complexity of this algorithm is O(2^n) because it explores all possible subsets, which is exponential. It's not efficient for large inputs, but it works for small ones. A more efficient approach would be to use dynamic programming.

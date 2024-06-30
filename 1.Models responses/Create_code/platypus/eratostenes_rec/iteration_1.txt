@@ -1,0 +1,16 @@
+This algorithm is called the Sieve of Eratosthenes. Here is a Python implementation of the algorithm:
+
+```python
+def sieve_of_eratosthenes(x):
+    primes = [True] * x
+    primes[0] = primes[1] = False
+
+    for i in range(2, int(x**0.5) + 1):
+        if primes[i]:
+            for j in range(i*i, x, i):
+                primes[j] = False
+
+    return [i for i in range(2, x) if primes[i]]
+```
+
+This function takes a natural number `x` as input and returns a list of all prime numbers smaller than `x`.

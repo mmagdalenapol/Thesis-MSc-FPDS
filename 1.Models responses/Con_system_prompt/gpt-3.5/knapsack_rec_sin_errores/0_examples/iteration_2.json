@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There is a syntax error in the code. The comma after 'return 0' is incorrect. Python expects either a single value or a tuple, not both."
+}

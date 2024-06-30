@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are syntax errors in the code. The issue is with the while loop condition. The not equal operator in Python is '!=' instead of '=!'"
+}

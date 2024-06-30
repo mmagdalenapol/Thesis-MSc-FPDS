@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "The comments are not correctly formatted in the code. Comments in Python should start with a # symbol."
+}

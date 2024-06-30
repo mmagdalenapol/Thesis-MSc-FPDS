@@ -1,0 +1,51 @@
+To implement the Python code that performs the steps you've outlined, we'll first define the recursive function `fun_1`. After defining the function, we will evaluate it with the specified inputs.
+
+Here's a Python implementation:
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return (0, [])
+    
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        # Calculate values if z[m-1] <= A
+        c_number, c_list = fun_1(A - z[m-1], z, t, m-1)
+        c = t[m-1] + c_number
+        
+        d, list_d = fun_1(A, z, t, m-1)
+        
+        if c > d:
+            return (c, c_list + [m-1])
+        else:
+            return (d, list_d)
+
+# Given vectors p and w, and a natural number W
+p = [10, 20, 30, 40]  # Example profit values
+w = [2, 3, 4, 5]      # Example weight values
+n = len(p)            # Length of vectors
+W = 7                 # A example maximum weight capacity
+
+# Evaluate fun_1 on (W, w, p, n)
+result = fun_1(W, w, p, n)
+print("Max value:", result[0])
+print("Items included:", [i+1 for i in result[1]])  # Output items index starting from 1
+```
+
+### Explanation:
+
+1. **Base Case**:
+   - If `m` is `0` or `A` is `0`, the function returns `(0, [])`, representing zero as the maximum value and an empty list for indices.
+
+2. **Recursive Step**:
+   - If the item at `m-1` cannot be included in the knapsack because it's heavier than the remaining capacity `A`, it simply calls itself without considering this item (`m-1`).
+   - If the item can be considered, the function computes two scenarios:
+     - Including the item at `m-1` and taking the best outcome from previous items for the remaining capacity (`A-w[m-1]`).
+     - Not including the item at `m-1` and evaluating the function without it.
+   - It then chooses the better value between including (`c`) or not including (`d`) the current item. If including provides a better value, it also includes the current index in the list; otherwise, it carries forward the list without including it.
+
+3. **Output**:
+   - The function finally returns a tuple which includes the maximum value obtainable and the list of item indices that yield this maximum value.
+
+In using this recursive function, keep in mind that recursion depth and time complexity may become issues with large input sizes. Consider adapting the approach with memoization or converting it into a dynamic programming solution if required.

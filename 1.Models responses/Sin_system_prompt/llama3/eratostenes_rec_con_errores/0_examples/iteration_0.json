@@ -1,0 +1,12 @@
+Here is the result:
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. 
+1. In the line `if p is None:`, `p` is not defined. It should be `primes`. 
+2. In the line `p = [i for i in range[2, x + 1]]`, `range` is a function and should be called with parentheses, not brackets. It should be `range(2, x + 1)`. 
+3. In the line `if c * c > x:`, `c` is not defined. It should be `current`. 
+4. In the line `for j in range [c*c,  x+1, c]:`, `range` is a function and should be called with parentheses, not brackets. It should be `range(c*c, x+1, c)`. 
+5. In the line `return fun_1(x, c + 1, p)`, `c` is not defined. It should be `current`. 
+6. The function is recursive but there is no base case when `primes` is not `None`. This will cause a recursion error."
+}

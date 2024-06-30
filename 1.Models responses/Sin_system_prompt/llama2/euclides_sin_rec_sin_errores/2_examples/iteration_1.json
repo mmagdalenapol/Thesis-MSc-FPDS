@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, the function name 'fun_1' should be capitalized to 'Fun_1' or 'fun_1' to follow Python's naming conventions. Secondly, the 'isinstance' function should have a space between 'not' and 'isinstance'. Thirdly, the 'or' operator should be separated by spaces. Lastly, the 'return' statement should be indented."
+}

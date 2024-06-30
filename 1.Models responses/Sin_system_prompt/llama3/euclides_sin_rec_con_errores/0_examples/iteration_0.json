@@ -1,0 +1,6 @@
+Here is the result:
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are two syntax errors in the code. The first error is in the line 'while y =! 0:' where the operator '=! ' is not a valid Python operator. It should be '!=' for not equal to. The second error is in the line 'return "No se encontró."' where the function is supposed to return the greatest common divisor (GCD) but it returns a string instead."
+}

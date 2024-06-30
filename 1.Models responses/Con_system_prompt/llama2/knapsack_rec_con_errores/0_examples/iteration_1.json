@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `def` keyword. \n2. Missing space between `W` and `wt` in the function signature. \n3. Missing space between `val` and `n` in the function signature. \n4. Missing space between `Wt` and `n` in the third argument of the recursive call. \n5. Missing space between `W` and `Wt` in the fourth argument of the recursive call. \n6. Missing space between `val` and `n` in the fourth argument of the recursive call. \n7. The last line of the function should be indented."
+}

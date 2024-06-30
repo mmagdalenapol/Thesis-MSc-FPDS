@@ -1,0 +1,30 @@
+
+Here is a Python code that implements the steps you described:
+
+```python
+import math
+
+def sieve_of_eratosthenes(n):
+    x = [True for i in range(n+1)]
+    x[0] = x[1] = False
+    for i in range(2, math.isqrt(n)+1):
+        if x[i]:
+            for j in range(i*i, n+1, i):
+                x[j] = False
+    return [i for i in range(n+1) if x[i]]
+
+n = 30
+print(sieve_of_eratosthenes(n))
+```
+
+This code first initializes an array `x` of size `n+1` with all values set to `True`. Then it sets the first two elements to `False`, as they are not prime numbers.
+
+Next, it iterates over the numbers from 2 to the square root of `n`. If `x[i]` is `True`, it means `i` is a prime number, so it changes the values of `x` to `False` at positions `j*j` through `n`, jumping from `j` to `j`.
+
+Finally, it returns the indices of `x` that are `True`, which are the prime numbers less than or equal to `n`.
+
+The `math.isqrt(n)` function is used to get the nearest integer to the square root of `n`.
+
+The `range(i*i, n+1, i)` generates a sequence of numbers starting from `i*i`, up to `n+1`, with a step of `i`. This sequence represents the multiples of `i` less than or equal to `n`.
+
+The `[i for i in range(n+1) if x[i]]` expression is a list comprehension that generates a list of all indices `i` for which `x[i]` is `True`.

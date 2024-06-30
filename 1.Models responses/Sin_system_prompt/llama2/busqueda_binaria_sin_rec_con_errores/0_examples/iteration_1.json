@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the def keyword. \n2. Missing indentation for the while loop. \n3. Unexpected elif keyword. \n4. Missing colon after the elif keyword. \n5. Unexpected return statement without a value. \n6. Missing closing parenthesis for the function definition."
+}

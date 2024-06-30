@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are several syntax errors in the code. First, the function definition should be `def fun_1(l, t):` instead of `def fun_1(l, t)`. Second, the variable `D` is not defined before it is used in the `if` statement. Third, the variable `d` is used in the `if` statement, but it is not defined. Fourth, the `elif` and `else` statements are not indented correctly. Fifth, the variable `d` is used in the `else` statement, but it is not defined. Sixth, the `return -1` statement is not indented correctly."
+}

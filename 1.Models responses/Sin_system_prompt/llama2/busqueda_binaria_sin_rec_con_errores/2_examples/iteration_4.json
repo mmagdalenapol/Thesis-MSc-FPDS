@@ -1,0 +1,78 @@
+  Sure, I can help you with that. Here's the analysis of the code you provided:
+
+--code_language--: Python
+
+&&code&&:
+
+&&
+
+def solution(a, b, c):
+    if b*b-4*a*c =0:
+        solution = [-b/(2*c),]
+    if b*b-4*a*c <0:
+        print("No solution")
+        break
+    else:
+        solution = [(-b+math. sqrt(b*b -4*a*c))/(2*c),(-b-math. sqrt(b*b -4*a*c))/(2*c)]
+
+    return solution
+
+&&
+
+RESULT:
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'b*b-4*a*c =0' the sintaxis for comparison is not correct."
+}
+
+--code_language--: Python
+
+&&code&&:
+
+&&
+
+from math import sqrt
+
+def fib(i):
+    if i < 2:
+        return i;
+    else:
+        phi = ((1+sqrt(5))/2);
+        fibonacci = ((phi**i-(1-phi)**i)/sqrt(5));
+        return rount(fibonacci);
+
+&&
+
+RESULT:
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "The function rount does not exist, you wanted to use the function round. Additionally you used ; when it was not necessary."
+}
+
+--code_language--: Python
+
+&&code&&:
+
+&&
+
+def fun_1(l, t):
+    x; y = 0; len(l) - 1
+    while x <= y:
+        D = (x + y) // 2
+        if l[d] == t:
+            return D
+        elif l[d] < t:
+            x = D + 1
+        else:
+            y = d - 1
+    return -1
+
+&&
+
+RESULT:
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in this code. First, the parameter d in the function fun_1 is not defined. Second, the while loop is missing a colon after the condition. Third, the if-else statement is missing a colon after the if clause. Fourth, the return statement is missing a value. Finally, the variable x and y are not defined."
+}
+
+I hope this helps! Let me know if you have any further questions.

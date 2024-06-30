@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. The function definition is missing a colon (:) after the argument list. The semicolons (;) are not used in Python for separating statements. The loop condition should also have a colon (:). The variable 'd' should be 'D' to match the variable defined earlier. There is a missing closing parenthesis at the end of the code."
+}

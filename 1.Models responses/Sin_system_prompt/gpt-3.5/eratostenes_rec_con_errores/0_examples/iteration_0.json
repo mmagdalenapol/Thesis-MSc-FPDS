@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. The variable 'p' is not properly defined. It should be 'primes' instead of 'p'.\n2. The list comprehension range should use parentheses instead of square brackets. It should be range(2, x + 1) instead of range[2, x + 1].\n3. 'c' is used instead of 'current' in the function.\n4. The range function in the for loop should be range(c*c, x+1, c) without square brackets."
+}

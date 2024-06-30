@@ -1,0 +1,4 @@
+{
+code_language: "python",
+code_objective: "define a recursive function that removes multiples of a given number from a list of integers",
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'if p is None:', 'p' is not defined, it should be 'primes' (the correct parameter name). Also, there are syntax errors in 'range[2, x + 1]' (should be range(2, x + 1)), 'for j in range [c*c,  x+1, c]:' (should be range(c*c, x+1, c)) and 'if j in p:' (should be 'if j in primes:')."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'ent' is not a recognized data type in Python, 'int' should be used instead of 'ent'. 2. The expression 'y =! 0' is incorrect; it should be 'y != 0' for not equal comparison."
+}

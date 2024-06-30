@@ -1,0 +1,35 @@
+
+Here is a Python code that implements the steps you described:
+
+```python
+def binary_search(a, x):
+    while len(x) > 2:
+        mid = len(x) // 2
+        if x[mid] == a:
+            return mid
+        elif x[mid] < a:
+            x = x[mid:]
+        else:
+            x = x[:mid]
+    if len(x) == 2:
+        if x[0] == a:
+            return 0
+        elif x[1] == a:
+            return 1
+        else:
+            return -1
+    else:
+        return 0 if x[0] == a else -1
+```
+
+This function takes a number "a" and a sorted list "x" as input, and returns the position of "a" in "x" if it exists, or -1 if it does not. The function uses a binary search algorithm to find the position of "a" in "x".
+
+Here is how you can use this function:
+
+```python
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = 6
+print(binary_search(a, x))  # Output: 5
+```
+
+In this example, the function returns 5, which is the position of 6 in the list.

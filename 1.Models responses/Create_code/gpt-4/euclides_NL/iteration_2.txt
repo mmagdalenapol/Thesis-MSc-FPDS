@@ -1,0 +1,35 @@
+Certainly! The problem you're describing involves implementing the Euclidean Algorithm to find the greatest common divisor (GCD) of two positive integers. The steps you've described essentially walk through this algorithm.
+
+Here's a Python implementation that follows these steps:
+
+```python
+def gcd(a, b):
+    # First, ensure that both numbers are positive integers
+    if not (isinstance(a, int) and isinstance(b, int) and a > 0 and b > 0):
+        raise ValueError("Both inputs must be positive integers")
+    
+    # Ensure that a is the larger number
+    if a < b:
+        a, b = b, a
+    
+    while b != 0:
+        remainder = a % b
+        a = b
+        b = remainder
+    
+    # The loop ends when b is 0, and 'a' contains the GCD
+    return a
+
+# Example usage:
+x = 48
+y = 18
+print(f"The GCD of {x} and {y} is {gcd(x, y)}")
+```
+
+### Explanation:
+1. The function `gcd(a, b)` checks whether both `a` and `b` are positive integers. If not, it raises a `ValueError`.
+2. It swaps `a` and `b` if `b` is greater than `a`; this ensures `a` is the larger number purely for consistency since the GCD will be the same regardless.
+3. The function then enters a loop that executes as long as `b` is not zero. In each iteration, it computes the remainder of the Euclidean division of `a` by `b`, then sets `a` to `b`, and `b` to the calculated remainder.
+4. When `b` becomes `0`, `a` contains the GCD of the original inputs, which is then returned.
+
+This implementation is efficient and adheres closely to both the problem's requirements and the typical implementation of the Euclidean Algorithm.

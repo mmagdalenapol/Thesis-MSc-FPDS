@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors. The comments should start with '#' instead of '&'. The assignment operator is '=' but it's used as '==' in 'a; b == b; a' which is not a valid syntax. The function name in the function call is 'euclidean_gcd' but the function is defined as 'fun_1'."
+}

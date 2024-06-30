@@ -1,0 +1,28 @@
+
+The algorithm you described is known as Binary Search. It is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
+
+Here is a Python code that implements Binary Search:
+
+```python
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = (high + low) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, high, x)
+    else:
+        return -1
+
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, 0, len(arr)-1, x)
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
+```
+
+In this code, `binary_search` is a recursive function that takes an array, the lowest and highest index of the array, and the target value as parameters. If the target value is found, it returns the index. If not, it calls itself with the appropriate half of the array. If the array is empty (i.e., `high < low`), it returns -1.

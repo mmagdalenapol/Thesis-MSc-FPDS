@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are multiple syntax errors in the code: 'if p is None:' should be 'if primes is None:', 'for i in range[2, x + 1]:' should be 'for i in range(2, x + 1):', 'if c * c > x:' should be 'if current * current > x:', 'for j in range [c*c,  x+1, c]:' should be 'for j in range(c*c, x+1, c):'."
+}

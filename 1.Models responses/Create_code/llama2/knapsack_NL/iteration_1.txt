@@ -1,0 +1,41 @@
+  Sure, here is a possible implementation of the function `fun_1` in Python:
+```
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    elif z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        c = t[m-1] + fun_1(A-z[m-1], z, t, m-1)[0]
+        d = fun_1(A, z, t, m-1)[0]
+        if c > d:
+            return c, [m-1] + fun_1(A-z[m-1], z, t, m-1)[1]
+        else:
+            return d, fun_1(A, z, t, m-1)[1]
+```
+This function takes four inputs:
+
+* `A`: a constant
+* `z`: a list of length `n`
+* `t`: a list of length `n`
+* `m`: a natural number less than or equal to `n`
+
+The function returns two outputs: a number and a list.
+
+The function is defined recursively, with the base case being when `m` is 0 or `A` is 0, in which case the output is 0 and an empty list.
+
+In the recursive case, the function first checks whether the value of `z` at position `m-1` is bigger than `A`. If it is, the function calls itself with the same inputs, but with `m-1` instead of `m`.
+
+If the value of `z` at position `m-1` is smaller than `A`, the function calculates two numbers, `c` and `d`, using the sum of the value of `t` at position `m-1` and the first output of the function called with `A-z[m-1]`, `z`, `t`, and `m-1` as inputs.
+
+The function then compares `c` and `d`, and returns the larger of the two values as the first output, along with a list that contains the second output of the function called with `A-z[m-1]`, `z`, `t`, and `m-1` as inputs.
+
+Finally, the function calls itself with `A`, `z`, `t`, and `m-1` as inputs, and returns the output of that call as the second output.
+
+To evaluate the function `fun_1` on the input `(W, w, p, n)`, you can simply call the function with those inputs:
+```
+result = fun_1(W, w, p, n)
+```
+This will return two values, the first of which is a number and the second of which is a list.
+
+I hope this helps! Let me know if you have any questions or need further clarification.

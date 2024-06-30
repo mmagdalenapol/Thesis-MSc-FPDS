@@ -1,0 +1,30 @@
+
+
+Here is a Python code that performs the steps you have described:
+
+```
+import math
+
+def sieve_of_eratosthenes(n):
+    # Initialize an array of n positions with all values set to True
+    x = [True] * n
+
+    # Change the values of the first two positions to False
+    x[0] = x[1] = False
+
+    # Iterate through the array from 2 to the nearest integer to the square root of n
+    for j in range(2, int(math.sqrt(n)) + 1):
+        # If the array x at position j takes the value True, update the values of x to False at positions j*j through n by jumping from j to j
+        if x[j]:
+            for k in range(j*j, n, j):
+                x[k] = False
+
+    # Return the indices of the array x that take the value True
+    return [i for i in range(n) if x[i]]
+
+# Example usage
+n = 100
+print(sieve_of_eratosthenes(n))
+```
+
+This code implements the Sieve of Eratosthenes algorithm to find prime numbers up to a given natural number n. It initializes an array x of n positions, sets all values to True, and then iterates through the array from 2 to the nearest integer to the square root of n. For each number j, if the value at position j is True, it updates the values of x to False at positions j*j through n by jumping from j to j. Finally, it returns the indices of the array x that take the value True.

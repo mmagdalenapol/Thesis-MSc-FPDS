@@ -1,0 +1,12 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are several syntax errors in the code. Here are the details:
+
+1. The function definition is missing parentheses: `def fun_1(l, t)` should be `def fun_1(l, t):`.
+2. The variable `D` is not defined before it is used in the `if` statement.
+3. The variable `d` is not defined before it is used in the `if` statement.
+4. The `elif` statement is missing a colon at the end.
+5. The `else` statement is missing a colon at the end.
+6. The variable `d` is not defined before it is used in the `else` statement.
+7. The `return -1` statement is missing a colon at the end."
+}

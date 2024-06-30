@@ -1,0 +1,4 @@
+{
+code_language: "python",
+code_objective: "implement Euclid's algorithm to find the greatest common divisor (GCD) of two natural numbers",
+}

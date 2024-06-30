@@ -1,0 +1,17 @@
+  Sure, here's the analysis of the code you provided:
+
+code_language: "python"
+code_objective: "define a function that solves a second order equation"
+
+The code you provided is a Python script that defines a function called `solution` that takes three arguments: `a`, `b`, and `c`. The function checks whether the discriminant of the quadratic equation `b*b - 4*a*c` is equal to zero, and based on that, it returns a list of solutions or a message indicating that there are no solutions.
+
+The code uses the `math` module to calculate the square root of the discriminant, and it also uses a list comprehension to return the solutions.
+
+Overall, the code seems to be well-structured and easy to read, with clear variable names and logical flow.
+
+Here's the dictionary with the results:
+
+{
+"code_language": "python",
+"code_objective": "define a function that solves a second order equation"
+}

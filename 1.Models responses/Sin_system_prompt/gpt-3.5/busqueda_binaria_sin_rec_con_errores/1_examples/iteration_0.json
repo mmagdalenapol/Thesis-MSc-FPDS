@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors in the code: missing colons after function and loop definitions, incorrect variable names ('D' instead of 'd'), missing colons after 'else' and 'elif' statements."
+}

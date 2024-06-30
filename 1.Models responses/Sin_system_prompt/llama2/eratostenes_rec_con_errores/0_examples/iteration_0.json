@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, the `if p is None:` statement is missing a colon after the condition. Secondly, the `range[2, x + 1]` expression should be surrounded by parentheses to avoid a syntax error. Additionally, the `for j in range [c*c,  x+1, c]` loop has a syntax error due to the missing colon after the loop header. Finally, the `return fun_1(x, c + 1, p)` statement is missing a colon after the function call."
+}

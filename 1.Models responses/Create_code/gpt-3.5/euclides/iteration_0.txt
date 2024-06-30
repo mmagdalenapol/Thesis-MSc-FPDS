@@ -1,0 +1,31 @@
+The algorithm you are describing is known as the Euclidean algorithm. It is used to find the greatest common divisor of two integers, which can also be expressed as the smallest positive integer that can be divided evenly into both numbers.
+
+Here is a Python code snippet that replicates the described process and finds the denominator of the division with a remainder of 0:
+
+```python
+def euclidean_algorithm(a, b):
+    if a < 0 or b < 0:
+        return "Both numbers must be natural numbers."
+    
+    x = max(a, b)
+    y = min(a, b)
+    
+    while y != 0:
+        q = x // y
+        r = x % y
+        if r == 0:
+            return y
+        x = y
+        y = r
+
+    return x
+
+a = 36
+b = 24
+result = euclidean_algorithm(a, b)
+print(f"The denominator of the division with remainder 0 is: {result}")
+```
+
+You can replace the values of `a` and `b` with any positive integers to find the denominator of their division with a remainder of 0.
+
+If you have any more questions or need further assistance, feel free to ask!

@@ -1,0 +1,28 @@
+Here's a Python function that implements the steps you've described:
+
+```python
+def euclidean_division(a, b):
+    # Step 1: Verify if they are two positive integers
+    if not (isinstance(a, int) and isinstance(b, int) and a > 0 and b > 0):
+        return "Both inputs must be positive integers."
+
+    # Step 2: Perform the Euclidean division
+    while b != 0:
+        # Step 4.1: Consider the denominator and the remainder of the previous division
+        quotient, remainder = divmod(a, b)
+        
+        # Step 4.2: Repeat the Euclidean division between them
+        a, b = b, remainder
+
+    # Step 3 & 4.3: Return the denominator when the remainder is 0
+    return a
+
+
+# Example usage:
+numerator = 56
+denominator = 14
+result = euclidean_division(numerator, denominator)
+print(f"The greatest common divisor is: {result}")
+```
+
+This function takes two positive integers as inputs, `numerator` and `denominator`, and returns their greatest common divisor (GCD) using the Euclidean algorithm. The GCD is the denominator you're looking for when the remainder becomes 0.

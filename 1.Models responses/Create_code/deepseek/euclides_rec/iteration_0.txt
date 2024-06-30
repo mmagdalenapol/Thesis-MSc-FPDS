@@ -1,0 +1,16 @@
+
+The algorithm you're describing is known as the Euclidean algorithm, named after the ancient Greek mathematician Euclid. It's used to find the greatest common divisor (GCD) of two numbers.
+
+Here is a Python implementation of the Euclidean algorithm:
+
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+```
+
+This function takes two numbers as input, and recursively calls itself with the second number and the remainder of the division of the first number by the second number. When the second number becomes 0, it returns the first number, which is the GCD of the original two numbers.
+
+In your question, you mentioned that you want to find the denominator of the division that has a remainder of 0. This is equivalent to finding the GCD of the two numbers. The Euclidean algorithm is used to find the GCD of two numbers, and it's a common algorithm used in number theory.

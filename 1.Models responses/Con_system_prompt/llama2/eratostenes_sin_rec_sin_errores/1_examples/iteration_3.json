@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'for i in range(2, int(x**0.5) + 1):' the syntax for the range() function is incorrect. The argument 'int(x**0.5)' should be 'int(x**0.5) + 1'."
+}

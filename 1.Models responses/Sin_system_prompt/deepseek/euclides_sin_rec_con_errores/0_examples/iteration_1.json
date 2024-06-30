@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The error is in the line where the while loop condition is defined. The operator used is not correct. It should be '==' instead of '=!'."
+}

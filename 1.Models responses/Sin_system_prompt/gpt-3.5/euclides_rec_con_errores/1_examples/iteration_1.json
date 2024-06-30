@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "The usage of '&' is not correct in Python, it is used for bitwise 'AND' instead of comments. Also, the assignment to variables is done using '=' instead of '==' for comparison."
+}

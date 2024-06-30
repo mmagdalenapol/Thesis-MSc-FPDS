@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In 'not isinstance(a, ent) or not isinstance(b, ent)', 'ent' is not a valid data type in Python. It should be 'int'. In 'while y = !0:', the comparison operator is not correct. It should be 'while y != 0:'. In 'if r == 0:', the comparison operator is not correct. It should be 'if r == 0:'. In 'x = y', 'y = r', the assignment operator is not correct. It should be 'x = y', 'y = r'."
+}

@@ -1,0 +1,21 @@
+
+
+Here is a Python code that recursively performs binary search on an ordered list of elements:
+
+```
+def binary_search(ordered_list, target):
+    if len(ordered_list) == 0:
+        return -1
+
+    mid_index = len(ordered_list) // 2
+    mid_value = ordered_list[mid_index]
+
+    if mid_value == target:
+        return mid_index
+    elif mid_value < target:
+        return binary_search(ordered_list[mid_index + 1:], target)
+    else:
+        return binary_search(ordered_list[:mid_index], target)
+```
+
+This algorithm is called "Binary Search".

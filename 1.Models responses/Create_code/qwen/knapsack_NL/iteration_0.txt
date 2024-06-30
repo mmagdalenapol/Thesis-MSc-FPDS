@@ -1,0 +1,32 @@
+Here's a Python implementation of the function `fun_1` as described, along with the evaluation of `fun_1` on `(W, w, p, n)`:
+
+```python
+def fun_1(A, z, t, m, n):
+    if m == 0 or A == 0:
+        return 0, []
+
+    z_m1 = z[m-1]
+    if z_m1 >= A:
+        return fun_1(A, z, t, m-1, n)
+
+    c, c_list = fun_1(A - z_m1, z, t, m-1, n)
+    d, d_list = fun_1(A, z, t, m-1, n)
+
+    if c > d:
+        return c + t[m-1], c_list + [m-1]
+    else:
+        return d, d_list
+
+# Given vectors and constants
+p = [1, 2, 3, 4]  # Example vector p
+w = [5, 6, 7, 8]  # Example vector w, same length as p
+n = len(p)  # Length of vectors
+W = 10  # Given natural number W
+
+# Evaluate fun_1 on (W, w, p, n)
+result, result_list = fun_1(W, w, p, n)
+print("First output:", result)
+print("Second output:", result_list)
+```
+
+Please replace the example vectors `p` and `w` with your actual data, and adjust the constant `W` accordingly. This code should work as long as the vectors have the same length and `W` is a natural number.

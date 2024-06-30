@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'Wt' is used but not defined previously or passed as an argument. The correct variable should be 'wt'. 2. 'fun_1(W, Wt, - 1, val)' should be 'fun_1(W, wt, val, n - 1)' as the parameters and arguments are mismatched or incorrectly ordered."
+}

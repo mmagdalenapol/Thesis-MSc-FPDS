@@ -1,0 +1,17 @@
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    c = t[m-1] + fun_1(A-z[m-1], z, t, m-1)[0]
+    d = fun_1(A, z, t, m-1)[0]
+    if c > d:
+        return c, [m-1] + fun_1(A-z[m-1], z, t, m-1)[1]
+    return fun_1(A, z, t, m-1)
+
+def main():
+    n = len(p)
+    result = fun_1(W, w, p, n)
+    print(result)
+
+main()

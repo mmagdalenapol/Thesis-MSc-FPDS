@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'ent' is not a valid type in Python, perhaps meant 'int'. 2. Incorrect syntax with '=!'; it should be '!='."
+}

@@ -1,0 +1,19 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code is missing a colon at the end of the function definition. Also, the function is not properly indented. The correct code should be as follows:
+
+```python
+def fun_1(x, p=None, c=2):
+    if p is None:
+        p = [i for i in range(2, x + 1)]
+    if c * c > x:
+        return p
+    for j in range (c*c,  x+1, c):
+      if j in p:
+        p.remove(j)
+    return fun_1(x, p, c + 1)
+```
+
+The function definition should be properly indented and the colon at the end of the function definition is missing."
+}

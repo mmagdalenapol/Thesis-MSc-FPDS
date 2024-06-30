@@ -1,0 +1,20 @@
+The algorithm you've described is a variation of Euclidean division or the Euclidean algorithm, which is used to find the greatest common divisor (GCD) of two numbers. It's based on the principle that the GCD of two numbers "a" and "b" can be found by recursively applying the division process until a remainder of 0 is reached.
+
+Here's a Python implementation of the algorithm to find the denominator (divisor) with a remainder of 0:
+
+```python
+def find_denominator(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+a = 48
+b = 18
+denominator = find_denominator(a, b)
+print(f"The denominator with a remainder of 0 is: {denominator}")
+```
+
+In this code, we keep dividing the larger number by the smaller number and swapping the results until the remainder is 0. The final non-zero remainder is the GCD, which in your case is the denominator you're looking for.
+
+Regarding your question about the algorithm's name, it's called the Euclidean algorithm, named after the ancient Greek mathematician Euclid.

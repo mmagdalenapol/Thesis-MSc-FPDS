@@ -1,0 +1,33 @@
+This problem is a classic example of the 0-1 Knapsack Problem. The algorithm that solves this problem using recursion is commonly known as the Recursive Knapsack Algorithm. Here is the Python code that implements this algorithm:
+
+```python
+def knapsack_recursive(W, p, w, n):
+    if n == 0 or W == 0:
+        return 0, set()
+    
+    if w[n - 1] > W:
+        return knapsack_recursive(W, p, w, n - 1)
+    
+    included_p, included_set = knapsack_recursive(W - w[n - 1], p, w, n - 1)
+    included_p += p[n - 1]
+    
+    excluded_p, excluded_set = knapsack_recursive(W, p, w, n - 1)
+    
+    if included_p > excluded_p:
+        included_set.add(n - 1)
+        return included_p, included_set
+    else:
+        return excluded_p, excluded_set
+
+# Example usage
+p = [60, 100, 120]
+w = [10, 20, 30]
+W = 50
+n = len(p)
+
+max_p, selected_indices = knapsack_recursive(W, p, w, n)
+print("Maximum sum of selected elements in p:", max_p)
+print("Indices of selected elements:", selected_indices)
+```
+
+You can run this code and provide your `p`, `w`, and `W` values to find the maximum sum of selected elements and the indices of the elements that have been used.

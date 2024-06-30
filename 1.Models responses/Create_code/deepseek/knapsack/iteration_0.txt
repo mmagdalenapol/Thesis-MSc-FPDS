@@ -1,0 +1,36 @@
+
+
+The algorithm you're describing is a variation of the 0/1 Knapsack problem, which is a well-known problem in computer science. It's a classic dynamic programming problem.
+
+Here is a Python code that solves the problem:
+
+```python
+def knapsack(p, w, W):
+    n = len(p)
+    dp = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
+    used = [[False for _ in range(W + 1)] for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        for j in range(1, W + 1):
+            if w[i - 1] <= j:
+                dp[i][j] = max(p[i - 1] + dp[i - 1][j - w[i - 1]], dp[i - 1][j])
+                if p[i - 1] + dp[i - 1][j - w[i - 1]] > dp[i - 1][j]:
+                    used[i][j] = True
+            else:
+                dp[i][j] = dp[i - 1][j]
+
+    max_p = dp[n][W]
+    used_items = [i for i in range(n) if used[i + 1][W]]
+
+    return max_p, used_items
+```
+
+This function takes as input the lists of p and w, and the maximum weight W. It returns the maximum sum of the selected elements in "p" and the indices of the elements that have been used.
+
+The algorithm works by filling up a 2D table dp where dp[i][j] is the maximum sum of p_i that can be achieved using the first i elements and a total weight of j. The table is filled up in a bottom-up manner, and the maximum sum is either the sum of the current element and the maximum sum that can be achieved with the remaining weight, or the maximum sum that can be achieved without using the current element.
+
+The used table is used to keep track of which elements are used to achieve the maximum sum.
+
+The time complexity of this algorithm is O(nW), where n is the number of elements and W is the maximum weight. The space complexity is also O(nW) for the dp and used tables.
+
+As for your question, yes, this algorithm does have a name. It's called the 0/1 Knapsack problem.

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Syntax errors present. Sintaxis for comments should use # symbol. Comparison operator '==' is used incorrectly as assignment operator '='. The function euclidean_gcd is never defined or called."
+}

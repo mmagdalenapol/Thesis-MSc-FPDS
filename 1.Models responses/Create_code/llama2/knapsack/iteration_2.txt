@@ -1,0 +1,32 @@
+  The algorithm you described is known as the 0/1 knapsack problem. It is a classic problem in computer science and operations research that involves finding the optimal way to select a subset of items from a set of items, subject to a constraint on the total weight of the selected items, and maximizing the total value of the selected items.
+
+Here is a Python code that solves the 0/1 knapsack problem:
+```
+def knapsack(p, w, W):
+    # Initialize the maximum value and the indices of the selected items
+    max_value = 0
+    selected_indices = []
+
+    # Consider all subsets of items with a total weight less than or equal to W
+    for subset_weight in range(W+1):
+        # Initialize the current subset of items
+        current_subset = []
+
+        # Iterate over the items and add them to the current subset if their weight is less than or equal to the remaining weight
+        for i in range(N):
+            if w[i] <= subset_weight:
+                current_subset.append(i)
+                subset_weight -= w[i]
+
+        # If the current subset has a total weight less than or equal to W and its total value is greater than the maximum value, update the maximum value and the selected indices
+        if subset_weight <= W and sum(p[i] for i in current_subset) > max_value:
+            max_value = sum(p[i] for i in current_subset)
+            selected_indices = current_subset
+
+    return max_value, selected_indices
+```
+This function takes as input the list of item values `p`, the list of item weights `w`, and the maximum weight `W` of the knapsack. It returns the maximum total value of the selected items and the indices of the selected items.
+
+The time complexity of this algorithm is O(N\*W), where N is the number of items and W is the maximum weight of the knapsack. The space complexity is O(N), because we need to keep track of the current subset of items.
+
+The 0/1 knapsack problem is a well-known problem in computer science and operations research, and there are many algorithms that can solve it. Some other algorithms that can solve this problem include the greedy algorithm, the value-to-weight ratio sorting algorithm, and the branch and bound algorithm.

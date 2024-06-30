@@ -1,0 +1,52 @@
+The problem you've described is known as the "Knapsack Problem," specifically the "0/1 Knapsack Problem." It is a classic problem in combinatorial optimization. The goal is to select a subset of items with a maximal sum of values such that the total weight does not exceed a given limit.
+
+Here’s a Python function that solves the 0/1 Knapsack Problem using dynamic programming:
+
+```python
+def knapsack(p, w, W):
+    N = len(p)
+    # dp[i][j] will be the max profit for i items and max weight j
+    dp = [[0 for _ in range(W + 1)] for _ in range(N + 1)]
+    
+    # Build table dp[][] in bottom up manner
+    for i in range(1, N + 1):
+        for j in range(W + 1):
+            if w[i-1] <= j: 
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + p[i-1])
+            else:
+                dp[i][j] = dp[i-1][j]
+                
+    # store the result of Knapsack
+    result = dp[N][W]
+    max_sum_p = result
+    
+    # To find out which items to pick, trace the decisions:
+    j = W
+    picked_items = []
+    for i in range(N, 0, -1):
+        if result <= 0:
+            break
+        if result == dp[i-1][j]:
+            continue
+        else:
+            # This item is included.
+            picked_items.append(i-1)
+            result -= p[i-1]
+            j -= w[i-1]
+
+    picked_items.reverse()  # To show items in the order they are given
+
+    return max_sum_p, picked_items
+
+# Example usage:
+p = [10, 40, 30, 50]  # Profits
+w = [5, 4, 6, 3]      # Weights
+W = 10                # Maximum weight capacity
+max_p, items_used = knapsack(p, w, W)
+print("Maximum sum of selected p:", max_p)
+print("Indices of elements used:", items_used)
+```
+
+This function `knapsack` first constructs a table to decide, for each number of items `i` and each weight limit `j`, the maximal profit that can be achieved. It does this in a bottom-up manner. After constructing the table, it also traces back the decision path to determine which items were actually included in this maximal-profit subset.
+
+This function will return the maximum possible sum of the selected elements of `p` and the indices (0-based) of the elements that are included in this optimal subset. In the example provided with the function call, the maximum sum and the indices of items used are printed out.

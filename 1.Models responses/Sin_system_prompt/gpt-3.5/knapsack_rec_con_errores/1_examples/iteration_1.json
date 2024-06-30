@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)', the syntax for passing arguments is not correct. The '-' symbol should be removed."
+}

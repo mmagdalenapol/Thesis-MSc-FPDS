@@ -1,0 +1,25 @@
+Here is a Python code that implements the algorithm you described:
+
+```python
+import math
+
+def sieve_of_eratosthenes(x):
+    # Create a boolean array, prime, of size x+1
+    prime = [True] * (x + 1)
+    prime[0] = prime[1] = False
+
+    # Iterate from 2 to sqrt(x)
+    for p in range(2, int(math.sqrt(x)) + 1):
+        # If p is prime, mark as composite all the multiples of p
+        if prime[p]:
+            for i in range(p * p, x + 1, p):
+                prime[i] = False
+
+    # Return a list of all prime numbers in the range [2, x]
+    return [p for p in range(2, x + 1) if prime[p]]
+
+x = int(input("Enter a natural number: "))
+print(sieve_of_eratosthenes(x))
+```
+
+This algorithm is known as the Sieve of Eratosthenes. It is an ancient algorithm for finding all prime numbers up to a given number, and it is still one of the most efficient ways to do so.

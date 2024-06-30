@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'p' is used before being defined, it should be 'primes'.\n2. 'range[2, x + 1]' should be 'range(2, x + 1)'.\n3. 'c' is used instead of 'current'.\n4. 'for j in range [c*c,  x+1, c]:' should be 'for j in range(c*c, x+1, c):'."
+}

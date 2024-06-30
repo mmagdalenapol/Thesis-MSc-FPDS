@@ -1,0 +1,32 @@
+The algorithm that you are referring to is called "Binary Search." Here is a Python code implementation for Binary Search:
+
+```python
+def binary_search_recursive(arr, target, start, end):
+    if start > end:
+        return -1
+    
+    mid = (start + end) // 2
+
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search_recursive(arr, target, mid + 1, end)
+    else:
+        return binary_search_recursive(arr, target, start, mid - 1)
+
+# Example Usage
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target = 5
+result = binary_search_recursive(arr, target, 0, len(arr) - 1)
+
+if result != -1:
+    print(f"Element found at position {result}.")
+else:
+    print("Element not found in the list.")
+```
+
+In this code, the function `binary_search_recursive` implements the binary search algorithm recursively. The function takes the sorted list `arr`, the `target` value to search for, the `start` and `end` indexes representing the sublist to search within.
+
+If the element is found, the function returns the position where the element is located in the list. If the element is not found, it returns `-1`.
+
+You can adjust the `arr` list and the `target` value to test the code with different inputs.

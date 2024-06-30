@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The condition 'while y =! 0:' uses '=!' which is incorrect for inequality. It should be '!='. Also, 'ent' is not recognized, you perhaps meant 'int'."
+}

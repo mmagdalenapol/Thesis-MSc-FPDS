@@ -1,0 +1,4 @@
+{
+    code_language: "python",
+    code_objective: "find the maximum value of a subset of items with a weight constraint",
+}

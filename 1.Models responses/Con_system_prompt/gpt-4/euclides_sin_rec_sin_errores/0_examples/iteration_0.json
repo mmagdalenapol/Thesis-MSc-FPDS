@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There is a logical error in the loop where the variable y is wrongly reassigned to c instead of r in the line y = c. Correctly, it should be y = r to properly implement the Euclidean algorithm for finding the greatest common divisor."
+}

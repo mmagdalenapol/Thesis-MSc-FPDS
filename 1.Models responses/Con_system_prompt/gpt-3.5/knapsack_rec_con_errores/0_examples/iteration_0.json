@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code has the following syntax errors: \n 1. 'Wt' is not defined, it should be 'wt'.\n 2. Incorrect usage of commas in function arguments, for example 'fun_1(W - Wt[n - 1], wt, n - 1, val)'."
+}

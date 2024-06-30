@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Multiple syntax errors found: 1. 'ent' should be 'int' for checking the variable type. 2. 'y =! 0' uses incorrect syntax for inequality, which should be 'y != 0'."
+}

@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code has several syntax errors. The first one is in the line 4 where the variable 'p' is used before it is defined. The second one is in the line 5 where the range function is used incorrectly. The third one is in the line 7 where the variable 'c' is used before it is defined. The fourth one is in the line 8 where the variable 'j' is used before it is defined. The fifth one is in the line 9 where the variable 'j' is used before it is defined. The sixth one is in the line 10 where the variable 'p' is used before it is defined. The seventh one is in the line 11 where the variable 'c' is used before it is defined."
+}

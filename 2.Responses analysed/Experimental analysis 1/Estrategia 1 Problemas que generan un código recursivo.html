@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "legend": {"disable": true}}, "data": {"name": "data-41855e15121aced76f3048005c7345b7"}, "mark": {"type": "rect", "stroke": "gray", "strokeWidth": 1}, "encoding": {"fill": {"field": "Count", "scale": {"domain": [1, 2, 3], "range": ["orange", "yellow", "green"]}, "type": "quantitative"}, "tooltip": [{"field": "model", "type": "nominal"}, {"field": "problem", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"axis": {"labelAngle": -25, "labelFontSize": 16, "titleFontSize": 16}, "field": "problem", "sort": "ascending", "title": "Problem", "type": "nominal"}, "y": {"axis": {"grid": false, "labelFontSize": 16, "titleFontSize": 18}, "field": "model", "sort": {"field": "model_order", "order": "ascending"}, "title": "Model", "type": "nominal"}}, "height": 400, "title": {"text": "Model vs. Problem", "fontSize": 20}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-41855e15121aced76f3048005c7345b7": [{"model": "codellama", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 3}, {"model": "codellama", "problem": "Eratosthenes Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 3}, {"model": "codellama", "problem": "Euclid Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 3}, {"model": "codellama", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 3}, {"model": "deepseek", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 4}, {"model": "deepseek", "problem": "Euclid Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 4}, {"model": "deepseek", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 4}, {"model": "gpt-3.5", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 2}, {"model": "gpt-3.5", "problem": "Eratosthenes Recursive", "Count": 1, "Total": 3, "percentage": 33.3, "model_order": 2}, {"model": "gpt-3.5", "problem": "Euclid Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 2}, {"model": "gpt-3.5", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 2}, {"model": "gpt-4", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 1}, {"model": "gpt-4", "problem": "Eratosthenes Recursive", "Count": 2, "Total": 3, "percentage": 66.7, "model_order": 1}, {"model": "gpt-4", "problem": "Euclid Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 1}, {"model": "gpt-4", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 1}, {"model": "llama2", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 5}, {"model": "llama3", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 0}, {"model": "llama3", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 0}, {"model": "platypus", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 6}, {"model": "platypus", "problem": "Knapsack Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 6}, {"model": "qwen", "problem": "Binary Search Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 7}, {"model": "qwen", "problem": "Eratosthenes Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 7}, {"model": "qwen", "problem": "Euclid Recursive", "Count": 3, "Total": 3, "percentage": 100.0, "model_order": 7}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

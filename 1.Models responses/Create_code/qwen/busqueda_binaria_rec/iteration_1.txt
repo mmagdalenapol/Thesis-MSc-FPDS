@@ -1,0 +1,36 @@
+The algorithm you described is called "Binary Search." Here's a Python implementation of the binary search algorithm as a recursive function:
+
+```python
+def binary_search(lst, low, high, target):
+    if high >= low:
+        mid = (low + high) // 2
+
+        # If the target is present at the middle itself
+        if lst[mid] == target:
+            return mid
+
+        # If target is smaller than mid, then it can only be present in left subarray
+        elif lst[mid] > target:
+            return binary_search(lst, low, mid - 1, target)
+
+        # Else the target can only be present in right subarray
+        else:
+            return binary_search(lst, mid + 1, high, target)
+
+    else:
+        # Element is not present in array
+        return -1
+
+# Example usage
+lst = [2, 3, 4, 10, 40]
+target = 10
+
+result = binary_search(lst, 0, len(lst) - 1, target)
+
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in list")
+```
+
+This algorithm has a time complexity of O(log n) because it halves the search space with each recursive call. It's efficient for large, ordered lists.

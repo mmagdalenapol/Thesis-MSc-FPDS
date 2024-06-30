@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Multiple syntax errors: 1. 'if p is None' should be 'if primes is None'. 2. 'range' should be used with parentheses not brackets, e.g., 'range(2, x+1)'. 3. 'c' is not defined before use in 'if c * c > x'. 4. The same error with 'range' in the loop. 5. Recursive function call should pass parameters correctly: 'fun_1(x, primes, current+1)'."
+}

@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In the function 'fun_1', the function call 'fun_1(W - Wt[n - 1], wt, n - 1, val)' is incorrect. The arguments should be in the order 'W - Wt[n - 1], wt, val, n - 1'."
+}

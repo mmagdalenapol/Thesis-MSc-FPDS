@@ -1,0 +1,7 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "The keyword 'ent' is not recognized, it should be 'int' to check if the variables are of integer type.",
+        "The syntax 'y =! 0' is incorrect for checking inequality, it should be 'y != 0'."
+    ]
+}

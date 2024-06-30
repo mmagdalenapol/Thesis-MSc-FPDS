@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'ent' should be 'int' to check integer type. Correct syntax: isinstance(a, int). 2. 'while y =! 0:' is incorrect. It should be 'while y != 0:' for checking non-equality."
+}

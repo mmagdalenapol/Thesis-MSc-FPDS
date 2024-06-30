@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several errors. 'range' is a function and should be called with parentheses, not brackets. The variable 'p' is not defined, it should be 'primes'. The variable 'c' is not defined, it should be 'current'."
+}

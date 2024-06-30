@@ -1,0 +1,25 @@
+Here is a Python implementation of the described algorithm:
+
+```python
+import math
+
+def sieve_of_eratosthenes(n):
+    x = [True] * n
+    x[0] = x[1] = False
+    
+    for j in range(2, math.isqrt(n) + 1):
+        if x[j]:
+            for k in range(j*j, n, j):
+                x[k] = False
+    
+    prime_indices = [i for i in range(n) if x[i]]
+    return prime_indices
+
+# Input the value of n
+n = 20
+result = sieve_of_eratosthenes(n)
+
+print("Prime numbers up to", n, "are at indices:", result)
+```
+
+You can run this code by copying and pasting it into a Python environment. Just change the value of `n` to the desired natural number for which you want to find prime indices. The code will output the indices of the array x that represent prime numbers according to the Sieve of Eratosthenes algorithm.

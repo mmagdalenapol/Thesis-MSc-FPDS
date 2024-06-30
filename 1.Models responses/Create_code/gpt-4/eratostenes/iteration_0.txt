@@ -1,0 +1,35 @@
+The algorithm you are describing is the "Sieve of Eratosthenes." It is an ancient algorithm used to find all prime numbers up to any given limit. It does so by iteratively marking the multiples of each prime number starting from 2. The primes are the numbers that never get marked as multiples.
+
+Here is a simple Python implementation of the Sieve of Eratosthenes that calculates all prime numbers smaller than a given number `x`:
+
+```python
+def sieve_of_eratosthenes(x):
+    # Initialize a boolean list where index represents the numbers from 0 to x-1
+    # True means the number is still considered a prime candidate
+    is_prime = [True] * x
+    p = 2
+    while (p * p <= x):
+        # If is_prime[p] is not changed, then it is a prime
+        if is_prime[p] == True:
+            # Updating all multiples of p to False indicating not prime
+            for i in range(p * p, x, p):
+                is_prime[i] = False
+        p += 1
+    # Collecting all prime numbers
+    primes = [p for p in range(2, x) if is_prime[p]]
+    return primes
+
+# Example of usage:
+x = 30
+print(f"All prime numbers smaller than {x}:", sieve_of_eratosthenes(x))
+```
+
+This code defines a function `sieve_of_eratosthenes()` that takes an integer `x` as input and returns a list of all prime numbers less than `x`. In this example, calling `sieve_of_eratosthenes(30)` will return `[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]`.
+
+The provided code effectively follows the steps of the Sieve of Eratosthenes:
+1. Create a list of boolean values set to `True`, representing that the indices are prime candidates.
+2. Start with the first prime number, 2, and mark its multiples as non-prime (set them to `False`).
+3. Move to the next integer and repeat the process until \( p^2 \leq x \), where \( p \) is your current prime number.
+4. Finally, collect all indices that have a `True` value, which are your prime numbers.
+
+The benefit of this algorithm is its efficiency in finding all primes smaller than a large number `x` compared to checking each number individually for primality.

@@ -1,0 +1,6 @@
+```json
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. Incorrect capitalization of 'Wt' should be 'wt'. 2. In the recursive call 'fun_1(W, Wt, - 1, val)', the arguments are incorrectly ordered and '- 1' is incorrectly used as an argument."
+}
+```

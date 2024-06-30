@@ -1,0 +1,29 @@
+Here is the Python code that implements the steps you provided:
+
+```python
+def euclidean_division(x, y):
+    if x <= 0 or y <= 0:
+        return "Input values must be positive integers."
+
+    a = max(x, y)
+    b = min(x, y)
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
+
+# Input values
+num1 = 48
+num2 = 18
+
+result = euclidean_division(num1, num2)
+print("Result:", result)
+```
+
+In this code:
+- The `euclidean_division` function takes two positive integer inputs, finds the larger and smaller values, and performs the Euclidean division until the remainder is 0.
+- If either of the input values is not a positive integer, the function returns a message stating that the values must be positive integers.
+- The code then applies the function with example values 48 and 18 and prints the result.
+
+You can change the values of `num1` and `num2` to test the function with different positive integers.

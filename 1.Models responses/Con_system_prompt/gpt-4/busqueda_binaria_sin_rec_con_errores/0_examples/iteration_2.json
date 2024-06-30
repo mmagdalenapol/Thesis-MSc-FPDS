@@ -1,0 +1,11 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "Missing colon after the function definition 'def fun_1(l, t)'. It should be 'def fun_1(l, t):'.",
+        "Missing colon after 'while x <= y'. It should be 'while x <= y:'.",
+        "Incorrect variable 'd' is used; it seems like it should be 'D' as defined by 'D = (x + y) // 2'.",
+        "Missing colon after 'elif l[d] < t'. It should be 'elif l[d] < t:'.",
+        "Missing colon after 'else'. It should be 'else:'.",
+        "Variable 'd' is again mistakenly used; it should be 'D' as in 'y = D - 1'."
+    ]
+}

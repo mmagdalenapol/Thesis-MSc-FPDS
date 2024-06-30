@@ -1,0 +1,9 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that finds the greatest common divisor of two integers"
+        }
+
+Explanation:
+
+* The code is written in Python, hence the value of "code_language" is "python".
+* The code defines a function named "fun_1" that takes two integer arguments "a" and "b" and returns a string message or the greatest common divisor (GCD) of the two numbers. The objective of the code is to find the GCD of two integers, hence the value of "code_objective" is "define a function that finds the greatest common divisor of two integers".

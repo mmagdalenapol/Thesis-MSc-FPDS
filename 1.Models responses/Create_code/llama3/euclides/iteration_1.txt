@@ -1,0 +1,29 @@
+The algorithm you're describing is known as the Euclidean algorithm, which is a method for computing the greatest common divisor (GCD) of two numbers. Here's a Python implementation of the algorithm:
+```
+def euclidean_algorithm(a, b):
+    if not isinstance(a, int) or not isinstance(b, int) or a < 0 or b < 0:
+        raise ValueError("Both inputs must be non-negative integers")
+
+    x, y = max(a, b), min(a, b)
+    while y != 0:
+        r = x % y
+        x, y = y, r
+
+    return x
+```
+Here's an explanation of the code:
+
+1. We first check that both inputs are non-negative integers. If not, we raise a `ValueError`.
+2. We set `x` to the maximum of `a` and `b`, and `y` to the minimum of `a` and `b`.
+3. We enter a loop that continues until `y` is 0.
+4. In each iteration, we compute the remainder `r` of `x` divided by `y` using the modulo operator (`%`).
+5. We update `x` and `y` by swapping their values and setting `y` to the remainder `r`.
+6. When `y` is 0, we return `x`, which is the GCD of the original `a` and `b`.
+
+You can test the function with examples, such as:
+```
+print(euclidean_algorithm(12, 15))  # Output: 3
+print(euclidean_algorithm(24, 30))  # Output: 6
+print(euclidean_algorithm(48, 18))  # Output: 6
+```
+The Euclidean algorithm is an efficient method for computing the GCD of two numbers, and it has many applications in number theory, algebra, and computer science.

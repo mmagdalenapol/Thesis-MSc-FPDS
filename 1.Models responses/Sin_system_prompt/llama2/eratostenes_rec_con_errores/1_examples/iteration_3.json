@@ -1,0 +1,8 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'c * c > x' the sintaxis for comparison is not correct."
+        }
+
+The code has a syntax error in the comparison 'c * c > x'. The correct syntax would be 'c ** 2 > x' or 'c * c > x'.
+
+It's also worth noting that the function name 'fun_1' is not following the conventional naming conventions for Python, which would make it harder to understand and maintain the code. It's better to use a more descriptive name that follows the conventions, such as 'find_primes'.

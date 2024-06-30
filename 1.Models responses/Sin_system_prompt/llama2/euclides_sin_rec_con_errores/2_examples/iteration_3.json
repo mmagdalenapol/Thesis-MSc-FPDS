@@ -1,0 +1,43 @@
+  Sure, I can help you with that. Here's the analysis of the given code:
+
+--code_language--: Python
+
+&&code&&:
+
+&&
+
+def solution(a, b, c):
+    if b*b-4*a*c =0:
+        solution = [-b/(2*c),]
+    if b*b-4*a*c <0:
+        print("No solution")
+        break
+    else:
+        solution = [(-b+math. sqrt(b*b -4*a*c))/(2*c),(-b-math. sqrt(b*b -4*a*c))/(2*c)]
+
+    return solution
+
+&&
+
+RESULT:
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'b*b-4*a*c =0' the sintaxis for comparison is not correct. You should use '==' instead of '='."
+}
+
+Here's the corrected code:
+
+def solution(a, b, c):
+    if b*b - 4*a*c == 0:
+        solution = [-b/(2*c),]
+    if b*b - 4*a*c < 0:
+        print("No solution")
+        break
+    else:
+        solution = [(-b + math.sqrt(b*b - 4*a*c))/(2*c), (-b - math.sqrt(b*b - 4*a*c))/(2*c)]
+
+    return solution
+
+---
+
+I hope this helps! Let me know if you have any further questions.

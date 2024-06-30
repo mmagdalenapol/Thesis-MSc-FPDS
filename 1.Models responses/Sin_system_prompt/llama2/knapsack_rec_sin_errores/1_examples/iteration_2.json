@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'v_n_i, i_n_i = fun_1(W, wt, val, n- 1)', the syntax for function calls is not correct. Python requires that function calls be made with parentheses around the arguments, rather than square brackets."
+}

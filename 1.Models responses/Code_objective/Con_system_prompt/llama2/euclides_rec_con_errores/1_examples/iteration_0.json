@@ -1,0 +1,9 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm",
+        }
+
+Explanation:
+
+* The code is written in Python, hence the value of "code_language" is "python".
+* The code defines a function named "fun_1" that takes two natural numbers as input and calculates their greatest common divisor using the Euclidean algorithm. Therefore, the value of "code_objective" is "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm".

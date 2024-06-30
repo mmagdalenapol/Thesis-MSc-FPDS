@@ -1,0 +1,12 @@
+  Sure, here's the analysis of the code you provided:
+
+code_language: "python"
+code_objective: "define a function that solves a second order equation"
+
+The code you provided is a Python script that defines a function called `solution` that takes three arguments: `a`, `b`, and `c`. The function solves a second-order equation of the form `b*x^2 + ax + c = 0` and returns a list of solutions.
+
+The function first checks if the discriminant `b*b - 4*a*c` is equal to zero. If it is, then there is only one solution, which is returned as a list containing a single element. If the discriminant is less than zero, then there are no real solutions, and the function prints "No solution" and breaks. Otherwise, there are two solutions, and the function returns a list containing both solutions.
+
+The code uses the `math.sqrt()` function to calculate the square root of the discriminant, and the `/` operator to divide numbers.
+
+Overall, the code seems to be well-structured and easy to follow, with clear variable names and logical flow.

@@ -1,0 +1,22 @@
+Here is a Python implementation of the steps described above:
+
+```python
+def find_indices(n):
+    x = [True] * n
+    x[0] = x[1] = False
+
+    for j in range(2, int(n**0.5) + 1):
+        if x[j]:
+            for i in range(j**2, n + 1, j):
+                x[i] = False
+
+    return [i for i in range(n) if x[i]]
+
+
+n = 10
+print(find_indices(n))
+```
+
+This code initializes an array `x` with `n` positions, all set to `True`. It then sets the first two positions to `False`. After that, it iterates through the numbers `j` from 2 to the nearest integer of the square root of `n`. For each `j`, if the value at position `j` in `x` is `True`, it updates the values of `x` to `False` at positions `j*j` through `n` by jumping from `j` to `j`. Finally, it returns the indices of the array `x` that take the value `True`.
+
+For example, if `n = 10`, the output will be `[3, 4, 5, 6, 7, 8, 9]`.

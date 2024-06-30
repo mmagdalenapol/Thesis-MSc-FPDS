@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, the `if` statement in the `fun_1` function is missing a colon after the condition. Secondly, the `for` loop in the same function has a missing colon after the loop header. Additionally, the `return` statement in the `fun_1` function is not indented correctly. Finally, the last line of the code, `RESULT`, is not properly indented and should be inside the `fun_1` function."
+}

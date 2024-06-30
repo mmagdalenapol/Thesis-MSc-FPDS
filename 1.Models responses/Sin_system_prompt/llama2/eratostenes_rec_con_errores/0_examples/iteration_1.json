@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. \n1. Missing colon after the `if p is None:` statement. \n2. Missing parentheses around the `range` function call in the `for j in range [c*c,  x+1, c]:` loop. \n3. Missing dot (`.`) before the `p.remove(j)` method call. \n4. Unexpected indentation in the `return fun_1(x, c + 1, p)` statement. \n5. Missing `)` at the end of the `for` loop."
+}

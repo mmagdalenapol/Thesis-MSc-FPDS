@@ -1,0 +1,41 @@
+The task described in your steps outlines an adaptation of the Sieve of Eratosthenes, which is a classic algorithm used to find all prime numbers up to a specified integer. The steps provided require creating a list where each value signifies whether the index is prime or not. The indices which end up being marked as `True` represent prime numbers. Here's how you might implement this in Python:
+
+```python
+import math
+
+def sieve_of_eratosthenes(n):
+    # Step 2: Initialize an array `x` with all entries set to True
+    if n < 2:
+        return []  # Handling case when n is less than 2
+  
+    x = [True] * (n+1)  # +1 because list is zero indexed
+
+    # Step 3: Set the value of the first two positions to False
+    x[0] = x[1] = False
+
+    # Step 4: iterate from 2 to the nearest integer to the square root of n
+    limit = int(math.sqrt(n)) + 1
+    for j in range(2, limit):
+        if x[j]:  # Step 4.1: Check if x[j] is True
+            # Update the values to False for all multiples of j
+            for multiple in range(j*j, n+1, j):
+                x[multiple] = False
+
+    # Step 4.2: Return the indices that are still True
+    primes = [i for i in range(n+1) if x[i]]
+    return primes
+
+# Example use case
+n = 30
+prime_numbers = sieve_of_eratosthenes(n)
+print("Prime numbers up to", n, ":", prime_numbers)
+```
+
+### Explanation:
+1. **n+1 Array Initialization**: We initialize an array `x` with `n+1` entries set to `True` to accommodate all numbers from 0 to n (inclusive).
+2. **Set First Two False**: As 0 and 1 are not prime numbers, these are explicitly set to `False`.
+3. **Square Root Limitation**: The loop iterates up to the square root of `n`, because any factor larger than the square root would have been found as a multiple of a smaller number already.
+4. **Marking Multiples as Non-prime**: For each valid `j` starting from 2, mark its multiples as `False` starting from `j*j` (because smaller multiples of `j` would have been marked by smaller primes).
+5. **Extract Primes**: Finally, list comprehension is used to extract all indices that have a value of `True`. These indices represent prime numbers.
+
+This code will provide you with a list of all prime numbers up to `n`. It operates efficiently by adhering to the principles of the Sieve of Eratosthenes.

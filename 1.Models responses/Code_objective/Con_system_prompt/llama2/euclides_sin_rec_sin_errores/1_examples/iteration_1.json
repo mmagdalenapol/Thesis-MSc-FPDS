@@ -1,0 +1,10 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that finds the greatest common divisor of two integers"
+        }
+
+Explanation:
+
+The code provided is a Python script that defines a function called `fun_1` that takes two integer arguments `a` and `b`. The function checks if the inputs are valid (i.e., both are positive integers) and then uses a while loop to find the greatest common divisor (GCD) of `a` and `b`. The GCD is returned if found, otherwise the function returns a message indicating that no GCD was found.
+
+Therefore, the theme of the code is mathematics, specifically number theory, and the objective of the code is to define a function that finds the GCD of two integers.

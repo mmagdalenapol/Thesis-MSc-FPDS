@@ -1,0 +1,40 @@
+  Sure! Here is a Python implementation of the algorithm you described:
+
+```
+def prime_numbers_up_to(x):
+    # Base case: if x is 1 or less, there are no prime numbers
+    if x <= 1:
+        return []
+
+    # Start with a list of all numbers from 2 to x
+    numbers = range(2, x + 1)
+
+    # Remove multiples of 2 up to x
+    numbers = [number for number in numbers if number % 2 != 0]
+
+    # Recursively remove multiples of the next prime number
+    numbers = prime_numbers_up_to(numbers, x)
+
+    return numbers
+
+def prime_numbers_up_to(numbers, x):
+    # If there are no more numbers to process, return
+    if not numbers:
+        return []
+
+    # Get the next prime number
+    prime = numbers[0]
+
+    # Remove multiples of the prime number up to x
+    numbers = [number for number in numbers[1:] if number % prime != 0]
+
+    # Recursively process the remaining numbers
+    return prime_numbers_up_to(numbers, x)
+
+# Test the function
+print(prime_numbers_up_to(100))
+```
+
+This should give you all the prime numbers up to 100.
+
+The algorithm you described is known as the Sieve of Eratosthenes. It is a simple and efficient method for finding all prime numbers up to a given number. It works by iteratively marking as composite (not prime) the multiples of each prime, starting with 2. The algorithm was first described by the ancient Greek mathematician Eratosthenes.

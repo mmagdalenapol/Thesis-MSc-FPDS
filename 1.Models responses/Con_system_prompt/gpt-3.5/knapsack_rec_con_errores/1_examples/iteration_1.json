@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'v_i, i_i = fun_1(W - Wt[n - 1], wt, n - 1, val)' there is a typo error 'Wt' instead of 'wt'."
+}

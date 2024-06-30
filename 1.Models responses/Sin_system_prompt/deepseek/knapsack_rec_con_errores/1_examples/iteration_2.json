@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In 'if Wt[n - 1] > W:', the variable 'Wt' is not defined. It should be 'wt'."
+}

@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "Several syntax errors which includes missing colons at the end of function and while loop lines, incorrect variable names (D instead of d), and mix of semicolons and missing semicolons for line termination."
+}

@@ -1,0 +1,23 @@
+
+
+Here's a Python code that implements the steps you've described:
+
+```
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        c = t[m-1] + fun_1(A-z[m-1], z, t, m-1)[0]
+        d = fun_1(A, z, t, m-1)[0]
+        if c > d:
+            return c, fun_1(A-z[m-1], z, t, m-1)[1] + [m-1]
+        else:
+            return fun_1(A, z, t, m-1)
+
+result = fun_1(W, w, p, n)
+print(result)
+```
+
+This code defines a function `fun_1` that takes four arguments: `A`, `z`, `t`, and `m`. It then performs the steps you've described, returning two outputs: a number and a list. The code then evaluates `fun_1` on the input values `W`, `w`, `p`, and `n`, storing the result in the `result` variable.

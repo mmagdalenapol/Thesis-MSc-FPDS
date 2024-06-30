@@ -1,0 +1,29 @@
+The algorithm described closely mimics the Euclidean algorithm, which is used to find the greatest common divisor (GCD) of two natural numbers. In your description, each step replaces the larger number with the remainder of the division until a remainder of 0 is obtained. When the remainder is zero, the smaller number at that step is the GCD.
+
+Here is a Python code that implements the described algorithm and returns the smallest non-zero remainder which ends the cycle (the GCD):
+
+```python
+def euclidean_algorithm(a, b):
+    if not (isinstance(a, int) and isinstance(b, int) and a > 0 and b > 0):
+        raise ValueError("Both a and b must be natural numbers (positive integers)")
+
+    x, y = max(a, b), min(a, b)
+
+    while y != 0:
+        c = x // y
+        r = x % y
+        print(f"Calculating: {x} = {y} * {c} + {r}")
+        x, y = y, r  # update x to y, and y to r
+    return x
+
+# Example usage
+a = 48
+b = 18
+
+gcd = euclidean_algorithm(a, b)
+print("The greatest common divisor (last non-zero remainder):", gcd)
+```
+
+This code will calculate stepwise the combinations as described and print each division step. The algorithm concludes when it finds a remainder of zero, and the other non-zero number associated with that division would be the GCD of the original two numbers.
+
+Regarding your question, as mentioned, the described algorithm is known as the "Euclidean algorithm". It is an ancient algorithm used for finding the greatest common divisor of two integers and is very efficient and commonly used in various applications, including in mathematics and computer science for problems related to number theory.

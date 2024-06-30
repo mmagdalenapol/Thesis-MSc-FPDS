@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In the function 'fun_1', the variable 'c' is not defined. Also, the range function is not correctly used in the second line of the function. It should be 'range(2, x + 1)' instead of 'range[2, x + 1]'."
+}

@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'p.append{i}' the sintaxis for list append is not correct, it should be 'p.append(i)' instead."
+}

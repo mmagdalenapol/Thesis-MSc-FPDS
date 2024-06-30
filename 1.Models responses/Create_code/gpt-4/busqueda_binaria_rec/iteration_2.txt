@@ -1,0 +1,52 @@
+The algorithm you're describing is known as the **Binary Search algorithm**. It's a powerful and commonly used searching technique that works on sorted arrays (or lists) by repeatedly dividing the search interval in half.
+
+Here's a Python implementation of this algorithm using recursion. This function searches for a given value `x` within a sorted list `arr[]` and returns its index if the element is present. It returns `-1` if the element is not found in the list:
+
+```python
+def binary_search(arr, left, right, x):
+    if right >= left:
+        mid = left + (right - left) // 2
+        
+        # Check if the element is present at the middle itself
+        if arr[mid] == x:
+            return mid
+        
+        # If the element is smaller than mid, then it can only be present in the left subarray
+        elif arr[mid] > x:
+            return binary_search(arr, left, mid - 1, x)
+        
+        # Otherwise, the element can only be present in the right subarray
+        else:
+            return binary_search(arr, mid + 1, right, x)
+    else:
+        # Element is not present in the array
+        return -1
+
+# Example usage:
+arr = [2, 3, 4, 10, 40]
+x = 10
+
+# Function call
+result = binary_search(arr, 0, len(arr) - 1, x)
+if result != -1:
+    print(f"Element is present at index {result}")
+else:
+    print("Element is not present in array")
+```
+
+### How the Code Works:
+1. **Base Case(s)**:
+   - If `right` is greater than or equal to `left`, it means that the range is still valid, and the search continues.
+   - If `right` becomes less than `left`, the search ends unsuccessfully.
+
+2. **Recursion**:
+   - The middle of the current range (`left` to `right`) is calculated.
+   - If the target value `x` is the middle element, its position is immediately returned.
+   - If `x` is less than the middle element, the function recurses into the left half of the array (`left` to `mid - 1`).
+   - If `x` is greater than the middle element, the function recurses into the right half (`mid + 1` to `right`).
+
+### Benefits of Binary Search:
+- Binary search drastically reduces the number of comparisons needed compared to linear search, as it discards half of the list during each step of the search.
+- Its average and worst-case time complexity is O(log n), making it much more efficient for large datasets than a linear search, which has a complexity of O(n).
+
+This method is only applicable if the list is sorted. If the list isn't sorted, other search algorithms such as linear search need to be considered.

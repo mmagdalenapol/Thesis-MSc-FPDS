@@ -1,0 +1,24 @@
+The algorithm you're describing is called the Sieve of Eratosthenes, an ancient algorithm for finding all prime numbers up to a given limit. Here's a Python implementation of the Sieve of Eratosthenes using recursion:
+
+```python
+def sieve_of_eratosthenes(x, primes=None, current=2):
+    if primes is None:
+        primes = list(range(2, x))
+    if current > int(x ** 0.5):
+        return primes
+
+    for multiple in range(current * current, x, current):
+        if multiple in primes:
+            primes.remove(multiple)
+
+    next_prime = primes[primes.index(current) + 1]
+    return sieve_of_eratosthenes(x, primes, next_prime)
+
+x = 50
+result = sieve_of_eratosthenes(x)
+print(result)
+```
+
+This code initializes a list of numbers from 2 to `x` (inclusive) and starts with the first prime number, 2. It removes all multiples of 2 from the list, then moves to the next unmarked number and repeats the process. The recursion stops when the current number exceeds the square root of `x`.
+
+The output will be a list of all prime numbers up to 50 (or any other value you set for `x`).

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are syntax errors in the provided code. The function `fun_1` seems to have indentation issues, as the `def`, `if`, and `else` statements are not properly aligned. Additionally, there is a space missing in the expression `n- 1` within the function. These issues need to be corrected to ensure proper syntax in Python."
+}

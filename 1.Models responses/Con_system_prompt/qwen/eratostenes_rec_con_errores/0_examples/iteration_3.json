@@ -1,0 +1,13 @@
+```python
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": [
+        "Line 3: Indentation error. The line should be indented to be part of the function.",
+        "Line 4: 'p' should be 'primes' as it is the parameter passed to the function.",
+        "Line 6: 'c' is not defined. It should be 'current'.",
+        "Line 7: Incorrect syntax for range function. Use parentheses instead of square brackets.",
+        "Line 10: 'c' is not defined. It should be 'current'.",
+        "Line 11: Incorrect syntax for range function. Use parentheses instead of square brackets."
+    ]
+}
+```

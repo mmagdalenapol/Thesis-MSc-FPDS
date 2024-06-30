@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "In the while loop, the condition 'y =! 0' is incorrect. The correct syntax is 'y != 0'."
+}

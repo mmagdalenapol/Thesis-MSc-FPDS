@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'Wt[n - 1] > W' the sintaxis for comparison is not correct."
+}

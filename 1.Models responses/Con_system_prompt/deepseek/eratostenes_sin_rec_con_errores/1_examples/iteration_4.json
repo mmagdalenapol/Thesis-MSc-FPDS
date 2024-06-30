@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In the function 'fun_1', the syntax for appending an element to a list is incorrect. The correct syntax is 'list.append(element)', not 'list.append{element}'."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'is None' is incorrect, it should be '== None' or 'is None'.\n2. 'range[2, x + 1]' should be 'range(2, x + 1)'.\n3. 'if c * c > x' should be 'if current * current > x'.\n4. 'for j in range [c*c, x+1, c]:' should be 'for j in range(c*c, x+1, c):'.\n5. 'return fun_1(x, c + 1, p)' should be 'return fun_1(x, current + 1, p)'."
+}

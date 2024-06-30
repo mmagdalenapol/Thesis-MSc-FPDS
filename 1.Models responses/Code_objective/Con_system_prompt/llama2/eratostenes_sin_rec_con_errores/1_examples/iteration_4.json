@@ -1,0 +1,9 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that finds the prime numbers up to a given number"
+        }
+
+Explanation:
+
+* The code is written in Python, hence the value of "code_language" is "python".
+* The code defines a function named "fun_1" that takes an integer "x" as input and returns a list of prime numbers up to "x". The function uses a boolean array "s" to keep track of the prime numbers and a list "p" to store the prime numbers. The function first initializes the boolean array and then iterates from 2 to the square root of "x" and marks the multiples of each number as false in the boolean array. Then it iterates from the square root of "x" to "x" and appends the prime numbers to the list "p". Finally, it returns the list "p". Therefore, the value of "code_objective" is "define a function that finds the prime numbers up to a given number".

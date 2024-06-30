@@ -1,0 +1,22 @@
+The process you described resembles the Euclidean algorithm, a well-known method used for finding the greatest common divisor (GCD) of two numbers.
+
+Here's a Python implementation of the process you described, which will continue until the remainder is 0 and return the divisor from the last non-zero remainder division:
+
+```python
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage
+a = 192
+b = 270
+result = gcd(a, b)
+print(f"The denominator of the division with remainder 0 is: {result}")
+```
+
+This code defines a function `gcd` that takes two integers, `a` and `b`. It applies the Euclidean algorithm as you outlined, where the two numbers undergo a series of divisions to produce successive remainders until the remainder is zero. The last nonzero remainder's divisor is returned as the greatest common divisor (GCD).
+
+In the example given, calling `gcd(192, 270)` would compute the GCD of 192 and 270 and print the denominator from the division step that achieved a remainder of 0, which in this case is 6, the GCD of 192 and 270.
+
+Regarding the question about the name of this algorithm, as mentioned, it is called the **Euclidean algorithm**, named after the ancient Greek mathematician Euclid, who first described it in his Elements. The algorithm is fundamental to number theory and is used not only to find the GCD but as a base in other algorithms involving integers.

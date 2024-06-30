@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The variable 'p' and 'c' are used before assignment. Instead of 'p' and 'c', it appears you meant 'primes' and 'current'. Additionally, 'range[2, x + 1]' and 'range[c*c, x+1, c]' should be 'range(2, x + 1)' and 'range(c*c, x+1, c)' as range is a function and should be called with parentheses."
+}

@@ -1,0 +1,40 @@
+This algorithm is called the "Knapsack Problem" or "0-1 Knapsack Problem". Here is a Python implementation that solves the problem recursively:
+
+```python
+def knapsack_problem(p, w, W, n):
+    if n == 0 or W == 0:
+        return 0, []
+
+    max_p, max_i = 0, []
+    for i in range(n):
+        p_i, w_i = p[i], w[i]
+        remaining_w = W - w_i
+        remaining_n = n - i - 1
+
+        sub_p, sub_i = knapsack_problem(p, w, remaining_w, remaining_n)
+
+        if sub_p + p_i > max_p:
+            max_p = sub_p + p_i
+            max_i = [i] + sub_i
+        elif sub_p + p_i == max_p:
+            max_i.append(i)
+
+    return max_p, max_i
+
+
+def main():
+    p = [3, 4, 5, 6]
+    w = [2, 3, 4, 5]
+    W = 10
+    n = len(p)
+
+    max_p, max_i = knapsack_problem(p, w, W, n)
+    print(f"Maximum sum of p: {max_p}")
+    print(f"Indices of selected elements: {max_i}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+This algorithm will return the maximum sum of the selected elements in "p" and the indices of the elements that have been used.

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The use of '&' instead of '#' for comments is causing a syntax error."
+}

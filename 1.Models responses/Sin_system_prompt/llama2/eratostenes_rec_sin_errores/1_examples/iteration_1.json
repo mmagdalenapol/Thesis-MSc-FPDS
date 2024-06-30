@@ -1,0 +1,12 @@
+  {
+        code_sintax_error: "Yes",
+        code_sintax_explanation: "In 'c * c > x' the sintaxis for comparison is not correct. Also, in 'return fun_1(x, p, c + 1)' there is a missing parentheses."
+        }
+
+The errors in the code are:
+
+* In the line 'b*b-4*a*c =0', the syntax for comparison is not correct. It should be 'b*b - 4*a*c == 0'
+* In the line 'c * c > x', the syntax for comparison is not correct. It should be 'c**2 > x'
+* In the line 'return fun_1(x, p, c + 1)', there is a missing parentheses. It should be 'return fun_1(x, p, c+1)'
+
+I hope this helps! Let me know if you have any further questions.

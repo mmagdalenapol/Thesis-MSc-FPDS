@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors. In 'if p is None:' the variable 'p' is not defined, it should be 'primes'. In 'p = [i for i in range[2, x + 1]]' the syntax for range is not correct, it should be 'range(2, x + 1)'. In 'for j in range [c*c,  x+1, c]:' the syntax for range is not correct, it should be 'range(c*c, x + 1, c)'. The variable 'c' is not defined, it should be 'current'."
+}

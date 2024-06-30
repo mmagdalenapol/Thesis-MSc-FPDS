@@ -1,0 +1,4 @@
+{
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'while y =! 0:' the sintaxis for 'not equal' is not correct, it should be '!='. Also, 'ent' is not defined, it should be 'int'."
+}

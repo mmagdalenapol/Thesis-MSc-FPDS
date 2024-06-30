@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'def fun_1(l, t)' there is a missing colon at the end of the function definition. In 'while x <= y' and 'elif l[d] < t' statements, the colons at the end of the lines are missing. In 'else' statement, the colon is missing as well."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code contains multiple syntax errors. Here are the errors:\n1. Missing parentheses in the function definition. Correct syntax should be: def fun_1(a, b):\n2. Incorrect comparison operator '==', should be '=' in lines: a == 10 and b == 6\n3. NameError: 'euclidean_gcd' is used in the print statement but not defined"
+}

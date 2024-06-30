@@ -1,0 +1,34 @@
+The algorithm you have described is known as the **Sieve of Eratosthenes**. This is a classical algorithm used to find all the prime numbers less than a specified integer, `x`, and it works by iteratively marking the multiples of each prime number starting from 2.
+
+Below is a Python code that replicates this process using a recursive approach. We would usually implement the Sieve of Eratosthenes iteratively, but as you requested, I will provide a recursive version, which isn't standard and is generally not recommended due to efficiency issues and potential risks of hitting Python's recursion limit for large values of `x`.
+
+```python
+def recursive_sieve(arr, start_index, n):
+    if start_index >= len(arr) or arr[start_index]**2 > n:
+        return [a for a in arr if a != 0]  # Filter out the remaining non-zero numbers which are prime
+    prime = arr[start_index]
+    # Mark multiples of the current prime as 0
+    for i in range(start_index + prime, len(arr), prime):
+        arr[i] = 0
+    # Find the next number which hasn't been marked and process recursively
+    next_index = start_index + 1
+    while next_index < len(arr) and arr[next_index] == 0:
+        next_index += 1
+    return recursive_sieve(arr, next_index, n)
+
+def sieve_of_eratosthenes(x):
+    # Create a list from 2 to x-1 (inclusive)
+    if x <= 2:
+        return []
+    arr = list(range(2, x))
+    return recursive_sieve(arr, 0, x)
+
+# Example usage:
+x = 30
+primes = sieve_of_eratosthenes(x)
+print(primes)
+```
+
+This code recursively removes multiples of each prime found in the list, starting from 2, and filters out the non-prime entries (set to zero). Keep in mind that Python's recursion limit might interfere with this approach for large `x`, and the iterative version of the Sieve of Eratosthenes is generally more appropriate.
+
+If you're interested in the iterative version or increasing the recursion depth, let me know, and I can provide further assistance on those topics.

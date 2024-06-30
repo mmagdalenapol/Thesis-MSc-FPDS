@@ -1,0 +1,30 @@
+Here is the Python code implementing the described function fun_1 and then evaluating it on the input (W, w, p, n):
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        c = t[m-1] + fun_1(A - z[m-1], z, t, m-1)[0]
+        d = fun_1(A, z, t, m-1)[0]
+        if c > d:
+            return c, fun_1(A - z[m-1], z, t, m-1)[1] + [m-1]
+        else:
+            return fun_1(A, z, t, m-1)
+
+# Given input
+p = [4, 3, 5, 2, 1]
+w = [3, 2, 4, 1, 2]
+W = 8
+n = len(p)
+
+# Evaluate fun_1 on (W, w, p, n)
+result = fun_1(W, w, p, n)
+print("Output of fun_1 on (W, w, p, n):", result)
+```
+
+You can replace the values of p, w, W, and n with your specific inputs before running this code.
+
+This code defines the function fun_1 according to the described rules and then evaluates it on the given input (W, w, p, n), where p and w are vectors of the same length n, and W is a natural number.

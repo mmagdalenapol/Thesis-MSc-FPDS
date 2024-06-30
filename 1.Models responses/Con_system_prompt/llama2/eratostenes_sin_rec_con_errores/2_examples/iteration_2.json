@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'p.append{i}', the syntax for appending an element to a list is not correct. Also, in 'for j in range(i*i, x + 1, i)', the syntax for the third argument of the range function is not correct. It should be 'step' instead of 'i'."
+}

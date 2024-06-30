@@ -1,0 +1,27 @@
+The algorithm you've described is called the Sieve of Eratosthenes, an ancient Greek algorithm for finding all prime numbers up to a given limit. It's an efficient method for generating primes and is based on the process you've outlined.
+
+Here's a Python implementation of the Sieve of Eratosthenes:
+
+```python
+import math
+
+def sieve_of_eratosthenes(x):
+    primes = [True] * (x + 1)
+    primes[0] = primes[1] = False
+
+    for num in range(2, int(math.sqrt(x)) + 1):
+        if primes[num]:
+            for multiple in range(num*num, x + 1, num):
+                primes[multiple] = False
+
+    return [i for i in range(2, x + 1) if primes[i]]
+
+# Example usage:
+x = 50
+result = sieve_of_eratosthenes(x)
+print(result)
+```
+
+This code initializes a boolean list `primes` of size `x + 1`, assuming all numbers are prime initially. It then iterates through numbers from 2 to the square root of `x`, marking their multiples as non-prime. Finally, it returns a list of numbers that are still marked as prime.
+
+The algorithm's name is a tribute to the ancient Greek mathematician Eratosthenes, who is credited with its discovery.

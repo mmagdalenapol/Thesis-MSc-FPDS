@@ -1,0 +1,18 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, the `if` statement in the third line is missing a colon after the condition. Secondly, the `for` loop in the fifth line has a missing colon after the loop header. Finally, the recursive call to `fun_1` in the last line is missing a comma after the argument `c + 1`.
+
+Here's a corrected version of the code:
+```
+def fun_1(x, p=None, c=2):
+    if p is None:
+        p = [i for i in range(2, x + 1)]
+    if c * c > x:
+        return p
+    for j in range(c * c, x + 1, c):
+        if j in p:
+            p.remove(j)
+    return fun_1(x, p, c + 1),
+```
+The corrected code should now work as intended."
+}

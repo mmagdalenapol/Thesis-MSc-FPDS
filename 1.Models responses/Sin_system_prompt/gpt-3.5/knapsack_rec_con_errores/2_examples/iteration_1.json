@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "In 'if Wt[n - 1] > W:', 'Wt' is not defined. It should be 'wt'. Also, in 'v_i, i_i = fun_1(W - Wt[n - 1], wt, n - 1, val)', 'Wt' should be 'wt'. In 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)', there is a space between '-' and '1' in '- 1', and it should be 'wt' instead of 'Wt'."
+}

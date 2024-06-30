@@ -1,0 +1,4 @@
+{
+    code_sintax_error: "Yes",
+    code_sintax_explanation: "There are multiple syntax errors. First, the lines starting with '&' are not valid Python syntax. Second, the function call 'euclidean_gcd(a, b)' is not defined, it should be 'fun_1(a, b)'. Third, the assignment statements 'a; b == b; a' are incorrect and should be replaced with 'a, b = b, a' for swapping values."
+}

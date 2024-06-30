@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "There are several syntax errors in the code. Firstly, there is a missing colon after the `else` keyword in the third `if` statement. Secondly, there is a missing comma after the `i_i` variable in the `return` statement of the fourth `if` statement. Lastly, there is a missing closing parenthesis at the end of the function definition."
+}

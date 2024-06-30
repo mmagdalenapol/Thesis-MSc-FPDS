@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In 'Wt' variable name is incorrect, it should be 'wt'. Also, there is a syntax error in 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)', the subtraction symbol is not correct." 
+}

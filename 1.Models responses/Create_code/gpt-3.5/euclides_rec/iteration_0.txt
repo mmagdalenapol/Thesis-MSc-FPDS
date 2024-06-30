@@ -1,0 +1,21 @@
+The process you described is known as the Euclidean algorithm. It is an algorithm for finding the greatest common divisor of two integers. In your case, you are describing a way to find the denominator of the division that has a remainder of 0, which can be achieved by applying the Euclidean algorithm recursively.
+
+Here is a Python implementation of the recursive function that replicates the process you described:
+
+```python
+def find_denominator(a, b):
+    if b == 0:
+        return a
+    else:
+        q = a // b
+        r = a % b
+        return find_denominator(b, r)
+
+# Test the function
+a = 357
+b = 234
+result = find_denominator(max(a,b), min(a,b))
+print("Denominator of the division with remainder 0 =", result)
+```
+
+You can input any two natural numbers "a" and "b" to find the denominator of the division that has a remainder of 0 using this function.

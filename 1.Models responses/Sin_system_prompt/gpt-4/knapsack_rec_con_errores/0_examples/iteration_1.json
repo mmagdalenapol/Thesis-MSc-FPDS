@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. The variable 'Wt' is used but not defined or passed as an argument.\n2. The function call to 'fun_1' has mismatched argument order and definitions as seen in 'fun_1(W - Wt[n - 1], wt, n - 1, val)' which expects 'fun_1(W, wt, val, n)'.\n3. In the function call 'fun_1(W, Wt, - 1, val)', the incorrect argument '- 1' is passed instead of an integer for 'n'. Incorrect list manipulation i_i + [n], as Python lists are concatenated using '+'. List [n] can be added directly."
+}

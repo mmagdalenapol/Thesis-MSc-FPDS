@@ -1,0 +1,4 @@
+  {
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "There are several syntax errors in the code. Firstly, the `while` loop is missing a colon after the condition. Secondly, the comparison operator in the loop condition should be `!=` instead of `=!`. Additionally, the `return` statement inside the loop is missing a value. Finally, the last `return` statement is not indented."
+}

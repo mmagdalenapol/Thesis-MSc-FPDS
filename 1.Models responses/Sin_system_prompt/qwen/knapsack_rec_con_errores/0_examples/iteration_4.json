@@ -1,0 +1,6 @@
+```python
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There is a typo in the variable name 'Wt' which should be 'wt' in the line 'if Wt[n - 1] > W:' and also in the recursive call 'fun_1(W - Wt[n - 1], wt, n - 1, val)'. Additionally, there's an incorrect argument 'n - 1' instead of 'val' in the recursive call 'fun_1(W, Wt, - 1, val)'."
+}
+```

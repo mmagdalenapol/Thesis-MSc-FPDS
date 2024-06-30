@@ -1,0 +1,30 @@
+  Sure, here's the analysis of the code you provided:
+
+code_language: "python"
+code_objective: "define a function that finds all prime numbers up to a given number"
+
+Here's the code with some minor formatting changes:
+```
+def fun_1(x):
+  p = []
+  s = [True] * (x + 1)
+  s[0] = s[1] = False
+  for i in range(2, int(x*0.5) + 1):
+    if s[i]:
+      p.append(i)
+      for j in range(i*i, x + 1, i):
+        s[j] = False
+  for i in range(int(x*0.5) + 1, x + 1):
+    if s[i]:
+      p.append(i)
+  return p
+```
+This code defines a function `fun_1` that takes an integer `x` as input and returns a list of all prime numbers up to `x`. The code uses the Sieve of Eratosthenes algorithm to find the prime numbers.
+
+The code first initializes a list `p` to store the prime numbers and a list `s` to keep track of whether a number is prime or not. The first two elements of `s` are set to `False` to indicate that 1 and 2 are not prime.
+
+The code then iterates over the numbers from 2 to `x` and checks whether the current number `i` is prime. If `i` is prime, its multiples are marked as non-prime by setting the corresponding elements in `s` to `False`. The prime number `i` is then appended to the `p` list.
+
+Finally, the code returns the `p` list, which contains all the prime numbers up to `x`.
+
+I hope this helps! Let me know if you have any questions.

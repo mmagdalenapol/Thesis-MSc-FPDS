@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors in the code. The 'def fun_1(x, primes=None, current=2)' statement is not correctly formatted, it should be 'def fun_1(x, primes=None, current=2):'. In the line 'if p is None:', the variable 'p' should be 'primes'. The list comprehension 'p = [i for i in range[2, x + 1]]' should use parentheses instead of square brackets for the range function, like 'p = [i for i in range(2, x + 1)]'. The square brackets in 'for j in range [c*c,  x+1, c]:' should be parentheses, like 'for j in range(c*c,  x+1, c):'."
+}

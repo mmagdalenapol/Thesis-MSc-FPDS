@@ -1,0 +1,25 @@
+def euclidean_division(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def main(a, b):
+    if a < 0 or b < 0:
+        return "Invalid input"
+    elif a == 0 or b == 0:
+        return "Invalid input"
+    else:
+        result = euclidean_division(a, b)
+        if result == 0:
+            return b
+        else:
+            return "Invalid input"
+
+a = int(input("Enter the first positive integer: "))
+b = int(input("Enter the second positive integer: "))
+
+result = main(a, b)
+if result == "Invalid input":
+    print("Invalid input")
+else:
+    print(result)

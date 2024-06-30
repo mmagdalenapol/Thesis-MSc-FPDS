@@ -1,0 +1,32 @@
+Here is the implemented Python code that follows the steps you provided:
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+    
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    
+    c = t[m-1] + fun_1(A - z[m-1], z, t, m-1)[0]
+    d = fun_1(A, z, t, m-1)[0]
+    
+    if c > d:
+        return c, fun_1(A - z[m-1], z, t, m-1)[1] + [m-1]
+    else:
+        return fun_1(A, z, t, m-1)
+
+def evaluate_fun_1(W, w, p, n):
+    result = fun_1(W, w, p, n)
+    return result
+
+# Example usage
+p = [3, 1, 4, 2]
+w = [2, 1, 3, 2]
+W = 5
+n = 4
+output = evaluate_fun_1(W, w, p, n)
+print(output)
+```
+
+You can replace the example values of `p`, `w`, `W`, and `n` with your desired values to test the code. The `evaluate_fun_1` function will return the result of evaluating `fun_1` on the provided input vectors according to the defined recursive rules.

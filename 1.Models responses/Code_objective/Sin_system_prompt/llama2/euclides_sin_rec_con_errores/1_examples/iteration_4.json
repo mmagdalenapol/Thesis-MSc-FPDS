@@ -1,0 +1,13 @@
+  Sure, here's the analysis of the code:
+
+code_language: "python"
+code_objective: "define a function that solves a second order equation"
+
+The code is written in Python and defines a function called `solution` that takes three arguments: `a`, `b`, and `c`. The function appears to solve a second-order equation of the form `b^2 - 4ac = 0`, where `a`, `b`, and `c` are constants. The function returns a list of solutions, which are calculated using the formulae `(-b ± sqrt(b^2 - 4ac)) / (2c)`. If there are no real solutions, the function prints "No solution" and returns an empty list.
+
+Here's the dictionary with the results:
+
+{
+"code_language": "python",
+"code_objective": "define a function that solves a second order equation"
+}

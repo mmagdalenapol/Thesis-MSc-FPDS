@@ -1,0 +1,21 @@
+  Sure! Here is a Python implementation of the algorithm you described:
+```
+def prime_numbers_up_to(x):
+    prime_numbers = [2]
+    for i in range(3, int(x ** 0.5) + 1):
+        is_prime = True
+        for j in range(2, int(i ** 0.5) + 1):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            prime_numbers.append(i)
+        for j in range(i * 2, x + 1, i):
+            prime_numbers.append(j)
+    return prime_numbers
+```
+This algorithm is known as the Sieve of Eratosthenes. It works by creating a list of all numbers up to x, and then iteratively marking as composite (not prime) any number that is divisible by a prime number less than or equal to the square root of x. The remaining numbers in the list, which have not been marked as composite, are the prime numbers.
+
+The time complexity of this algorithm is O(n log log n), where n is the number of numbers up to x. This is because the algorithm only needs to check for divisibility by prime numbers less than or equal to the square root of x, which is a subset of the total number of numbers up to x. The space complexity is O(n), since the algorithm needs to store all the prime numbers in a list.
+
+I hope this helps! Let me know if you have any questions or need further clarification.

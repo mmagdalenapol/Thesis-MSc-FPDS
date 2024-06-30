@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The '&' character is used as a comment indicator, which is incorrect in Python. Comments should start with '#'. Misuse of ';' in the swapping line 'a; b == b; a' and incorrect naming in the print statement, using 'euclidean_gcd' instead of 'fun_1'."
+}

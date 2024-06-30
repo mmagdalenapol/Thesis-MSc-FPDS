@@ -1,0 +1,1 @@
+This algorithm is called the Euclidean Algorithm. It is used to find the greatest common divisor (GCD) of two numbers by repeatedly applying the division with remainder process until the remainder is zero. The GCD is the final non-zero remainder.

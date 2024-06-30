@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The variable 'Wt' is used but not defined or passed as an argument, it seems 'wt' was meant instead. Another mistake is observed in 'fun_1(W, Wt, - 1, val)', where 'Wt' appears to be used incorrectly as a list of weights, and the function arguments seem to be in the wrong order. Also, there's a missing case distribution for 'fun_1(W - Wt[n - 1], wt, n - 1, val)' where 'wt' should be used instead of 'Wt'."
+}

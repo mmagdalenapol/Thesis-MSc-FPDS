@@ -1,0 +1,4 @@
+{
+    code_language: "python",
+    code_objective: "define a function that calculates the maximum value of a subset of items with given weights and values",
+}

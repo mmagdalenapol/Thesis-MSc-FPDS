@@ -1,0 +1,42 @@
+Here is the Python implementation of the described algorithm:
+
+```python
+def find_element(a, x):
+    low = 0
+    high = len(x) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if x[mid] == a:
+            return mid
+        elif x[mid] < a:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    if len(x) == 2:
+        if x[0] == a:
+            return 0
+        elif x[1] == a:
+            return 1
+        else:
+            return -1
+    
+    return -1
+
+# Test the function
+x = [1, 3, 5, 7, 9, 11, 13, 15]
+a = 7
+result = find_element(a, x)
+print("Index of element", a, "in the list:", result)
+```
+
+In this code:
+- The `find_element` function takes a number `a` and a sorted list `x` as input.
+- It performs binary search to find the element `a` in the list `x`.
+- If the element is found, it returns the index of the element.
+- If the element is not found, it returns -1.
+- The function handles the cases where the length of the list is 2 separately to check for the element in those cases.
+
+You can test this code by providing a sorted list `x` and a number `a` to search for in the list.

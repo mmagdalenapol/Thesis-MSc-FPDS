@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Missing colons at the end of 'def fun_1(l, t)', 'while x <= y', 'elif l[d] < t', 'else'"
+}

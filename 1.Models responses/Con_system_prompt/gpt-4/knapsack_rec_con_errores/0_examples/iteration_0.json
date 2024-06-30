@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The code contains several syntax errors: 1. The variable 'Wt' is used but not defined or passed to the function. It seems to be a typo and should be 'wt'. 2. In the recursive call fun_1(W - Wt[n - 1], wt, n - 1, val), the parameters are incorrectly ordered as per the function definition 'fun_1(W, wt, val, n)'. It should be reordered to match the function definition. 3. The code line 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)' uses 'Wt' incorrectly instead of 'wt' and has an extra space between the '-' and '1', which should be '-1'. It also mismatches the function parameters which should be in the order (W, wt, val, n)."
+}

@@ -1,0 +1,32 @@
+The algorithm you described for finding an element in an ordered list by repeatedly dividing the search interval in half is called **binary search**. It is a very efficient searching method for sorted arrays, with a time complexity of O(log n), where n is the number of elements in the list.
+
+Here is a Python function implementing the binary search algorithm:
+
+```python
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        mid_val = arr[mid]
+
+        if mid_val == target:
+            return mid  # target found, return its index
+        elif mid_val < target:
+            low = mid + 1  # target is in the upper half
+        else:
+            high = mid - 1  # target is in the lower half
+
+    return -1  # target was not found
+
+# Example usage:
+example_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target_value = 5
+
+print(f"Index of {target_value}:", binary_search(example_list, target_value))
+```
+
+This Python code defines a function `binary_search` that takes an array `arr` and a `target` value as arguments and returns the index of the target if it is present in the array. If the target is not found, it returns `-1`.
+
+The function works by narrowing down the search to the relevant half of the array after comparing the target with the middle element of the array (`mid_val`). The loop continues until the target is found (returning the index of the target) or until the search boundaries (`low` and `high`) cross each other, indicating the target is not in the array.

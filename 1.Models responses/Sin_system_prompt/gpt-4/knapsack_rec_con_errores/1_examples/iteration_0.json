@@ -1,0 +1,4 @@
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "In the code, 'Wt' is not defined but 'wt' is used, suggesting a typo. The recursive call for 'fun_1' in 'v_i, i_i' mistakenly uses 'wt' as the third argument instead of 'val'. Similarly, the second recursive call uses 'Wt' instead of 'wt' and '- 1' which is incorrect should be 'n - 1'."
+}

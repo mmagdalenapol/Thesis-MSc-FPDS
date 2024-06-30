@@ -1,0 +1,54 @@
+The problem you are describing is known as the "Knapsack Problem", specifically the "0/1 Knapsack Problem". This problem is a famous example in combinatorial optimization where the goal is to maximize the sum of the values (p_i in your case) of a subset of items while adhering to a weight constraint (sum of w_i).
+
+The solution can be achieved using dynamic programming. Here's a Python implementation that returns both the maximum sum of selected elements from "p" and the indexes of these elements that have been used to achieve this sum:
+
+```python
+def knapsack(p, w, W):
+    n = len(w)
+    # dp[i][j]: maximum sum of p_i with total weight less than or equal to j
+    dp = [[0] * (W + 1) for _ in range(n + 1)]
+
+    # Build the dp array
+    for i in range(1, n + 1):
+        for j in range(W + 1):
+            if w[i - 1] <= j:
+                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - w[i - 1]] + p[i - 1])
+            else:
+                dp[i][j] = dp[i - 1][j]
+
+    # Find the selected items
+    result = dp[n][W]
+    selected_items = []
+    current_capacity = W
+
+    for i in range(n, 0, -1):
+        if dp[i][current_capacity] != dp[i - 1][current_capacity]:
+            selected_items.append(i - 1)
+            current_capacity -= w[i - 1]
+
+    selected_items.reverse()
+    return dp[n][W], selected_items
+
+# Example use:
+p = [10, 20, 30]    # Values
+w = [5, 10, 15]     # Weights
+W = 20              # Maximum capacity of Knapsack
+
+max_sum, items_used = knapsack(p, w, W)
+print("Max sum of selected elements:", max_sum)
+print("Indices of elements used:", items_used)
+```
+
+### Explanation:
+1. **Dynamic Programming Table (`dp`)**: `dp[i][j]` holds the maximum value that can be achieved with the first `i` items and a weight limit `j`.
+   
+2. **Building dp Table**: For each item and weight capacity combination, decide whether to include the item in the optimal subset or not.
+
+3. **Tracking Selected Items**: After computing the maximum value, backtrack through the `dp` table to determine which items were included to reach that value.
+
+### Complexity:
+- Time Complexity: O(n*W) where `n` is the number of items and `W` is the capacity.
+- Space Complexity: Also O(n*W) because of the 2D list.
+
+### Note:
+For very large `n` or `W`, this approach might not be feasible because of high time and memory consumption. In such cases, alternative approaches or optimizations like approximation algorithms or problem-specific heuristics might be needed.

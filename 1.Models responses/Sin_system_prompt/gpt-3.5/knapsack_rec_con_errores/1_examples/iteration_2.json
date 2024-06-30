@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There is a syntax error in the code. In 'Wt[n - 1]', the variable 'Wt' is not defined. It should be 'wt' instead."
+}

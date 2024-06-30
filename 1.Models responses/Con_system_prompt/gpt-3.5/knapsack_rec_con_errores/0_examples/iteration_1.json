@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. 'Wt' is not defined, it should be 'wt'.\n2. There is a syntax error in this line: 'v_i, i_i = fun_1(W - Wt[n - 1], wt, n - 1, val)', the third argument should be 'val' instead of 'n - 1'.\n3. Another syntax error in this line: 'v_n_i, i_n_i = fun_1(W, Wt, - 1, val)', there is a space before the - sign in '- 1'."
+}

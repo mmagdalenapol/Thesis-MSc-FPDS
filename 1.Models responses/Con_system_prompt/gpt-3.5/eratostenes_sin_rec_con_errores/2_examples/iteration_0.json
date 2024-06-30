@@ -1,0 +1,4 @@
+{
+            "code_sintax_error": "Yes",
+            "code_sintax_explanation": "There are syntax errors in the code. Usage of curly brackets '{}' instead of square brackets '[]' in 'p.append{i}', and 'rount' function is undefined when you meant to use 'round'."
+}

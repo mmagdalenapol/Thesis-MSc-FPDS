@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "1. The variable 'Wt' is used but not defined. The intended variable from the function signature is 'wt'. 2. Incorrect recursive function call 'fun_1(W, Wt, - 1, val)' should be 'fun_1(W, wt, val, n-1)' as parameters need to follow the prototype in function definition."
+}

@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are multiple syntax errors in the code: '&' is not a valid syntax in Python, '=' should be '==', ';' is used incorrectly, and the function euclidean_gcd is not defined."
+}

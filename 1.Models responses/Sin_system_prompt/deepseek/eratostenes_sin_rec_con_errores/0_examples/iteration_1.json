@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The function 'append' is missing parentheses in the lines 7 and 11. It should be 'append(i)' instead of 'append{i}'."
+}

@@ -1,0 +1,12 @@
+  {
+        code_language: "python",
+        code_objective: "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm",
+        }
+    }
+
+Explanation:
+
+* code_language: The programming language used in the code snippet is Python, so the value of this key is "python".
+* code_objective: The objective of the code snippet is to define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm, so the value of this key is "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm".
+
+Note: The code snippet does not contain any syntax errors, but it is not clear what the function `euclidean_gcd` does, as it is not explicitly stated in the code. Therefore, the value of `code_objective` is a concise description of the function's purpose, based on the code's syntax and structure.

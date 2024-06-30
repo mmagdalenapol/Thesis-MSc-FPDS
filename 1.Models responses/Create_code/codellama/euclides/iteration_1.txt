@@ -1,0 +1,27 @@
+
+
+The algorithm you described is similar to the Euclidean algorithm for finding the greatest common divisor (GCD) of two natural numbers. The Euclidean algorithm is a well-known and efficient algorithm for finding the GCD of two natural numbers.
+
+Here is a Python code that implements the Euclidean algorithm:
+
+```
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+a = 10
+b = 20
+print(gcd(a, b))  # Output: 10
+```
+
+The Euclidean algorithm is named after the ancient Greek mathematician Euclid, who described it in his book "Elements" around 300 BC. The algorithm is based on the idea that the GCD of two numbers is the same as the GCD of the smaller number and the remainder of the larger number divided by the smaller number.
+
+In the code, the function `gcd` takes two natural numbers `a` and `b` as input. It uses a `while` loop to repeatedly divide the larger number by the smaller number until the remainder is zero. The `a % b` operation calculates the remainder of `a` divided by `b`.
+
+The code starts with `a` and `b` as the initial values. In each iteration of the loop, it swaps `a` and `b` so that `a` is always the smaller number. Then, it calculates the remainder of `a` divided by `b` and assigns it to `b`. When `b` becomes zero, the loop terminates, and `a` contains the GCD of the original `a` and `b`.
+
+The code handles the case where `a` or `b` is zero by starting the loop only if `b` is not zero. If `b` is zero, the GCD is simply `a`.
+
+The Euclidean algorithm is a fundamental algorithm in number theory and is used in many applications, such as cryptography and computer graphics.

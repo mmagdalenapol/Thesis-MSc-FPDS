@@ -1,0 +1,29 @@
+The algorithm described in your request is known as the Euclidean Algorithm. It's a method for finding the greatest common divisor (GCD) of two integers and also for finding integer solutions to the equation ax + by = gcd(a, b). The process of iteratively finding remainders until reaching a remainder of 0 is a key part of the Euclidean Algorithm.
+
+Here is a Python implementation of the Euclidean Algorithm that finds the denominator of the division that has a remainder of 0:
+
+```python
+def euclidean_algorithm(a, b):
+    if b == 0:
+        return a
+    else:
+        q = a // b
+        r = a % b
+        if r == 0:
+            return b
+        else:
+            return euclidean_algorithm(b, r)
+
+a = int(input("Enter the first natural number (a): "))
+b = int(input("Enter the second natural number (b): "))
+
+if a < 1 or b < 1:
+    print("Please enter natural numbers.")
+else:
+    x = max(a, b)
+    y = min(a, b)
+    gcd = euclidean_algorithm(x, y)
+    print(f"The denominator of the division that has a remainder of 0 is: {gcd}")
+```
+
+You can run this code in a Python environment to find the denominator of the division that has a remainder of 0 for two given natural numbers "a" and "b". Let me know if you need any further clarification or assistance.

@@ -1,0 +1,5 @@
+
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The variable 'p' is not defined in the function. Also, the range function is not correctly used in the list comprehension. It should be range(2, x + 1) instead of range[2, x + 1]."
+}

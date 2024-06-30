@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "In the declaration of the function parameters, 'ent' is used which is not a valid identifier. In Python syntax, it is likely supposed to be 'int'. The operator '=!' does not exist in Python, it should be '!=' to check for inequality."
+}

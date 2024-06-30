@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Two syntax errors detected: The conditional 'while y =! 0:' should be 'while y != 0:'. Also, function call to check variable type in 'isinstance(a, ent)' should use 'int' instead of 'ent'."
+}

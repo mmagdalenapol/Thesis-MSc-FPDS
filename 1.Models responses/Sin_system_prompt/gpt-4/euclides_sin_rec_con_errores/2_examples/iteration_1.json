@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "Several syntax errors: 'ent' is not a valid type, it should be 'int'. In the expression 'while y =! 0', the syntax for the not equal operator is incorrect, it should be '!='."
+}

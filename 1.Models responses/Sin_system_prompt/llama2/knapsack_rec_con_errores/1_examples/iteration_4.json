@@ -1,0 +1,4 @@
+  {
+code_sintax_error: "Yes",
+code_sintax_explanation: "In 'Wt[n - 1] > W', the syntax for indexing a list is not correct. The correct syntax is 'Wt[n-1]' instead of 'Wt[n - 1]'."
+}

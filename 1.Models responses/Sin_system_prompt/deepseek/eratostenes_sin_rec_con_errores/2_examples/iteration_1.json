@@ -1,0 +1,5 @@
+
+{
+"code_sintax_error": "Yes",
+"code_sintax_explanation": "The function fun_1 is not correctly defined. The append function in python is used with parentheses, not curly braces. The correct code should be 'p.append(i)' instead of 'p.append{i}'."
+}

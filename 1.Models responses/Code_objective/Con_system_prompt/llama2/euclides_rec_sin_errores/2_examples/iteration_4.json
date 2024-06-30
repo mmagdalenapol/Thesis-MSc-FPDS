@@ -1,0 +1,4 @@
+  {
+code_language: "python",
+code_objective: "define a function that calculates the greatest common divisor of two natural numbers using the Euclidean algorithm",
+}

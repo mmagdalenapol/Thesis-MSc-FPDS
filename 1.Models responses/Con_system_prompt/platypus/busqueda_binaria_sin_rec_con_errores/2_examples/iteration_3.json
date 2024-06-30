@@ -1,0 +1,4 @@
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "There are several syntax errors in the code. First, the function definition should be `def fun_1(l, t):` instead of `def fun_1(l, t)`. Second, the variable `D` is not defined. Third, the comparison operators should be `l[D] == t`, `l[D] < t`, and `l[D] > t`. Fourth, the `else` statement should be indented. Fifth, the variable `d` should be `D`. Sixth, the return statement should be `return D` instead of `return d`. Seventh, the `return -1` statement should be indented."
+}

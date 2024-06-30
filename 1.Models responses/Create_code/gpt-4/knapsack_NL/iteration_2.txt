@@ -1,0 +1,41 @@
+To implement the described recursive function and to evaluate it using given vectors "p" and "w", and a natural number "W", we can follow the steps you outlined. Below, you'll find the corresponding Python code, which defines the recursive function `fun_1` and uses it with given inputs.
+
+```python
+def fun_1(A, z, t, m):
+    if m == 0 or A == 0:
+        return 0, []
+
+    if z[m-1] > A:
+        return fun_1(A, z, t, m-1)
+    else:
+        result, indices = fun_1(A - z[m-1], z, t, m-1)
+        c = t[m-1] + result
+        d, previous_indices = fun_1(A, z, t, m-1)
+        
+        if c > d:
+            return c, indices + [m-1]
+        else:
+            return d, previous_indices
+
+# Example vectors and constant
+w = [5, 10, 20, 30]  # weights
+p = [60, 100, 120, 150]  # profits
+W = 50  # Maximum weight capacity
+
+n = len(w)  # Assuming w and p are of the same length and valid
+
+# Call the function
+max_profit, items_used = fun_1(W, w, p, n)
+
+print("Maximum profit:", max_profit)
+print("Items used (indices):", items_used)
+```
+
+Explanation and Key Points:
+- The function `fun_1(A, z, t, m)` recursively determines the best combination of items under a weight limit `A` using item weights `z` and corresponding values `t`.
+- The function returns a tuple `(max_profit, items_used)` where `max_profit` is the maximum profit that can be obtained from the first `m` items under the weight restriction `A`, and `items_used` is the list of indices (0-based) representing which items contribute to `max_profit`.
+- The function decreases the index `m` in a recursive manner until it either hits `m == 0` or `A == 0`, in which case it terminates and returns `(0, [])` representing a base case of no profit and no items.
+- The code efficiently computes whether to include each item based on its weight, updating the optimal solution by choosing either inclusion (leading to profit addition) or exclusion of the current item, based on which choice gives a higher profit.
+- The example vectors `w` and `p` along with `W` can be modified to test different scenarios.
+
+This Python implementation relies on recursion and effective base cases to handle simple scenarios, progressing through the problem in a structured manner. Adjust the vectors `w`, `p` and the value of `W` to match specific problem instances you might be interested in solving.

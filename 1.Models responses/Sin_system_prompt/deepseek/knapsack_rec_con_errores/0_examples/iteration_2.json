@@ -1,0 +1,30 @@
+
+The code is written in Python.
+
+The code has a syntax error. The function `fun_1` is calling itself recursively with the arguments in a different order than they are defined in the function definition. The correct order should be `fun_1(W - Wt[n - 1], Wt, val, n - 1)` and `fun_1(W, Wt, val, n - 1)`.
+
+Here is the corrected code:
+
+```python
+def fun_1(W, wt, val, n):
+    if n == 0 or W == 0:
+        return 0, []
+    if wt[n - 1] > W:
+        return fun_1(W, wt, val, n - 1)
+    else:
+        v_i, i_i = fun_1(W - wt[n - 1], wt, val, n - 1)
+        v_n_i, i_n_i = fun_1(W, wt, val, n - 1)
+        if v_i + val[n - 1] > v_n_i:
+            return v_i + val[n - 1], i_i + [n]
+        else:
+            return v_n_i, i_n_i
+```
+
+The dictionary with the results is:
+
+```python
+{
+    "code_sintax_error": "Yes",
+    "code_sintax_explanation": "The function 'fun_1' is calling itself recursively with the arguments in a different order than they are defined in the function definition. The correct order should be 'fun_1(W - Wt[n - 1], Wt, val, n - 1)' and 'fun_1(W, Wt, val, n - 1)'."
+}
+```
